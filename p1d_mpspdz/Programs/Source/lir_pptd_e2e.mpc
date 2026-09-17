@@ -1,0 +1,93 @@
+# P1-D2 MP-SPDZ real-MPC program for LIR-PPTD.
+# Compile: ./compile.py -F 192 lir_pptd_e2e <m> <mode>
+# mode: 0=ordinary, 1=calibration.
+#
+# Mapping for paper (N,T_threshold)=(10,4):
+# runtime uses -N 10 -T 3 because MP-SPDZ T is max corrupted parties.
+
+from Compiler.types import sfix
+from Compiler.library import listen_for_clients, accept_client_connection
+
+sfix.set_precision(24, 56)
+sfix.round_nearest = True
+
+m = int(program.args[1])
+mode = int(program.args[2])
+if m < 2:
+    raise ValueError("m must be >= 2")
+if mode not in (0, 1):
+    raise ValueError("mode must be 0 ordinary or 1 calibration")
+
+K = 10
+EPS = 1.0 / 1024.0
+ETA = 0.1
+KAPPA = 2.0
+PORT_BASE = 14000
+
+listen_for_clients(PORT_BASE)
+client_id = accept_client_connection(PORT_BASE)
+
+# Geometry-aware tau is resolved by the application from the legal report domain
+# and injected as the same public/configured value for ordinary and calibration paths.
+# ExternalIO transports it in the same fixed-point representation as other inputs.
+tau = sfix.receive_from_client(1, client_id)[0]
+
+# The client already scales inputs to the sfix integer representation.
+reports = sfix.receive_from_client(m, client_id)
+reputations = sfix.receive_from_client(m, client_id)
+
+def add_all(values):
+    acc = values[0]
+    for x in values[1:]:
+        acc = acc + x
+    return acc
+
+if mode == 0:
+    effective = [reputations[i] + EPS for i in range(m)]
+    den = add_all(effective)
+    num = add_all([effective[i] * reports[i] for i in range(m)])
+    truth = num / den
+
+    for _ in range(K):
+        q = []
+        influence = []
+        for i in range(m):
+            diff = reports[i] - truth
+            distance = diff * diff
+            qi = tau / (tau + distance)
+            q.append(qi)
+            influence.append(effective[i] * qi)
+        aden = add_all(influence)
+        anum = add_all([influence[i] * reports[i] for i in range(m)])
+        truth = anum / aden
+
+    # Recompute final q_out against x^(K), but keep it task-local.
+    q_out = sfix.Array(m)
+    for i in range(m):
+        diff = reports[i] - truth
+        distance = diff * diff
+        q_out[i] = tau / (tau + distance)
+
+    # Private requester output.
+    sfix.reveal_to_clients([client_id], [truth])
+
+elif mode == 1:
+    reference = sfix.receive_from_client(1, client_id)[0]
+    candidates = sfix.Array(m)
+    checksum = sfix(0)
+    for i in range(m):
+        diff = reports[i] - reference
+        distance = diff * diff
+        qcal = tau / (tau + distance)
+        c = reputations[i]
+        # Positive-form bounded transition.
+        nxt = ((1.0 - ETA * KAPPA) * c
+               + ETA * qcal
+               + ETA * (KAPPA - 1.0) * c * qcal)
+        candidates[i] = nxt
+        checksum = checksum + nxt
+
+    # Validation-only aggregate. Per-worker reputation remains secret.
+    # The paper must not describe this checksum as a protocol output.
+    checksum = checksum / m
+    sfix.reveal_to_clients([client_id], [checksum])

@@ -1,0 +1,20 @@
+family,condition,evidence_path,status,metric,value,notes
+weather,rho=3/10|attack=persistent|rep=1,analysis/geo_tau/equivalence_numeric_binary.csv,PASS,max_diff,0.0,legacy==geometry; current default geometry verified by tests
+product,rho=3/10|attack=persistent|rep=1,analysis/geo_tau/equivalence_numeric_binary.csv,PASS,max_diff,0.0,legacy==geometry; current default geometry verified by tests
+duck,rho=3/10|attack=persistent|rep=1,analysis/geo_tau/equivalence_numeric_binary.csv,PASS,max_diff,0.0,legacy==geometry; current default geometry verified by tests
+dog,persistent rho=3/10; rep=1,runs/geo_tau/dog_main.jsonl,PASS,primary_loss,0.2308340777203436,80-digit exact geometry condition spot-check
+dog,persistent rho=7/10; rep=1,runs/geo_tau/dog_main.jsonl,PASS,primary_loss,0.7227318181129603,80-digit exact geometry condition spot-check
+dog,attack=collusive; rho=7/10; rep=1,runs/geo_tau/dog_attacks.jsonl,PASS,primary_loss,0.5865752423930013,80-digit exact geometry condition spot-check
+dog,attack=on_off; rho=7/10; rep=1,runs/geo_tau/dog_attacks.jsonl,PASS,primary_loss,0.40874042754131457,80-digit exact geometry condition spot-check
+netease,capability=50,analysis/geo_tau_final/netease_current_active_path_spotcheck.csv,PASS,max_abs_error,1.1102230246251563e-16,current active geometry path exact/scalable spot-check
+netease,capability=52,analysis/geo_tau_final/netease_current_active_path_spotcheck.csv,PASS,max_abs_error,1.1102230246251563e-16,current active geometry path exact/scalable spot-check
+netease,capability=53,analysis/geo_tau_final/netease_current_active_path_spotcheck.csv,PASS,max_abs_error,2.220446049250313e-16,current active geometry path exact/scalable spot-check
+netease,capability=56,analysis/geo_tau_final/netease_current_active_path_spotcheck.csv,PASS,max_abs_error,1.1102230246251563e-16,current active geometry path exact/scalable spot-check
+netease,capability=69,analysis/geo_tau_final/netease_current_active_path_spotcheck.csv,PASS,max_abs_error,2.220446049250313e-16,current active geometry path exact/scalable spot-check
+netease,capability=126,analysis/geo_tau_final/netease_current_active_path_spotcheck.csv,PASS,max_abs_error,2.220446049250313e-16,current active geometry path exact/scalable spot-check
+highD,D=16; rho=0.3; scenario=binary_support; seed=546952759217708064,analysis/geo_tau/highD_categorical.csv,PASS,failure_nan_overflow_count,0,frozen 1200-run geometry diagnostic
+highD,D=32; rho=0.3; scenario=binary_support; seed=546952759217708064,analysis/geo_tau/highD_categorical.csv,PASS,failure_nan_overflow_count,0,frozen 1200-run geometry diagnostic
+near_tie,run=dataset=dog|rho=1/10|rep=8|subset=e2cafea7f2be68625111c60097f7c74bbac948414d9d15b68a9262109987ce33; task=dog:711,analysis/geo_tau_final/near_tie_release.csv,PASS,fixed_matches_formal_release,True,f=24 deterministic lowest-index release
+near_tie,run=dataset=dog|rho=1/2|rep=9|subset=bcda20275a4f18698861725968ce41f1bc9c028335db203afcd56018ea2a34c9; task=dog:273,analysis/geo_tau_final/near_tie_release.csv,PASS,fixed_matches_formal_release,True,f=24 deterministic lowest-index release
+near_tie,run=dataset=dog|rho=3/10|rep=3|subset=06fbb7445168e996b289ca36bf8b792ebab7f3c9d7f6ee92c361039fc2ba81ed; task=dog:273,analysis/geo_tau_final/near_tie_release.csv,PASS,fixed_matches_formal_release,True,f=24 deterministic lowest-index release
+near_tie,run=dataset=dog|rho=3/10|rep=6|subset=1f766d46479e4ad6f645bf26ab5bbfbd16645b1dd3703779dd7a4387e72a1a9e; task=dog:342,analysis/geo_tau_final/near_tie_release.csv,PASS,fixed_matches_formal_release,True,f=24 deterministic lowest-index release

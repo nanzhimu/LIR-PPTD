@@ -1,0 +1,123 @@
+{
+  "algorithm_retuning": false,
+  "correctness_gate": {
+    "max_abs_calibration_checksum_error": 0.0005,
+    "max_abs_truth_error": 0.0002,
+    "note": "MP-SPDZ sfix deterministic-nearest arithmetic is numerically/functionally checked; it is not claimed bit-identical to the bespoke fixed-point backend",
+    "reference": "frozen LIR-PPTD numerical formulas"
+  },
+  "execution": {
+    "formal_default": {
+      "measured": 20,
+      "parties": 10,
+      "reconstruction_threshold": 4,
+      "requires_real_network_hosts": true,
+      "warmups": 5,
+      "worker_grid": [
+        20,
+        50,
+        100,
+        200
+      ]
+    },
+    "local_gate": {
+      "claim": "real local multi-process MPC validation only; not multi-host evidence",
+      "hosts": 1,
+      "measured": 3,
+      "parties": 10,
+      "warmups": 1,
+      "worker_grid": [
+        20,
+        50
+      ]
+    },
+    "secondary_committee_scaling": [
+      {
+        "N": 3,
+        "mpspdz_T": 1,
+        "threshold": 2
+      },
+      {
+        "N": 5,
+        "mpspdz_T": 2,
+        "threshold": 3
+      },
+      {
+        "N": 7,
+        "mpspdz_T": 3,
+        "threshold": 4
+      },
+      {
+        "N": 10,
+        "mpspdz_T": 3,
+        "threshold": 4
+      }
+    ]
+  },
+  "metrics": [
+    "client_wall_seconds",
+    "mpc_wall_seconds",
+    "cpu_seconds",
+    "party0_data_sent_mb",
+    "global_data_sent_mb",
+    "approx_rounds",
+    "client_communication_mb",
+    "client_communication_seconds",
+    "peak_rss_if_available"
+  ],
+  "prohibited_claims": [
+    "production-ready MPC",
+    "malicious/Byzantine security",
+    "bit-exact equivalence to the bespoke fixed-point backend",
+    "multi-host result from localhost-only execution",
+    "author-code reproduction of recent SOTA without actually running author code"
+  ],
+  "result_dependent_selection": false,
+  "runtime": {
+    "field_bits": 192,
+    "fixed_point": {
+      "fractional_bits": 24,
+      "round_nearest": true,
+      "total_bits": 56
+    },
+    "framework": "MP-SPDZ",
+    "mpspdz_default_runtime": {
+      "N": 10,
+      "max_corrupted_T": 3
+    },
+    "paper_default_committee": {
+      "N": 10,
+      "reconstruction_threshold": 4
+    },
+    "protocol": "shamir",
+    "security_model": "semi-honest honest-majority Shamir",
+    "ssl": true,
+    "version": "v0.4.3"
+  },
+  "schema_version": "1.0",
+  "study_id": "p1d_mpspdz_real_e2e_v1",
+  "workloads": {
+    "D": 1,
+    "K": 10,
+    "calibration": "authenticated-reference q_cal plus one bounded reputation transition; candidate states remain secret inside MPC",
+    "consistency_scale_mode": "geometry_diameter_scaling",
+    "dimension": 1,
+    "domain_type": "numerical_box",
+    "epsilon_c": 0.0009765625,
+    "eta": 0.1,
+    "input_transport": "one external benchmark client privately injects deterministic worker reports and persistent reputation states to all MPC parties",
+    "kappa": 2.0,
+    "lambda_tau": 0.2,
+    "ordinary": "full ordinary LIR-PPTD numerical inference including final task-local q_out recomputation; no persistent reputation update",
+    "output_transport": "truth returned privately to the external requester/client",
+    "resolved_tau": 0.2,
+    "squared_diameter": 1,
+    "task_kind": "numerical",
+    "worker_grid": [
+      20,
+      50,
+      100,
+      200
+    ]
+  }
+}

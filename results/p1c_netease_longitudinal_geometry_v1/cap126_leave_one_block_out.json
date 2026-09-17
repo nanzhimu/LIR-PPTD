@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "analysis": "capability 126 leave-one-taskset-block-out sensitivity",
+  "capability": 126,
+  "taskset_clusters": 15,
+  "scope": "frozen predictions; each native taskset_id cluster omitted once",
+  "comparisons": {
+    "lir_pptd-cowa": {
+      "accuracy": {
+        "full": 0.0049509327203607345,
+        "loo_min": 0.0021727609962903793,
+        "loo_max": 0.006470089096308862,
+        "loo_mean": 0.004953352947701406,
+        "loo_all_positive": true,
+        "loo_all_negative": false,
+        "jackknife_se": 0.0033595662761605515,
+        "normal_ci95_low": -0.0016338171809139462,
+        "normal_ci95_high": 0.011535682621635415
+      },
+      "macro_f1": {
+        "full": 0.0057469034521595574,
+        "loo_min": 0.0024304528007161874,
+        "loo_max": 0.007880785000840218,
+        "loo_mean": 0.005738021447788218,
+        "loo_all_positive": true,
+        "loo_all_negative": false,
+        "jackknife_se": 0.004318842665797459,
+        "normal_ci95_low": -0.0027180281728034616,
+        "normal_ci95_high": 0.014211835077122576
+      }
+    },
+    "lir_pptd-no_hr": {
+      "accuracy": {
+        "full": 0.02837945362921046,
+        "loo_min": 0.024642289348171698,
+        "loo_max": 0.03261329944938596,
+        "loo_mean": 0.028377656517119276,
+        "loo_all_positive": true,
+        "loo_all_negative": false,
+        "jackknife_se": 0.006860109366686233,
+        "normal_ci95_low": 0.014933639270505443,
+        "normal_ci95_high": 0.04182526798791548
+      },
+      "macro_f1": {
+        "full": 0.032336146120217735,
+        "loo_min": 0.0268392030314899,
+        "loo_max": 0.036385947112562156,
+        "loo_mean": 0.03233913405894086,
+        "loo_all_positive": true,
+        "loo_all_negative": false,
+        "jackknife_se": 0.008273468079876611,
+        "normal_ci95_low": 0.016120148683659578,
+        "normal_ci95_high": 0.048552143556775895
+      }
+    }
+  }
+}

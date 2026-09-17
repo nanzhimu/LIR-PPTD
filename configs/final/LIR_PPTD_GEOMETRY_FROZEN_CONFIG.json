@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "algorithm": "LIR-PPTD",
+  "consistency_scale_mode": "geometry_diameter_scaling",
+  "domain_geometry": {
+    "numerical_box": {
+      "domain": "[0,1]^D",
+      "squared_diameter": "D"
+    },
+    "categorical_one_hot": {
+      "domain": "{e_1,...,e_D}",
+      "squared_diameter": "2"
+    }
+  },
+  "parameters": {
+    "K": 10,
+    "c0": "1/2",
+    "epsilon_c": "1/1024",
+    "lambda_tau": "1/5",
+    "kappa": "2",
+    "eta": "1/10",
+    "P": 20,
+    "pi": "1/20",
+    "fixed_point_fractional_bits": 24,
+    "threshold": {
+      "N": 10,
+      "T": 4
+    }
+  },
+  "tie_breaking": "deterministic lowest-index",
+  "ordinary_persistent_reputation_update": false,
+  "calibration_persistent_reputation_update": "post-freeze authenticated exactly once"
+}

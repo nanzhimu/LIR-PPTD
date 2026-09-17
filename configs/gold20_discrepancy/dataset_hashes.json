@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "datasets": {
+    "product": {"answer_sha256":"ca69e3f2cba3d6f9c3b3ecc2f8d2a81afcd747d0b91aa5ab18608a5715e26adc","truth_sha256":"9a5757c726ef1a32b05f6a675924c483b24d602c61b1a2d087ab3d84f90b3766"},
+    "duck": {"answer_sha256":"0d5e423652c079361a4cbc0adbee0945d40f02a9dedcfb6b068e8f2af63b24f0","truth_sha256":"04c6d8b6cdc298b63c05dc87d28ceebd018d4207e0ced7c1229ca3593a74983a"},
+    "dog": {"answer_sha256":"db11159198f59fa2af87450b008f860ca2e9e04e3f15c697ef254af40fb6763a","truth_sha256":"2a641fa31e80526164d956da4228f80d31b303c2691ab1855c76fef72d04b746"},
+    "weather": {"answer_sha256":"172f55259ad4c436402aca7b18ef8df6527bbb458ca0673833b1cc6374c088c2","truth_sha256":"8e882b70b9478329dc9b12fda3cef58e91b1a5417193384cdf34df54ce474b86"}
+  }
+}

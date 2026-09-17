@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "study_id": "p1c_netease_longitudinal_v1",
+  "seeds": {
+    "50": "547fe20b2918c7cf22b84cd402bce3198252bbfb70486edc8638ecb4a6b49d83",
+    "52": "4e806afad8d9b6e648cbd4a819bdb3407a2c8fd6763f4bbe1a2bc9299bf141bb",
+    "53": "49774adb244969e25bb2ceafc952c78cd6e9ee7d07e2b706e4d1214b53f13ddd",
+    "56": "32611dadb68f7bfa0d47fcdd18c9eb0b6773bc48fc10cf846217c14d310a5b07",
+    "69": "6525ae5521a6e693a911ae0fc6f5bf232a07b9de5db8b4efc21dfd2853731ac9",
+    "126": "799bb83a4b150e91d0c622efdbb97f895ebf2409b72d484f60d6794afbefc3c8"
+  },
+  "note": "Private during the run; safe to reveal after the observational study is retired."
+}

@@ -1,0 +1,3 @@
+﻿dataset,rho,order_count,lir_favored_orders,tie_orders,crh_favored_orders,min_order_mean_delta,max_order_mean_delta,mean_of_order_mean_deltas,holm_significant_lir_orders,holm_significant_crh_orders
+dog,3/10,5,5,0,0,-0.05037220578031309,-0.03646802497000003,-0.04308734111335483,5,0
+dog,7/10,5,5,0,0,-0.13665843211572723,-0.10273821546380597,-0.12062632034864762,5,0

@@ -1,0 +1,10 @@
+{
+  "seed_start": 1,
+  "seed_end": 20,
+  "planned": 2000,
+  "rows": 2000,
+  "success": 2000,
+  "failure": 0,
+  "mask_provenance_mismatches": 0,
+  "complete": true
+}

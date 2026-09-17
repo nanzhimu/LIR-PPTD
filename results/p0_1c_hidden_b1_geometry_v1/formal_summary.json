@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.1-ga",
+  "study_id": "p0_1c_hidden_b1_formal_migration_v1",
+  "algorithm_variant": "geometry_aware_domain_diameter_v1",
+  "source": "old unaffected Product/Duck/Weather and Dog baselines + rerun Dog LIR",
+  "success": 1512,
+  "failure": 0,
+  "analysis": {
+    "b1_cell_count": 20,
+    "cell_mean_wins_against_both_crh_and_pptd": 17,
+    "per_comparator": {
+      "crh": {
+        "mean_wins": 17,
+        "mean_ties": 0,
+        "mean_losses": 3,
+        "holm_significant_wins": 15,
+        "holm_significant_losses": 2
+      },
+      "pptd_liang": {
+        "mean_wins": 17,
+        "mean_ties": 0,
+        "mean_losses": 3,
+        "holm_significant_wins": 16,
+        "holm_significant_losses": 1
+      },
+      "tqpp_liu": {
+        "mean_wins": 14,
+        "mean_ties": 0,
+        "mean_losses": 6,
+        "holm_significant_wins": 11,
+        "holm_significant_losses": 5
+      }
+    },
+    "core_robustness_gate": "REVIEW_REQUIRED",
+    "core_gate_rule": "at least 18/20 cell mean wins against both CRH and PPTD, with zero Holm-significant losses against either; TQPP is reported separately and is not a gate because it retains a different trusted-information model"
+  }
+}

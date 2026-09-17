@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "experiment_namespace": "VI-E",
+  "status": "DESIGN_FIXED_BEFORE_FORMAL_MEASUREMENT",
+  "title": "Matched longitudinal-reputation overhead under simulated threshold sharing",
+  "primary_question": "How much additional simulated secure-arithmetic cost is introduced by the longitudinal reputation update when the truth-discovery path is held identical?",
+  "methods": {
+    "lir_pptd_full": {
+      "implementation": "existing run_secure",
+      "includes_longitudinal_reputation_update": true
+    },
+    "matched_pptd_core_no_longitudinal_update": {
+      "implementation": "VI-E matched core copied from the bound run_secure truth path and stopped before q_out/reputation transition",
+      "includes_longitudinal_reputation_update": false,
+      "public_label": "Matched PPTD-core",
+      "not_fog_pptd": true,
+      "not_fptd": true,
+      "not_tqpp": true
+    }
+  },
+  "fairness": {
+    "same_task_per_pair": true,
+    "same_initial_reputation_c0": "1/2",
+    "same_worker_reports": true,
+    "same_K": 10,
+    "same_fixed_profile": "l2-plaintext-f24-v1",
+    "fractional_bits_f": 24,
+    "same_simulated_backend_implementation": "SimulatedShamirBackend",
+    "simulated_threshold_profile": {
+      "committee_size_N": 10,
+      "threshold_T": 4,
+      "note": "benchmark-only profile instantiated from the existing validated simulated backend; not production MPC"
+    },
+    "method_order": "paired alternating AB/BA by replicate",
+    "backend_construction_excluded_from_timer": true,
+    "task_construction_excluded_from_timer": true
+  },
+  "workload": {
+    "task_kind": "numerical",
+    "D": 1,
+    "K": 10,
+    "worker_counts": [
+      20,
+      50,
+      100,
+      200
+    ],
+    "attack": "none",
+    "reports": "deterministic exact rational synthetic reports in [0,1]",
+    "truth_accuracy_claim": false,
+    "tau": "1/5",
+    "epsilon_c": "1/1024",
+    "kappa": "2",
+    "eta": "1/10",
+    "c0": "1/2"
+  },
+  "repetitions": {
+    "warmup_pairs_per_worker_count": 5,
+    "measured_pairs_per_worker_count": 30,
+    "measured_pair_count_total": 120
+  },
+  "measured_signals": [
+    "paired wall-clock execution time",
+    "paired process CPU time",
+    "high-level simulated secure primitive counts from operation_trace",
+    "total private transcript-entry count"
+  ],
+  "not_measured": {
+    "network_communication_bytes": "backend does not model network transport",
+    "online_rounds": "backend transcript has no round semantics",
+    "offline_preprocessing_time": "no offline preprocessing implementation in this backend"
+  },
+  "primary_derived_metrics": [
+    "delta_wall_seconds = Full - Matched PPTD-core",
+    "relative_wall_overhead_percent",
+    "delta_SecSqr",
+    "delta_SecMulPositive",
+    "delta_SecDivPositive",
+    "delta_PubMulPositive"
+  ],
+  "statistics": {
+    "unit": "paired replicate",
+    "bootstrap_resamples": 10000,
+    "paired_mean_delta_ci": "percentile bootstrap 95% CI with fixed RNG",
+    "paired_test": "two-sided exact sign-flip on wall-time deltas",
+    "multiplicity": "Holm across four worker-count hypotheses",
+    "alpha": 0.05
+  },
+  "claim_boundary": [
+    "simulated threshold-sharing efficiency evidence only",
+    "not production MPC performance",
+    "not a cryptographic security benchmark",
+    "Matched PPTD-core is an internal control baseline and must not be relabeled Fog-PPTD/FPTD/TQPP",
+    "external Fog-PPTD runtime comparison remains unavailable unless a faithful runnable implementation is later activated"
+  ],
+  "runtime_policy": {
+    "runtime_gate_enabled": false,
+    "resume_same_binding": true,
+    "retain_failures": true,
+    "no_post_start_grid_change": true
+  }
+}

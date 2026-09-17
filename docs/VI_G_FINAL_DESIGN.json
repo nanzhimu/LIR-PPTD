@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "study_id": "vi_g_final_semantics_v1",
+  "title": "VI-G Synthetic Stress and Empirical Operating Boundary",
+  "final_algorithm_semantics": {
+    "ordinary": "Historical reputation is consumed in all K truth iterations, but the ordinary q_out-derived candidate reputation is not committed.",
+    "calibration": "Every 20th task in the experimental profile is an authenticated calibration event; it is excluded from scoring and is the only event that advances persistent reputation.",
+    "calibration_status_handling": "Attack generation is completed before calibration designation is evaluated and receives neither the calibration flag nor the authenticated reference."
+  },
+  "families": [
+    "synthetic_num_small",
+    "synthetic_num_shifted",
+    "synthetic_num_longitudinal",
+    "synthetic_cat_binary",
+    "synthetic_cat_tie"
+  ],
+  "attacks": [
+    "persistent",
+    "random",
+    "on_off"
+  ],
+  "attack_notes": {
+    "persistent": "Truth-independent response corruption: numerical x->1-x; categorical cyclic shift.",
+    "random": "Deterministic hash-derived random reports independent of truth.",
+    "on_off": "5 benign + 5 corrupted tasks; 10 seeds benign-first and 10 seeds attack-first.",
+    "excluded_fixed_target": "The old fixed-target stress axis is not reused because realized attack validity/strength can depend strongly on the task truth distribution."
+  },
+  "rho_grid": [
+    "0",
+    "1/10",
+    "3/10",
+    "1/2",
+    "7/10",
+    "9/10"
+  ],
+  "primary_rhos": [
+    "1/10",
+    "3/10",
+    "1/2",
+    "7/10",
+    "9/10"
+  ],
+  "seeds": {
+    "start": 4001,
+    "end": 4020,
+    "count": 20
+  },
+  "tasks_per_stream": 100,
+  "calibration_period": 20,
+  "calibration_indices": [
+    20,
+    40,
+    60,
+    80,
+    100
+  ],
+  "scored_ordinary_tasks": 95,
+  "warm_start_dimension": "removed",
+  "primary_comparator": "Mean/Majority Vote",
+  "primary_endpoints": {
+    "synthetic_num_small": "MAE",
+    "synthetic_num_shifted": "MAE",
+    "synthetic_num_longitudinal": "MAE",
+    "synthetic_cat_binary": "1-Accuracy",
+    "synthetic_cat_tie": "1-MacroF1"
+  },
+  "planned_streams": 1800,
+  "primary_contrasts": 75,
+  "holm_families": 15,
+  "hypotheses_per_holm_family": 5,
+  "statistics": {
+    "paired_bootstrap_resamples": 10000,
+    "primary_test": "exact one-sided paired sign-flip, LIR-PPTD loss < Mean/MV loss",
+    "supplementary_test": "exact two-sided paired sign-flip",
+    "holm_scope": "family x attack across five nonzero malicious ratios"
+  },
+  "interpretation_policy": "Any crossover is an empirical operating-boundary observation, not a theoretical critical malicious-worker threshold."
+}

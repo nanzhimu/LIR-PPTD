@@ -1,0 +1,79 @@
+[
+  {
+    "gate": "A",
+    "requirement": "Active algorithm defaults to geometry scaling",
+    "evidence_path": "docs/GEO_TAU_FINAL_INTEGRATION_CODE_AUDIT.md",
+    "result": "geometry default; 0 direct active lambda_tau*D",
+    "status": "PASS"
+  },
+  {
+    "gate": "B",
+    "requirement": "Numerical/binary equivalence preserved",
+    "evidence_path": "analysis/geo_tau/equivalence_numeric_binary.csv",
+    "result": "40/40 PASS; all max diffs 0",
+    "status": "PASS"
+  },
+  {
+    "gate": "C",
+    "requirement": "All Dog experiments used by the active paper are synchronized",
+    "evidence_path": "results/geo_tau_final_secondary",
+    "result": "main/attack/ablation/reputation geometry canonical; sensitivity 560/560; calibration 200/200; order 200/200; behavior-switch geometry bound",
+    "status": "PASS"
+  },
+  {
+    "gate": "D",
+    "requirement": "NetEase domain audit and required rerun closure",
+    "evidence_path": "analysis/geo_tau_final/netease_domain_audit.csv",
+    "result": "six capabilities D=3 one-hot; C10 full geometry rerun; 2850 current-path comparisons 0 mismatch",
+    "status": "PASS"
+  },
+  {
+    "gate": "E",
+    "requirement": "11 near-tie fixed-point release semantics closed",
+    "evidence_path": "analysis/geo_tau_final/near_tie_fixed_point_mpc_audit.md",
+    "result": "11/11 fixed-point matches formal release; 11/11 semantic Shamir MPC matches fixed-point",
+    "status": "PASS"
+  },
+  {
+    "gate": "F",
+    "requirement": "MP-SPDZ consumes unified resolved tau",
+    "evidence_path": "analysis/geo_tau_final/primitive_count_equivalence.md",
+    "result": "hard-coded TAU removed; ordinary/calibration use one resolved public tau",
+    "status": "PASS"
+  },
+  {
+    "gate": "G",
+    "requirement": "Fixed-point range/error certificate updated",
+    "evidence_path": "src/lir_pptd/fixedpoint/range_analysis.py",
+    "result": "B_d=diam^2(X): numerical D, categorical 2; focused tests PASS",
+    "status": "PASS"
+  },
+  {
+    "gate": "H",
+    "requirement": "Primitive count/complexity consistent with new formula",
+    "evidence_path": "analysis/geo_tau_final/primitive_count_equivalence.csv",
+    "result": "representative D=4 traces identical in legacy/geometry; no new secure branch",
+    "status": "PASS"
+  },
+  {
+    "gate": "I",
+    "requirement": "Active paper legacy-tau results replaced or explicitly marked",
+    "evidence_path": "analysis/geo_tau_final/paper_result_consistency.csv",
+    "result": "23/23 verified; 0 pending",
+    "status": "PASS"
+  },
+  {
+    "gate": "J",
+    "requirement": "Obsolete D<=4/extension-only narratives removed",
+    "evidence_path": "analysis/geo_tau_final/legacy_tau_occurrences.csv",
+    "result": "844 occurrences classified; 0 pending; banned final-paper phrases absent",
+    "status": "PASS"
+  },
+  {
+    "gate": "K",
+    "requirement": "Final manifest/artifact closure",
+    "evidence_path": "PUBLIC_ARTIFACT_MANIFEST + final_integration_manifest",
+    "result": "C11 public artifact manifest 287 files; fresh-unzip verifier 287/287; errors=0",
+    "status": "PASS"
+  }
+]

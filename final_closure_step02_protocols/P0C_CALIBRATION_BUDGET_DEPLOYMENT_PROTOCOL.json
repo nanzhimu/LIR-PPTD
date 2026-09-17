@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "study_id": "fc2_p0c_calibration_budget_deployment_v1",
+  "reviewer_concern": "C3 calibration-source realism and 5% budget justification",
+  "scientific_question": "How does the final mechanism respond to a predeclared range of sparse authenticated-reference budgets, without using the sweep to retune the frozen 5% default?",
+  "datasets": [
+    "dog",
+    "weather"
+  ],
+  "reason": "one multiclass categorical and one numerical benchmark; both already have final calibration-quality evidence and provide complementary modalities",
+  "attack": {
+    "type": "persistent",
+    "rho": 0.7,
+    "malicious_subsets": "20 frozen unique subsets per dataset"
+  },
+  "budgets": [
+    0.01,
+    0.02,
+    0.05,
+    0.1
+  ],
+  "selector": {
+    "family": "hidden task-ID HMAC thresholding, same semantics as manuscript",
+    "public_retired_experimental_seeds": [
+      "a0ceda2981cdd1e5dfa0e574849c455ae7650f22f5d8c25c3a471193797fba8a",
+      "403154ea16ab43a1faf90f1b56561dc2aba7e91a6498b0bc90f75fd3a279cbff",
+      "0a65f57e123deb842eba9c5ae3e676baf65ff14ca66966ec963d37b796cf3b16",
+      "41d5feb1dc66a53fc85d14f5deac990c921bb43a139a62c7d4408cdfcb5ce2bc",
+      "b5e14139bbed872fd39b8451e8caa4cf753fade3c4e60fac44debdee84376619",
+      "4175f77a3d887ca9ded18e960cc24472348827046832307c1b9c9c49736e2d16",
+      "9ba90c1de394068392680e82592a88584a08bff8cd6b7556a11a56019df55804",
+      "131451051e379ee979605063392d642f6d6b98f1a7783891f6cbea3d865ee4ca",
+      "335cb076c789748587a9854a388dfb6f868e5d812335450212f22aeffdfc361e",
+      "07af3d98dde7a57d25b9fc699aca4e68646fc5e67ff6e296cc2392e3992603a0"
+    ],
+    "nested_masks": "for each dataset/seed, compute one uniform selector value per immutable task ID; lower-rate masks are strict threshold subsets of the 10% mask",
+    "attack_before_selector_use": true
+  },
+  "scoring": {
+    "common_mask": "score every rate on the identical complement of the 10% selector mask; tasks selected only by the 10% mask but not by a lower-rate mask remain ordinary for that lower rate but are excluded from metric scoring",
+    "reason": "prevents a changing evaluation set from confounding the calibration-budget comparison"
+  },
+  "algorithm": "LIR-PPTD canonical FC1 Full only; no parameter changes across budgets",
+  "endpoints": {
+    "dog": "1-MacroF1",
+    "weather": "MAE"
+  },
+  "statistics": {
+    "outer_unit": "selector seed (10)",
+    "nested_unit": "malicious subset (20 per seed)",
+    "bootstrap_resamples": 10000,
+    "contrasts": "1%, 2%, and 10% each paired against 5% within dataset; six planned contrasts total",
+    "test": "exact two-sided sign-flip on selector-seed means",
+    "holm": "six planned contrasts",
+    "report": "mean loss, 95% nested-bootstrap CI, delta vs 5%, realized calibration counts, sign-flip p/Holm p"
+  },
+  "run_cardinality": {
+    "datasets": 2,
+    "selector_seeds": 10,
+    "subsets_per_seed": 20,
+    "budgets": 4,
+    "lir_runs": 1600
+  },
+  "deployment_case": {
+    "application": "environmental / weather mobile crowdsensing",
+    "reference_source": "a calibrated fixed monitoring station or equivalently governed reference instrument covering the same spatiotemporal cell",
+    "authorization": "after participant/report freeze, the reference authority signs task ID, configuration/participant binding, selector epoch/mode, and reference value; no worker sees the selector mode/reference before freeze",
+    "late_or_missing_reference": "if no authenticated reference is available before the configured state-update timeout, no persistent transition is installed; the existing missing-calibration semantics apply",
+    "cost_model": "if one authenticated reference costs C_ref, expected acquisition cost per task is pi*C_ref; this paper does not fabricate a measured C_ref",
+    "latency_model": "reference-acquisition latency L_ref is external to MPC timing; it affects when a calibration transition can be installed, not the cryptographic ordinary-task timing; this paper does not fabricate a measured L_ref",
+    "selection_bias": "selector depends only on immutable task ID and hidden seed, not report content, worker identity, or observed truth"
+  },
+  "decision_policy": {
+    "LOW_BUDGET_STABLE": "if 1-2% are close to 5%, state that useful evidence can persist below the frozen default; do not change default.",
+    "DEFAULT_JUSTIFIED": "if 1-2% materially degrade while 5% is stable, describe 5% as the evaluated operating point rather than an optimum.",
+    "MORE_LABELS_HELP": "if 10% is better, report that additional authenticated evidence helps; do not retune the manuscript default.",
+    "UNSTABLE": "if performance is highly unstable across seeds/budgets, narrow deployment claims and retain calibration availability as a limitation; do not introduce new budget points."
+  },
+  "forbidden_after_freeze": [
+    "change budget grid",
+    "change 5% default",
+    "select favorable selector seeds",
+    "score on rate-specific masks",
+    "add a new dataset because results are weak",
+    "claim measured reference cost/latency without measurement"
+  ],
+  "design_sha256": "7753a17fdc1870682f77b5e9f34e0c751c85571ccb3934a296e6d452274b128b"
+}

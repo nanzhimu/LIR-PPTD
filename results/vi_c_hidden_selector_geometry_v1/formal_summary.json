@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "study_id": "vi_c_geometry_v1",
+  "status": "COMPLETE",
+  "success": 720,
+  "failure": 0,
+  "analysis": {
+    "primary_contrast_count": 36,
+    "holm_family_size": 36,
+    "comparison_summary": {
+      "no_hr": {
+        "cells": 12,
+        "mean_wins": 11,
+        "mean_ties": 0,
+        "mean_losses": 1,
+        "holm_significant_wins": 11,
+        "holm_significant_losses": 0
+      },
+      "no_cw": {
+        "cells": 12,
+        "mean_wins": 3,
+        "mean_ties": 9,
+        "mean_losses": 0,
+        "holm_significant_wins": 2,
+        "holm_significant_losses": 0
+      },
+      "no_eg": {
+        "cells": 12,
+        "mean_wins": 11,
+        "mean_ties": 0,
+        "mean_losses": 1,
+        "holm_significant_wins": 8,
+        "holm_significant_losses": 1
+      }
+    },
+    "trajectory_conditions": {
+      "datasets": [
+        "dog",
+        "weather"
+      ],
+      "rho": "7/10"
+    },
+    "final_reputation_gaps": {
+      "dog": {
+        "calibration_epoch": 48,
+        "lir_pptd": 0.13224769797030683,
+        "no_eg": -0.3693024152742074
+      },
+      "weather": {
+        "calibration_epoch": 86,
+        "lir_pptd": 0.3448677801319449,
+        "no_eg": 0.013644782856772652
+      }
+    },
+    "scientific_decision": "REVIEW_AFTER_RESULT",
+    "retuning_allowed": false
+  },
+  "geometry_rule": "tau=lambda_tau*diameter_squared"
+}

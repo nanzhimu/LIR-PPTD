@@ -1,0 +1,36 @@
+{
+  "all_cases_pass": true,
+  "calibration_cases": [
+    "calibration_crash_before_decision",
+    "calibration_crash_after_prepared",
+    "calibration_crash_after_commit",
+    "calibration_duplicate_replay"
+  ],
+  "calibration_commit_semantic_transition_expected": "exactly once per participant",
+  "limitations": {
+    "application_output_payload_bytes_persisted_by_protocol_v2": false,
+    "byte_identical_retransmission_measured": false,
+    "distributed_network_failures_measured": false,
+    "semantic_mode_epoch_guard_is_experiment_adapter_over_frozen_protocol_v2": true
+  },
+  "ordinary_cases": [
+    "ordinary_crash_before_decision",
+    "ordinary_crash_after_prepared",
+    "ordinary_crash_after_commit",
+    "ordinary_postcommit_delivery_failure",
+    "ordinary_duplicate_replay"
+  ],
+  "ordinary_semantic_transition_expected": 0,
+  "scope": {
+    "distributed_e8b_used": false,
+    "mode_aware_evaluation_adapter": true,
+    "production_fault_tolerance_claim": false,
+    "production_mpc_used": false,
+    "protocol_v2_core_modified": false,
+    "single_machine_sqlite_wal": true
+  },
+  "stale_snapshot_case": "stale_ordinary_snapshot_after_calibration",
+  "state_duplication_cases": 0,
+  "study_id": "vi_f_final_evidence_gated_recovery_v1",
+  "threshold_case": "threshold_availability_boundary"
+}

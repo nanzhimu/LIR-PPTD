@@ -1,0 +1,94 @@
+{
+  "DS_source_semantics_conformance": {
+    "fixture_annotations": 126,
+    "fixture_tasks": 24,
+    "history_len_adapter": 10,
+    "history_len_reference": 10,
+    "labels_match": true,
+    "max_history_abs_diff": 4.440892098500626e-16,
+    "max_proba_abs_diff": 0.0,
+    "pass": true
+  },
+  "capabilities": [
+    50,
+    52,
+    53,
+    56,
+    69,
+    126
+  ],
+  "capability_direction_counts": {
+    "DS": {
+      "LIR_accuracy_wins": 4,
+      "LIR_macrof1_wins": 4,
+      "baseline_accuracy_wins": 2,
+      "baseline_macrof1_wins": 2
+    },
+    "LA-onepass": {
+      "LIR_accuracy_wins": 4,
+      "LIR_macrof1_wins": 4,
+      "baseline_accuracy_wins": 2,
+      "baseline_macrof1_wins": 2
+    }
+  },
+  "chronological_chunks": 5,
+  "decision": "ADVANTAGE",
+  "design_sha256": "245369b85b409c7eb0dddf8f14a79a545c7e85ab5ce47188c9f3fd16e722e507",
+  "elapsed_seconds": 280.6791090965271,
+  "equal_capability_macro": [
+    {
+      "equal_capability_macro_Accuracy": 0.9115197146748297,
+      "equal_capability_macro_MacroF1": 0.8930073668094489,
+      "method": "LIR-PPTD"
+    },
+    {
+      "equal_capability_macro_Accuracy": 0.873292417840736,
+      "equal_capability_macro_MacroF1": 0.8543255891574574,
+      "method": "DS"
+    },
+    {
+      "equal_capability_macro_Accuracy": 0.9102778850967327,
+      "equal_capability_macro_MacroF1": 0.8924896155784984,
+      "method": "LA-onepass"
+    },
+    {
+      "equal_capability_macro_Accuracy": 0.8946487689911371,
+      "equal_capability_macro_MacroF1": 0.8717799827817805,
+      "method": "MV"
+    }
+  ],
+  "external_reference_access": false,
+  "future_leakage": false,
+  "methods": [
+    "LIR-PPTD",
+    "DS",
+    "LA-onepass",
+    "MV"
+  ],
+  "schema_version": "1.0",
+  "source_provenance": {
+    "DS": {
+      "implementation": "Crowd-Kit DawidSkene source-equivalent accelerated adapter",
+      "n_iter": 10,
+      "note": "NumPy adapter follows the pinned Crowd-Kit 1.4.1 MV initialization, EM E/M steps, epsilon clipping, ELBO stopping rule, and first-max label release; conformance checked against a direct pandas translation of the pinned source on a deterministic fixture.",
+      "source_blob_sha": "65bca6b261bdc551085d79fba73389d1e533e797",
+      "source_file": "crowdkit/aggregation/classification/dawid_skene.py",
+      "tag": "v1.4.1",
+      "tol": 1e-05,
+      "version": "1.4.1"
+    },
+    "LA-onepass": {
+      "alpha": 2,
+      "beta": 2,
+      "commit": "8a4aec398872b50f7da423db6a2352cce8c34c84",
+      "implementation": "paper-faithful Python port of authors online one-pass flow",
+      "note": "Uses the authors weighted vote and immediate agreement-based ability update. Refit causally on each frozen prefix; no truth/reference input.",
+      "random_seed": 1,
+      "repository": "yyang318/LA_onepass",
+      "source_blob_sha": "ea2a587907706b5bcd2dc8946d66abb1bfd2dccb",
+      "source_file": "LA_methods/proposed/proposed_method_online.py"
+    }
+  },
+  "status": "complete",
+  "study_id": "fc2_p0b_netease_external_baselines_v1"
+}

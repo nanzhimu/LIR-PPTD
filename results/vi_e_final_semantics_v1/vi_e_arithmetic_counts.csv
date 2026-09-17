@@ -1,0 +1,5 @@
+m,lir_ordinary_tmul,lir_ordinary_tadd,fog_k10_tmul,fog_k10_tadd,tmul_reduction_percent,tadd_reduction_percent,calibration_tmul_per_event,calibration_tadd_per_event,calibration_high_level_calls_per_event,amortized_calibration_tmul_P10,amortized_calibration_tadd_P10,amortized_calibration_tmul_P20,amortized_calibration_tadd_P20,amortized_calibration_tmul_P40,amortized_calibration_tadd_P40
+20,1795,8202,3650,8640,50.821917808219176,5.069444444444445,200,560,120,20.0,56.0,10.0,28.0,5.0,14.0
+50,4405,20472,9050,21540,51.32596685082873,4.958217270194986,500,1400,300,50.0,140.0,25.0,70.0,12.5,35.0
+100,8755,40922,18050,43040,51.495844875346265,4.921003717472119,1000,2800,600,100.0,280.0,50.0,140.0,25.0,70.0
+200,17455,81822,36050,86040,51.58113730929264,4.902370990237099,2000,5600,1200,200.0,560.0,100.0,280.0,50.0,140.0

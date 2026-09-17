@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "study_id": "fc2_p0b_netease_external_baselines_v1",
+  "reviewer_concern": "C2 mature NetEaseCrowd baselines under a chronological protocol",
+  "scientific_question": "How competitive is LIR-PPTD on the complete NetEaseCrowd trace against a canonical probabilistic truth-inference method and a published online label-aggregation method when all are evaluated causally without future chunks?",
+  "dataset": {
+    "name": "NetEaseCrowd",
+    "tasks": 999799,
+    "capabilities": [
+      50,
+      52,
+      53,
+      56,
+      69,
+      126
+    ],
+    "raw_source": "official NetEaseCrowd dataset; must match FC1 dataset_audit hashes before execution"
+  },
+  "methods": [
+    {
+      "id": "LIR-PPTD",
+      "role": "candidate",
+      "definition": "canonical FC1 Full with the frozen 5% hidden selector; calibration references used only by LIR-PPTD"
+    },
+    {
+      "id": "DS",
+      "role": "canonical external probabilistic baseline",
+      "implementation": "crowd-kit DawidSkene",
+      "version": "1.4.1",
+      "n_iter": 10,
+      "reference_access": false
+    },
+    {
+      "id": "LA-onepass",
+      "role": "published online external baseline",
+      "source": "Yang et al., ACM TKDD, DOI 10.1145/3630102; authors public LA_onepass repository",
+      "implementation_policy": "pin the fetched author-repository revision and source archive hash before any primary result is produced; if environment incompatibility prevents direct execution, use a paper-faithful port of LA-onepass only, validated on author demo/synthetic fixtures, and label it as a reimplementation; do not substitute another method",
+      "reference_access": false
+    },
+    {
+      "id": "MV",
+      "role": "descriptive anchor already in manuscript",
+      "reference_access": false
+    }
+  ],
+  "chronological_protocol": {
+    "unit": "native taskset group; never split a taskset across chunks",
+    "sort_key": "taskset maximum completeTime, then tasksetId for deterministic ties",
+    "chunks": 5,
+    "chunk_balance": "greedy contiguous partition targeting equal task counts per capability while preserving tasksets",
+    "causal_rule": "for chunk j, each external baseline is run on the prefix consisting only of chunks 1..j; no future chunk annotations or truths are visible; score predictions only for non-calibration tasks in chunk j",
+    "DS_rule": "fit_predict on the current causal prefix; score only the newest chunk; this allows current-chunk unsupervised joint inference but no future information",
+    "LA_onepass_rule": "process the causal prefix in frozen task-completion order using its online one-pass flow; score only the newest chunk",
+    "calibration_handling_external": "external DS/LA-onepass/MV may see annotation rows from calibration tasks as unlabeled crowd labels but never see their ground truth/reference; calibration tasks are excluded from evaluation for every method",
+    "LIR_rule": "run the canonical chronological LIR stream once per capability and map its predictions to the same chunk/scoring partition; no refit or retuning"
+  },
+  "endpoints": [
+    "Accuracy",
+    "MacroF1"
+  ],
+  "primary_summary": "equal-capability macro Accuracy and MacroF1 over the concatenated five causal scoring chunks; also report all six capability values",
+  "uncertainty": {
+    "cluster": "native tasksetId",
+    "bootstrap_resamples": 10000,
+    "seed": 20260905,
+    "report": "paired LIR-minus-baseline Accuracy/MacroF1 deltas with percentile 95% cluster-bootstrap CIs per capability; no significance cherry-picking"
+  },
+  "official_score_policy": "official NetEase aggregate baseline scores are context only and must never be compared numerically as if they used this causal protocol",
+  "decision_policy": {
+    "COMPETITIVE": "if LIR is not materially worse on equal-capability macro metrics and capability-level intervals are mixed/non-dominating, state competitive longitudinal performance under distinct information/privacy semantics.",
+    "ADVANTAGE": "if LIR has higher macro metrics and broadly positive capability-level deltas, state a causal-protocol empirical advantage, without claiming universal SOTA.",
+    "TRADEOFF": "if DS or LA-onepass is clearly stronger, do not add baselines or tune LIR; state the observed accuracy tradeoff and position LIR on evidence authorization, privacy, persistence, and replay-safe state semantics."
+  },
+  "forbidden_after_freeze": [
+    "use future chunks",
+    "use ground truth for DS/LA-onepass training",
+    "compare official aggregate scores as same protocol",
+    "retune baseline hyperparameters on NetEase truths",
+    "drop capabilities",
+    "replace a baseline after seeing results"
+  ],
+  "design_sha256": "245369b85b409c7eb0dddf8f14a79a545c7e85ab5ce47188c9f3fd16e722e507"
+}

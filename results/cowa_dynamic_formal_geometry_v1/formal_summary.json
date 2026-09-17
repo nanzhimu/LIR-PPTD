@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "study_id": "cowa_dynamic_geometry_v1",
+  "status": "COMPLETE",
+  "analysis": {
+    "formal_holdout_replicates": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "probe_replicates_excluded_from_inference": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "primary_endpoint": "post_switch_primary_loss",
+    "by_contrast": {
+      "full_vs_cowa": {
+        "cell_count": 8,
+        "mean_first_method_wins": 5,
+        "mean_ties": 0,
+        "mean_comparator_wins": 3,
+        "holm_significant_first_method_wins": 5,
+        "holm_significant_comparator_wins": 0
+      },
+      "no_cw_vs_cowa": {
+        "cell_count": 8,
+        "mean_first_method_wins": 5,
+        "mean_ties": 0,
+        "mean_comparator_wins": 3,
+        "holm_significant_first_method_wins": 5,
+        "holm_significant_comparator_wins": 0
+      },
+      "full_vs_no_cw": {
+        "cell_count": 8,
+        "mean_first_method_wins": 1,
+        "mean_ties": 6,
+        "mean_comparator_wins": 1,
+        "holm_significant_first_method_wins": 1,
+        "holm_significant_comparator_wins": 0
+      },
+      "full_vs_no_hr": {
+        "cell_count": 8,
+        "mean_first_method_wins": 8,
+        "mean_ties": 0,
+        "mean_comparator_wins": 0,
+        "holm_significant_first_method_wins": 6,
+        "holm_significant_comparator_wins": 0
+      }
+    },
+    "categorical_full_vs_cowa": {
+      "cell_count": 6,
+      "mean_lir_wins": 4,
+      "holm_significant_lir_wins": 4,
+      "holm_significant_cowa_wins": 0
+    },
+    "secondary_endpoint_availability": {
+      "post_switch_primary_loss_cells": 8,
+      "early_post_switch_loss_cells": 8,
+      "post_calibration_alignment_cells": 6,
+      "post_calibration_alignment_unavailable_cells": [
+        "duck|benign_to_malicious",
+        "duck|malicious_to_benign"
+      ],
+      "reason": "The frozen hidden selector may yield zero post-switch calibration events on a short dataset; such cells are N/A and excluded from that endpoint's Holm family."
+    },
+    "formal_dynamic_necessity_gate_rule": {
+      "full_vs_cowa_min_mean_win_cells": 6,
+      "full_vs_cowa_min_holm_win_cells": 4,
+      "full_vs_cowa_max_holm_loss_cells": 1
+    },
+    "formal_dynamic_necessity_gate": "REVIEW_REQUIRED",
+    "retuning_allowed": false
+  },
+  "geometry_rule": "tau=lambda_tau*diameter_squared"
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "study_id": "round6_3c_c9_geometry_validation_v1",
+  "final_method": "tau=lambda_tau*diameter_squared(report_domain)",
+  "lambda_tau": "1/5",
+  "paired_runs": 1200,
+  "dimensions": [
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "rhos": [
+    0.3,
+    0.5,
+    0.7
+  ],
+  "seeds": 20,
+  "support_regimes": [
+    "binary_support",
+    "full_support"
+  ],
+  "D2_equivalence_max_abs_difference_across_reported_means": 0.0,
+  "binary_support_geometry_gap_invariance_by_rho": {
+    "0.3": {
+      "min": 0.48512660744088487,
+      "max": 0.48512660744088487,
+      "range": 0.0
+    },
+    "0.5": {
+      "min": 0.4814754614008291,
+      "max": 0.4814754614008291,
+      "range": 0.0
+    },
+    "0.7": {
+      "min": 0.48163384864572,
+      "max": 0.48163384864572,
+      "range": 0.0
+    }
+  },
+  "D32_binary_support_mean_final_reputation_gap": {
+    "ambient_dimension_scaling": 0.1739966591794626,
+    "domain_diameter_scaling": 0.48274530582914466
+  },
+  "D32_full_support_mean_accuracy": {
+    "ambient_dimension_scaling": 0.6199295058080629,
+    "domain_diameter_scaling": 0.8120507862066709
+  },
+  "analytic_one_hot_wrong_score": {
+    "diameter_squared": 2,
+    "tau_at_lambda_0_2": 0.4,
+    "q_wrong": 0.16666666666666666,
+    "q_wrong_dimension_invariant": true
+  },
+  "formal_runs_sha256": "174763ba73788b4aeb7fca7a71ab8eca8bb265e5367b43dfc33a4c57771d3db3",
+  "interpretation": "The final rule is exactly identical to ambient-dimension scaling at D=2, preserves calibration/reputation geometry across one-hot class dimension, and avoids the dimension-driven loss of categorical discriminability.",
+  "status": "COMPLETE"
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "study_id": "round6_2_multi_selector_seed_robustness_v1",
+  "purpose": "Estimate robustness uncertainty induced by hidden-calibration selector randomness, separately from malicious-worker-subset randomness, without retuning LIR-PPTD.",
+  "status": "SELECTOR_SEEDS_FROZEN_EXECUTION_PENDING",
+  "scientific_question": "Do the principal B1 robustness conclusions remain stable when the hidden task-ID calibration selector is resampled independently rather than fixed to one mask per dataset?",
+  "frozen_semantics": {
+    "selector_family": "same task-ID HMAC/PRF Bernoulli selector as the final paper",
+    "nominal_calibration_rate": 0.05,
+    "nominal_interval_label": 20,
+    "selector_seed_count_per_dataset": 20,
+    "selector_seed_reuse_from_prior_studies": false,
+    "attack_randomness_independent_of_selector_randomness": true,
+    "attack_reports_generated_before_mode_mask_consumed": true,
+    "ordinary_tasks_update_persistent_reputation": false,
+    "calibration_tasks_update_persistent_reputation": true,
+    "calibration_tasks_excluded_from_truth_scoring": true,
+    "all_methods_share_same_mask_within_selector_seed_and_paired_stream": true,
+    "algorithm_retuning": false,
+    "parameter_retuning": false,
+    "selector_seed_reselection_after_results": false
+  },
+  "datasets": [
+    "product",
+    "duck",
+    "dog",
+    "weather"
+  ],
+  "rho_grid": [
+    "1/10",
+    "3/10",
+    "1/2",
+    "7/10",
+    "9/10"
+  ],
+  "canonical_malicious_subset_contract": {
+    "standard_cells": 18,
+    "standard_subsets_per_cell": 20,
+    "weather_extreme_cells": [
+      "weather|rho=1/10",
+      "weather|rho=9/10"
+    ],
+    "weather_extreme_subsets_per_cell": 9,
+    "canonical_streams_per_selector_seed": 378,
+    "selector_seed_count": 20,
+    "planned_selector_stream_pairs": 7560
+  },
+  "methods": {
+    "primary": [
+      "lir_pptd",
+      "crh",
+      "pptd_liang"
+    ],
+    "secondary": [
+      "tqpp_liu"
+    ],
+    "note": "CRH/PPTD/TQPP predictions may be cached across selector seeds only if metrics are recomputed on each seed-specific ordinary-task scoring mask. LIR-PPTD must rerun because selector membership changes the persistent reputation trajectory."
+  },
+  "primary_estimand": {
+    "unit": "selector seed",
+    "definition": "For each dataset-rho-comparator cell and selector seed s, average paired loss deltas across the canonical malicious-worker subsets: Delta_bar_s = mean_j(L_LIR,s,j - L_comp,s,j).",
+    "outputs": [
+      "mean_of_seed_means",
+      "median_seed_mean",
+      "between_seed_sd",
+      "seed_win_tie_loss_counts",
+      "95_percent_bootstrap_CI_over_selector_seeds",
+      "exact_two_sided_seed_level_sign_flip_p",
+      "Holm_adjusted_p_within_each_comparator_family"
+    ]
+  },
+  "secondary_hierarchical_inference": {
+    "bootstrap_resamples": 10000,
+    "procedure": "Nested bootstrap: resample selector seeds with replacement, then resample malicious subsets within each selected seed; report grand paired loss-delta CI.",
+    "variance_outputs": [
+      "between_selector_seed_variance_of_seed_means",
+      "mean_within_selector_seed_malicious_subset_variance",
+      "descriptive_between_seed_variance_share"
+    ],
+    "warning": "The variance share is descriptive and is not labeled a formal ICC under unbalanced cells."
+  },
+  "multiplicity": {
+    "crh_family_cells": 20,
+    "pptd_family_cells": 20,
+    "tqpp_family_cells": 20,
+    "families_kept_separate": true,
+    "holm_input": "seed-level p-values only"
+  },
+  "closure_gates": [
+    "20 fresh selector seeds per dataset are commitment-frozen before outcome inspection",
+    "all planned selector-stream pairs finish or every failure is retained and reported",
+    "no selector seed is removed, replaced, or rerun based on performance",
+    "selector randomness and malicious-subset randomness are independent",
+    "paired methods use the same realized calibration/scoring mask",
+    "no algorithm or parameter is retuned",
+    "Duck calibration-count distribution is reported explicitly",
+    "primary inference treats selector seed as the outer randomization unit"
+  ],
+  "interpretation_policy": {
+    "if_consistent": "Strengthen robustness evidence by reporting selector-seed stability and retain existing bounded claims.",
+    "if_mixed": "Retain results and narrow claims to regimes stable across selector seeds; do not search for a better seed.",
+    "if_reversed": "Treat the reviewer concern as validated and revise the manuscript accordingly; do not retune the selector or algorithm within this study."
+  },
+  "required_outputs": [
+    "selector_commitments.json",
+    "selector_private_seeds.json (private during execution)",
+    "selector_retired_audit.json",
+    "formal_runs.jsonl",
+    "selector_count_summary.csv",
+    "seed_level_deltas.csv",
+    "multi_selector_cell_summary.csv",
+    "hierarchical_bootstrap_summary.csv",
+    "variance_decomposition.csv",
+    "multi_selector_formal_summary.json"
+  ],
+  "preexecution_seed_freeze": {
+    "public_commitments_sha256": "1bf59b5e6d94e12bb317af53afae04c7c099d8604a7079cea5b6cee7cd284192",
+    "private_seed_manifest_sha256": "f360a03dcc01f5ae850b7c6a4ccdc3fdf45be84e0acccb62a8985a962b793a22",
+    "seed_rows": 80,
+    "note": "These 80 seeds were generated and commitment-frozen before any Round 6-2 performance outcome existed. Use these exact seeds; do not regenerate them."
+  }
+}

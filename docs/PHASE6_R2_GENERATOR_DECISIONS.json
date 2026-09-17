@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0",
+  "decision_id": "phase6_r2_generator_decisions_v1",
+  "decision_type": "human_preimplementation_freeze",
+  "phase": 6,
+  "revision": 2,
+  "scope": {
+    "purpose": "close deterministic synthetic empirical execution contract before implementation",
+    "final_test_access": "blocked_not_active",
+    "final_test_materialization": "prohibited",
+    "production_mpc": "blocked_not_active",
+    "real_data_empirical": "blocked_not_active",
+    "distributed_e8b": "blocked_not_active"
+  },
+  "split_policy": {
+    "validation": {
+      "seed_start": 1001,
+      "seed_end": 1030
+    },
+    "formal_candidate": {
+      "seed_start": 2001,
+      "seed_end": 2030
+    },
+    "final_test": {
+      "status": "blocked_not_active",
+      "exact_seeds": [],
+      "future_rule": "Phase9 r2 freezes seeds 3001..(3000+N_final) only after Phase8 r2 freezes N_final"
+    },
+    "require_pairwise_disjoint": true
+  },
+  "rng": {
+    "algorithm": "sha256_namespace_stateless_v1",
+    "version_namespace": "lir-pptd-phase6-r2-v1",
+    "master_seed_type": "nonnegative_integer",
+    "uniform_mapping": "big_endian_uint256_div_2pow256",
+    "normal_mapping": "box_muller_from_two_independent_labeled_uniforms",
+    "global_random_state_prohibited": true,
+    "time_based_seed_prohibited": true,
+    "unordered_traversal_prohibited": true,
+    "thread_dependent_randomness_prohibited": true,
+    "namespace_examples": [
+      "truth/<task_id>/<r>/<dimension>",
+      "honest_noise/<task_id>/<r>/<worker_id>/<dimension>",
+      "categorical_report/<task_id>/<r>/<worker_id>",
+      "malicious_identity/<rho_m>/<worker_id>",
+      "attack/<family>/<task_id>/<r>/<worker_id>",
+      "warm_prefix/<task_id>/<r>/<worker_id>"
+    ]
+  },
+  "worker_contract": {
+    "worker_pool_size": 20,
+    "participants_per_scored_task": 20,
+    "worker_ids": "w000..w019",
+    "participation_policy": "all_workers_participate_in_every_synthetic_accuracy_task",
+    "worker_identity_persistent_across_stream": true,
+    "eligible_pool": "all_20_workers",
+    "minimum_activity_rule": "participates_in_100_percent_of_scored_tasks",
+    "insufficient_pool_policy": "fail_closed"
+  },
+  "stream_contract": {
+    "scored_tasks_per_seed_per_condition": 100,
+    "equal_length_across_seeds": true,
+    "accuracy_denominator": "all_100_preconstructed_scored_tasks; runtime failure never changes denominator",
+    "warm_prefix_candidates": [
+      10,
+      20,
+      30
+    ],
+    "warm_prefix_selection_rule": "Phase8 validation-only minimum primary loss; ties choose shorter prefix",
+    "warm_prefix_attack_free": true,
+    "warm_prefix_primary_endpoint_scored": false,
+    "warm_prefix_advances_on_off_state": false,
+    "cold_start_reputation": "frozen c0",
+    "warm_start_suffix": "identical scored suffix as paired cold-start condition"
+  },
+  "numerical_generator": {
+    "dimension": 5,
+    "normalized_domain": "[0,1]^5",
+    "raw_external_normalization": "not_applicable_for_synthetic_generator",
+    "honest_noise_distribution": "Normal(0,0.05)",
+    "domain_enforcement": "clip generator-produced honest numerical values to [0,1]; attack outputs validated separately",
+    "persistent_worker_bias": "none",
+    "synthetic_num_small": {
+      "truth": "iid Uniform(0.25,0.75)^5 across tasks"
+    },
+    "synthetic_num_shifted": {
+      "truth_tasks_1_50": "iid Uniform(0.20,0.50)^5",
+      "truth_tasks_51_100": "iid Uniform(0.50,0.80)^5"
+    },
+    "synthetic_num_longitudinal": {
+      "initial_truth": "Uniform(0.25,0.75)^5",
+      "transition": "previous_truth + Normal(0,0.03)^5",
+      "projection": "coordinatewise clip to [0.10,0.90]"
+    }
+  },
+  "categorical_generator": {
+    "binary_vocabulary": [
+      "class_0",
+      "class_1"
+    ],
+    "serialization": {
+      "class_0": [
+        1,
+        0
+      ],
+      "class_1": [
+        0,
+        1
+      ]
+    },
+    "synthetic_cat_binary": {
+      "truth_prior": {
+        "class_0": "0.5",
+        "class_1": "0.5"
+      },
+      "honest_correct_probability": "0.95",
+      "incorrect_report": "the other binary class"
+    },
+    "synthetic_cat_tie": {
+      "purpose": "controlled categorical tie stress stream",
+      "participants": 20,
+      "report_construction": "exactly 10 class_0 and 10 class_1 reports per scored task",
+      "reporter_partition": "seed-and-task deterministic hash ranking; first 10 class_0, remaining 10 class_1",
+      "truth_sequence": "odd task index class_0; even task index class_1",
+      "tie_stage": "initial equal-weight aggregate",
+      "tie_break": "minimum category index"
+    }
+  },
+  "malicious_identity_contract": {
+    "rho_grid": [
+      "0",
+      "1/10",
+      "3/10",
+      "1/2",
+      "7/10",
+      "9/10"
+    ],
+    "eligible_worker_count": 20,
+    "malicious_counts": {
+      "0": 0,
+      "1/10": 2,
+      "3/10": 6,
+      "1/2": 10,
+      "7/10": 14,
+      "9/10": 18
+    },
+    "selection": "rank all eligible worker IDs by SHA256 namespace malicious_identity/<rho_m>/<worker_id> and select the first required count",
+    "fixed_within_paired_stream": true,
+    "shared_across_methods": true
+  },
+  "attack_contract": {
+    "random_numerical": "independent Uniform([0,1]^D)",
+    "random_categorical": "uniform over all vocabulary labels",
+    "fixed_target_numerical": {
+      "candidate_targets": [
+        "all_zero_vector",
+        "all_one_vector"
+      ],
+      "selection_phase": 8,
+      "selection_data": "validation_only",
+      "selection_rule": "choose candidate with larger mean L2 distance from validation ground truths; ties choose all_zero_vector",
+      "test_truth_independent": true
+    },
+    "fixed_target_categorical": {
+      "candidate_targets": [
+        "class_0",
+        "class_1"
+      ],
+      "selection_phase": 8,
+      "selection_data": "validation_only",
+      "selection_rule": "choose candidate with larger validation ground-truth disagreement rate; ties choose class_0",
+      "test_truth_independent": true
+    },
+    "oracle_numerical": {
+      "delta_candidates_times_sqrt_D": [
+        "0.1",
+        "0.25",
+        "0.5",
+        "1.0"
+      ],
+      "direction": "unit vector from archived attack namespace",
+      "projection": "[0,1]^D",
+      "always_report_as": "oracle_assisted"
+    },
+    "oracle_categorical": {
+      "variants": [
+        "uniform_over_incorrect_labels",
+        "deterministic_minimum_index_incorrect_label"
+      ],
+      "always_report_as": "oracle_assisted"
+    },
+    "on_off": {
+      "block_length_candidates_actual_malicious_participations": [
+        1,
+        2,
+        5,
+        10
+      ],
+      "pattern": "equal benign block followed by equal attack block",
+      "duty_cycle": "1/2",
+      "initial_phase": "benign",
+      "state_advances_only_on_actual_malicious_worker_scored_suffix_participation": true,
+      "warm_prefix_advances_state": false,
+      "recovery_neighborhood": "absolute difference from matched attack-free control <= 0.05",
+      "hold_length": 5,
+      "censoring_horizon_scored_tasks": 100
+    }
+  },
+  "baseline_contract": {
+    "mean_vote": {
+      "numerical": "coordinatewise unweighted arithmetic mean over participating reports",
+      "categorical": "unweighted sum of one-hot reports followed by argmax; ties choose minimum category index",
+      "hyperparameters": "none"
+    },
+    "crh": {
+      "variant_id": "crh_plaintext_frozen_v1",
+      "initial_truth": "unweighted arithmetic mean",
+      "distance": "sum of squared Euclidean coordinate differences",
+      "weight": "-log(max(distance_i,beta_min)/sum_j max(distance_j,beta_min))",
+      "truth_update": "weighted arithmetic mean",
+      "categorical_adaptation": "apply the same vector CRH rule to one-hot reports and release argmax with minimum-index tie break",
+      "beta_min": "1e-12",
+      "convergence_tolerance": "1e-10",
+      "maximum_iterations": 50,
+      "zero_or_nonfinite_denominator": "fail_closed",
+      "plaintext_only_for_algorithmic_accuracy": true
+    },
+    "fptd": "blocked_not_active_without_audited_manifest",
+    "tqpp": "blocked_not_active_without_matched_reproducible_implementation"
+  },
+  "recovery_contract": {
+    "synthetic_recovery_task": "protocol_only",
+    "included_in_accuracy_denominator": false,
+    "fault_profile": "phase5_e8a_frozen_fault_profile",
+    "backend": "sqlite_wal_single_process",
+    "production_extension_prohibited": true,
+    "distributed_e8b_prohibited": true
+  },
+  "artifact_contract": {
+    "canonical_json": true,
+    "stream_manifest_required": true,
+    "required_stream_fields": [
+      "schema_version",
+      "generator_version",
+      "split",
+      "paired_seed",
+      "task_family",
+      "task_count",
+      "worker_ids",
+      "generator_config_hash",
+      "task_artifact_hashes"
+    ],
+    "required_task_fields": [
+      "task_id",
+      "task_index",
+      "modality",
+      "dimension_or_vocabulary",
+      "ground_truth",
+      "participant_ids",
+      "reports",
+      "malicious_ids",
+      "attack_id",
+      "attack_state",
+      "source_seed",
+      "generator_namespace"
+    ],
+    "raw_hash": "SHA256 canonical generated task artifact",
+    "processed_hash": "SHA256 canonical validated task artifact"
+  },
+  "phase6_readiness_gate": {
+    "reject_active_scope_markers": [
+      "blocked_requires_human_parameter_decision",
+      "blocked_requires_manual_baseline_audit",
+      "not_applicable_generated_on_demand",
+      "requires_human",
+      "unresolved"
+    ],
+    "reject_missing_active_implementation": true,
+    "reject_missing_active_implementation_hash": true,
+    "allow_blocked_not_active_only_for": [
+      "production_mpc",
+      "real_data_empirical",
+      "distributed_e8b",
+      "fptd_without_audited_manifest",
+      "tqpp_without_matched_reproducible_implementation"
+    ],
+    "ready_for_human_review_only_if_all_active_fields_resolved": true
+  },
+  "public_artifact_provenance": {
+    "source_original_sha256": "321a32ca9c1f6339d5ca15fc3ff73235e75c772734390e6e145b8212d5d351b4",
+    "note": "Semantic public compatibility snapshot reconstructed from the archived frozen decision record. It preserves released-code decision fields; it is not claimed byte-identical to the historical source file."
+  }
+}

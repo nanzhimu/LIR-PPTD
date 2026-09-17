@@ -1,0 +1,12 @@
+﻿gate,requirement,evidence_path,result,status
+A,Active algorithm defaults to geometry scaling,docs/GEO_TAU_FINAL_INTEGRATION_CODE_AUDIT.md,geometry default; 0 direct active lambda_tau*D,PASS
+B,Numerical/binary equivalence preserved,analysis/geo_tau/equivalence_numeric_binary.csv,40/40 PASS; all max diffs 0,PASS
+C,All Dog experiments used by the active paper are synchronized,results/geo_tau_final_secondary,"main/attack/ablation/reputation geometry canonical; sensitivity 560/560; calibration 200/200; order 200/200; behavior-switch geometry bound; selector Dog geometry 2000/2000 and merged 30,240 rows",PASS
+D,NetEase domain audit and required rerun closure,analysis/geo_tau_final/netease_domain_audit.csv,six capabilities D=3 one-hot; C10 full geometry rerun; 2850 current-path comparisons 0 mismatch,PASS
+E,11 near-tie fixed-point release semantics closed,analysis/geo_tau_final/near_tie_fixed_point_mpc_audit.md,11/11 fixed-point matches formal release; 11/11 semantic Shamir MPC matches fixed-point,PASS
+F,MP-SPDZ consumes unified resolved tau,analysis/geo_tau_final/primitive_count_equivalence.md,hard-coded TAU removed; ordinary/calibration use one resolved public tau,PASS
+G,Fixed-point range/error certificate updated,src/lir_pptd/fixedpoint/range_analysis.py,"B_d=diam^2(X): numerical D, categorical 2; focused tests PASS",PASS
+H,Primitive count/complexity consistent with new formula,analysis/geo_tau_final/primitive_count_equivalence.csv,representative D=4 traces identical in legacy/geometry; no new secure branch,PASS
+I,Active paper legacy-tau results replaced or explicitly marked,analysis/geo_tau_final/paper_result_consistency.csv,24/24 verified including geometry-final selector robustness; 0 pending,PASS
+J,Obsolete D<=4/extension-only narratives removed,analysis/geo_tau_final/legacy_tau_occurrences.csv,844 occurrences classified; 0 pending; banned final-paper phrases absent,PASS
+K,Final manifest/artifact closure,PUBLIC_ARTIFACT_MANIFEST + final_integration_manifest,C12 corrective artifact manifest and fresh-unzip verifier bound at final closure,PASS

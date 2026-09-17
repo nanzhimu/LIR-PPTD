@@ -1,0 +1,129 @@
+{
+  "calibration": [
+    {
+      "amortized_calls_per_task_P10": 12.0,
+      "amortized_calls_per_task_P20": 6.0,
+      "amortized_calls_per_task_P40": 3.0,
+      "amortized_time_ms_per_task_P10": 0.1368686666666667,
+      "amortized_time_ms_per_task_P20": 0.06843433333333335,
+      "amortized_time_ms_per_task_P40": 0.034217166666666674,
+      "calibration_tail_mean_ms": 1.3686866666666668,
+      "ci95_high_ms": 1.3976433333333333,
+      "ci95_low_ms": 1.3426633333333333,
+      "high_level_calls_per_event": 120,
+      "m": 20,
+      "n": 30
+    },
+    {
+      "amortized_calls_per_task_P10": 30.0,
+      "amortized_calls_per_task_P20": 15.0,
+      "amortized_calls_per_task_P40": 7.5,
+      "amortized_time_ms_per_task_P10": 0.532111,
+      "amortized_time_ms_per_task_P20": 0.2660555,
+      "amortized_time_ms_per_task_P40": 0.13302775,
+      "calibration_tail_mean_ms": 5.32111,
+      "ci95_high_ms": 5.946153333333333,
+      "ci95_low_ms": 4.705276666666666,
+      "high_level_calls_per_event": 300,
+      "m": 50,
+      "n": 30
+    },
+    {
+      "amortized_calls_per_task_P10": 60.0,
+      "amortized_calls_per_task_P20": 30.0,
+      "amortized_calls_per_task_P40": 15.0,
+      "amortized_time_ms_per_task_P10": 0.9251506666666666,
+      "amortized_time_ms_per_task_P20": 0.4625753333333333,
+      "amortized_time_ms_per_task_P40": 0.23128766666666664,
+      "calibration_tail_mean_ms": 9.251506666666666,
+      "ci95_high_ms": 10.452113333333333,
+      "ci95_low_ms": 8.108556666666665,
+      "high_level_calls_per_event": 600,
+      "m": 100,
+      "n": 30
+    },
+    {
+      "amortized_calls_per_task_P10": 120.0,
+      "amortized_calls_per_task_P20": 60.0,
+      "amortized_calls_per_task_P40": 30.0,
+      "amortized_time_ms_per_task_P10": 1.9735496666666665,
+      "amortized_time_ms_per_task_P20": 0.9867748333333333,
+      "amortized_time_ms_per_task_P40": 0.49338741666666663,
+      "calibration_tail_mean_ms": 19.735496666666666,
+      "ci95_high_ms": 22.153763333333334,
+      "ci95_low_ms": 17.39832666666667,
+      "high_level_calls_per_event": 1200,
+      "m": 200,
+      "n": 30
+    }
+  ],
+  "claim_scope": {
+    "calibration": "tail arithmetic only; excludes protocol storage/resharing/network and does not equal total task runtime",
+    "runtime": "same local benchmark-only 521-bit minimal Shamir kernel; not production-network latency",
+    "tqpp": "structural comparator only; no numeric speedup claimed"
+  },
+  "external": [
+    {
+      "delta_ci95_high_ms": 2.5818633333333336,
+      "delta_ci95_low_ms": 2.0381766666666667,
+      "fog_mean_ms": 13.469106666666669,
+      "fog_minus_lir_mean_ms": 2.2959833333333335,
+      "fog_wins": 0,
+      "holm_p": 7.450580596923828e-09,
+      "lir_mean_ms": 11.173123333333333,
+      "lir_wins": 30,
+      "m": 20,
+      "n_pairs": 30,
+      "raw_sign_p": 1.862645149230957e-09,
+      "runtime_reduction_percent": 17.046292602429467,
+      "ties": 0
+    },
+    {
+      "delta_ci95_high_ms": 10.028783333333331,
+      "delta_ci95_low_ms": 7.054389999999999,
+      "fog_mean_ms": 50.34250333333333,
+      "fog_minus_lir_mean_ms": 8.498896666666667,
+      "fog_wins": 0,
+      "holm_p": 7.450580596923828e-09,
+      "lir_mean_ms": 41.843606666666666,
+      "lir_wins": 30,
+      "m": 50,
+      "n_pairs": 30,
+      "raw_sign_p": 1.862645149230957e-09,
+      "runtime_reduction_percent": 16.88214948389204,
+      "ties": 0
+    },
+    {
+      "delta_ci95_high_ms": 15.972483333333336,
+      "delta_ci95_low_ms": 6.622470000000002,
+      "fog_mean_ms": 91.84652,
+      "fog_minus_lir_mean_ms": 11.59339,
+      "fog_wins": 2,
+      "holm_p": 8.67992639541626e-07,
+      "lir_mean_ms": 80.25313,
+      "lir_wins": 28,
+      "m": 100,
+      "n_pairs": 30,
+      "raw_sign_p": 8.67992639541626e-07,
+      "runtime_reduction_percent": 12.622568606845414,
+      "ties": 0
+    },
+    {
+      "delta_ci95_high_ms": 46.09957333333334,
+      "delta_ci95_low_ms": 23.112196666666673,
+      "fog_mean_ms": 194.95873333333333,
+      "fog_minus_lir_mean_ms": 34.62819,
+      "fog_wins": 1,
+      "holm_p": 1.1548399925231934e-07,
+      "lir_mean_ms": 160.33054333333337,
+      "lir_wins": 29,
+      "m": 200,
+      "n_pairs": 30,
+      "raw_sign_p": 5.774199962615967e-08,
+      "runtime_reduction_percent": 17.76180497684808,
+      "ties": 0
+    }
+  ],
+  "schema_version": "1.0",
+  "study_id": "vi_e_final_evidence_gated_efficiency_v1"
+}

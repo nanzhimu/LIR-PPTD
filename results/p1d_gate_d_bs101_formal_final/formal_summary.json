@@ -1,0 +1,89 @@
+{
+  "batch_size": 101,
+  "cells": {
+    "calibration_m100": {
+      "approx_rounds_median": 10279.0,
+      "client_wall_mean": 9.319548608599508,
+      "client_wall_median": 9.325173256496782,
+      "client_wall_p95": 9.44819864299643,
+      "global_data_sent_mb_median": 661.142,
+      "max_abs_error": 7.816927338755164e-08,
+      "n": 20
+    },
+    "calibration_m20": {
+      "approx_rounds_median": 2190.0,
+      "client_wall_mean": 2.0135971912495734,
+      "client_wall_median": 2.018826204002835,
+      "client_wall_p95": 2.0474309519995586,
+      "global_data_sent_mb_median": 134.282,
+      "max_abs_error": 7.401472146284505e-08,
+      "n": 20
+    },
+    "calibration_m200": {
+      "approx_rounds_median": 20393.0,
+      "client_wall_mean": 18.15874409845019,
+      "client_wall_median": 18.158147116500913,
+      "client_wall_p95": 18.234579303003557,
+      "global_data_sent_mb_median": 1319.81,
+      "max_abs_error": 6.264994956151071e-08,
+      "n": 20
+    },
+    "calibration_m50": {
+      "approx_rounds_median": 5219.0,
+      "client_wall_mean": 4.86350035745163,
+      "client_wall_median": 4.825150897002459,
+      "client_wall_p95": 4.973393448002753,
+      "global_data_sent_mb_median": 331.633,
+      "max_abs_error": 8.267746232082374e-08,
+      "n": 20
+    },
+    "ordinary_m100": {
+      "approx_rounds_median": 86492.0,
+      "client_wall_mean": 87.68912132149998,
+      "client_wall_median": 87.39952737050044,
+      "client_wall_p95": 89.23774993499683,
+      "global_data_sent_mb_median": 6624.92,
+      "max_abs_error": 4.387043656128853e-08,
+      "n": 20
+    },
+    "ordinary_m20": {
+      "approx_rounds_median": 19417.0,
+      "client_wall_mean": 18.334725324800456,
+      "client_wall_median": 18.294006735999574,
+      "client_wall_p95": 18.561990005000553,
+      "global_data_sent_mb_median": 1370.12,
+      "max_abs_error": 4.575982848198379e-08,
+      "n": 20
+    },
+    "ordinary_m200": {
+      "approx_rounds_median": 170342.0,
+      "client_wall_mean": 169.56082945585004,
+      "client_wall_median": 169.5219147300013,
+      "client_wall_p95": 170.46913162899727,
+      "global_data_sent_mb_median": 13193.7,
+      "max_abs_error": 3.587310637431784e-08,
+      "n": 20
+    },
+    "ordinary_m50": {
+      "approx_rounds_median": 44567.0,
+      "client_wall_mean": 44.066262629201084,
+      "client_wall_median": 44.13968877050138,
+      "client_wall_p95": 44.26992037900345,
+      "global_data_sent_mb_median": 3340.52,
+      "max_abs_error": 4.428725930427646e-08,
+      "n": 20
+    }
+  },
+  "correctness_failures": 0,
+  "deployment": "4vm_vpc_3compute_1requester",
+  "formal_configuration_id": "aliyun_batch101_final",
+  "formal_runs": 200,
+  "logical_parties": 10,
+  "measured_runs": 160,
+  "party_placement": "4+3+3",
+  "physical_or_virtual_hosts_for_mpc": 3,
+  "requester_hosts": 1,
+  "schema_version": "1.1",
+  "study_id": "p1d_mpspdz_real_e2e_v1",
+  "unused_triples_warning_runs": 0
+}

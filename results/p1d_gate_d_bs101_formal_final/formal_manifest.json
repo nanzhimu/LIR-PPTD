@@ -1,0 +1,28 @@
+{
+  "batch_size": 101,
+  "formal_configuration_id": "aliyun_batch101_final",
+  "hygiene_proof_sha256": "6b8f25a6893dacdb443db01e5638003a37cb9c31cacbdc64442e5d2c031fb409",
+  "logical_parties": 10,
+  "m_values": [
+    20,
+    50,
+    100,
+    200
+  ],
+  "measured_per_cell": 20,
+  "measured_runs": 160,
+  "mpspdz_commit": "26a605368e40fed3a7e9cee78c9a3f4390b85eb5",
+  "mpspdz_max_corrupted_T": 3,
+  "mpspdz_source_sha256": "82c93103852a4c4c1053060f117c20fe0f0d6ad0b9ba4808b226b2dc89d93ab3",
+  "mpspdz_tag": "v0.4.3",
+  "paper_reconstruction_threshold": 4,
+  "party_placement": "4+3+3",
+  "paths": [
+    "ordinary",
+    "calibration"
+  ],
+  "schema_version": "1.0",
+  "study_id": "p1d_mpspdz_real_e2e_v1",
+  "total_runs": 200,
+  "warmups_per_cell": 5
+}

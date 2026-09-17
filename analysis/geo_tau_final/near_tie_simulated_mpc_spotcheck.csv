@@ -1,0 +1,12 @@
+﻿rho,replicate,task_id,fixed_point_release_label,simulated_shamir_release_label,match,fixed_tie,exact_tie,quantization_induced_release_difference
+1/10,8,dog:711,0,0,True,True,True,False
+1/2,9,dog:273,0,0,True,True,False,True
+3/10,3,dog:273,0,0,True,True,False,True
+3/10,6,dog:342,0,0,True,True,True,True
+3/10,9,dog:711,0,0,True,True,True,False
+3/10,12,dog:715,2,2,True,True,True,False
+3/10,18,dog:715,2,2,True,True,True,False
+7/10,1,dog:35,0,0,True,True,True,False
+7/10,12,dog:299,0,0,True,True,True,False
+7/10,13,dog:278,2,2,True,True,True,True
+9/10,9,dog:715,0,0,True,True,True,False

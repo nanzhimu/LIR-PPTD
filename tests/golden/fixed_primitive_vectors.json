@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0-public-artifact-regression",
+  "vectors": [
+    {
+      "vector_id": "pub_encoding_half",
+      "category": "encoding",
+      "primitive": "encoding",
+      "profile_id": "l2-plaintext-f24-v1",
+      "source_reference": "public-artifact-regression",
+      "semantic_inputs": {
+        "value": "1/2",
+        "bound": "1"
+      },
+      "encoded_inputs": {},
+      "intermediate_integers": [
+        8388608
+      ],
+      "truncation_points": [
+        "signed truncation toward zero"
+      ],
+      "expected_output_integer": 8388608,
+      "expected_decoded_output": "8388608/16777216",
+      "certified_error_bound": "0",
+      "expected_status": "passed",
+      "expected_reason_code": null
+    },
+    {
+      "vector_id": "pub_add_quarters",
+      "category": "arithmetic",
+      "primitive": "local_add",
+      "profile_id": "l2-plaintext-f24-v1",
+      "source_reference": "public-artifact-regression",
+      "semantic_inputs": {},
+      "encoded_inputs": {
+        "a": 4194304,
+        "b": 4194304
+      },
+      "intermediate_integers": [
+        8388608
+      ],
+      "truncation_points": [],
+      "expected_output_integer": 8388608,
+      "expected_decoded_output": "8388608/16777216",
+      "certified_error_bound": "0",
+      "expected_status": "passed",
+      "expected_reason_code": null
+    },
+    {
+      "vector_id": "pub_sub_three_quarter",
+      "category": "arithmetic",
+      "primitive": "local_sub",
+      "profile_id": "l2-plaintext-f24-v1",
+      "source_reference": "public-artifact-regression",
+      "semantic_inputs": {},
+      "encoded_inputs": {
+        "a": 12582912,
+        "b": 4194304
+      },
+      "intermediate_integers": [
+        8388608
+      ],
+      "truncation_points": [],
+      "expected_output_integer": 8388608,
+      "expected_decoded_output": "8388608/16777216",
+      "certified_error_bound": "0",
+      "expected_status": "passed",
+      "expected_reason_code": null
+    },
+    {
+      "vector_id": "pub_mul_halves",
+      "category": "arithmetic",
+      "primitive": "SecMulPositive",
+      "profile_id": "l2-plaintext-f24-v1",
+      "source_reference": "public-artifact-regression",
+      "semantic_inputs": {},
+      "encoded_inputs": {
+        "a": 8388608,
+        "b": 8388608
+      },
+      "intermediate_integers": [
+        70368744177664,
+        0
+      ],
+      "truncation_points": [
+        "floor raw product / Delta"
+      ],
+      "expected_output_integer": 4194304,
+      "expected_decoded_output": "4194304/16777216",
+      "certified_error_bound": "1/16777216",
+      "expected_status": "passed",
+      "expected_reason_code": null
+    },
+    {
+      "vector_id": "pub_square_neg_half",
+      "category": "arithmetic",
+      "primitive": "SecSqr",
+      "profile_id": "l2-plaintext-f24-v1",
+      "source_reference": "public-artifact-regression",
+      "semantic_inputs": {},
+      "encoded_inputs": {
+        "a": -8388608
+      },
+      "intermediate_integers": [
+        70368744177664,
+        0
+      ],
+      "truncation_points": [
+        "floor square / Delta"
+      ],
+      "expected_output_integer": 4194304,
+      "expected_decoded_output": "4194304/16777216",
+      "certified_error_bound": "1/16777216",
+      "expected_status": "passed",
+      "expected_reason_code": null
+    },
+    {
+      "vector_id": "pub_pubmul_halves",
+      "category": "arithmetic",
+      "primitive": "PubMulPositive",
+      "profile_id": "l2-plaintext-f24-v1",
+      "source_reference": "public-artifact-regression",
+      "semantic_inputs": {},
+      "encoded_inputs": {
+        "a": 8388608,
+        "gamma": 8388608,
+        "strict_positive": 1
+      },
+      "intermediate_integers": [
+        70368744177664,
+        0
+      ],
+      "truncation_points": [
+        "floor public product / Delta"
+      ],
+      "expected_output_integer": 4194304,
+      "expected_decoded_output": "4194304/16777216",
+      "certified_error_bound": "1/16777216",
+      "expected_status": "passed",
+      "expected_reason_code": null
+    },
+    {
+      "vector_id": "pub_div_quarter_half",
+      "category": "arithmetic",
+      "primitive": "DivPositive",
+      "profile_id": "l2-plaintext-f24-v1",
+      "source_reference": "public-artifact-regression",
+      "semantic_inputs": {},
+      "encoded_inputs": {
+        "u": 4194304,
+        "v": 8388608,
+        "lower": 1,
+        "upper": 16777216
+      },
+      "intermediate_integers": [
+        70368744177664,
+        0
+      ],
+      "truncation_points": [
+        "floor u*Delta/v"
+      ],
+      "expected_output_integer": 8388608,
+      "expected_decoded_output": "8388608/16777216",
+      "certified_error_bound": "1/16777216",
+      "expected_status": "passed",
+      "expected_reason_code": null
+    },
+    {
+      "vector_id": "pub_reputation_half",
+      "category": "reputation",
+      "primitive": "reputation",
+      "profile_id": "l2-plaintext-f24-v1",
+      "source_reference": "public-artifact-regression",
+      "semantic_inputs": {
+        "eta": "1/10",
+        "kappa": "2"
+      },
+      "encoded_inputs": {
+        "c": 8388608,
+        "q": 8388608
+      },
+      "intermediate_integers": [
+        4194304,
+        6710886,
+        838860,
+        419430,
+        7969176
+      ],
+      "truncation_points": [
+        "c*q",
+        "three public products"
+      ],
+      "expected_output_integer": 7969176,
+      "expected_decoded_output": "7969176/16777216",
+      "certified_error_bound": "implementation-grid-exact",
+      "expected_status": "passed",
+      "expected_reason_code": null
+    }
+  ]
+}

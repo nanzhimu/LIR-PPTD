@@ -1,0 +1,268 @@
+{
+  "binding_sha256": "9e8ab59d278f722dbe163a05d80728d4c3ec46c2a13052eac3a8899ddbbe0ad6",
+  "case_count": 12,
+  "cases": [
+    {
+      "all_pass": true,
+      "case_id": "ordinary_crash_before_decision",
+      "expected_result": "Abort/restart outcome; no semantic reputation transition",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "Ordinary predecision recovery aborted/restartable; semantic reputation epoch unchanged",
+      "paper_label": "Ordinary: crash before durable decision",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": 0.00151573,
+        "median_seconds": 0.00143225,
+        "p25_seconds": 0.00134355,
+        "p75_seconds": 0.0015658500000000001,
+        "p95_seconds": 0.0019856499999999994
+      }
+    },
+    {
+      "all_pass": true,
+      "case_id": "ordinary_crash_after_prepared",
+      "expected_result": "RecoveryNoDecision Abort; no semantic reputation transition",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "Ordinary Prepared-without-decision recovered to Abort; semantic reputation epoch unchanged",
+      "paper_label": "Ordinary: crash after Prepared",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": 0.0032385466666666664,
+        "median_seconds": 0.00303595,
+        "p25_seconds": 0.002684225,
+        "p75_seconds": 0.0032302999999999998,
+        "p95_seconds": 0.005362594999999997
+      }
+    },
+    {
+      "all_pass": true,
+      "case_id": "ordinary_crash_after_commit",
+      "expected_result": "Commit preserved; log repair idempotent; semantic reputation unchanged",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "Ordinary Commit preserved and core logs repaired idempotently; semantic reputation epoch unchanged",
+      "paper_label": "Ordinary: crash after Commit",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": 0.0026101933333333334,
+        "median_seconds": 0.0025360499999999998,
+        "p25_seconds": 0.00236715,
+        "p75_seconds": 0.002766975,
+        "p95_seconds": 0.0032860899999999993
+      }
+    },
+    {
+      "all_pass": true,
+      "case_id": "ordinary_postcommit_delivery_failure",
+      "expected_result": "Commit preserved; delivery metadata stable; semantic reputation unchanged",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "Ordinary Commit and delivery metadata preserved; semantic reputation epoch unchanged",
+      "paper_label": "Ordinary: postcommit delivery failure",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": 0.0019324933333333333,
+        "median_seconds": 0.00188945,
+        "p25_seconds": 0.0017499,
+        "p75_seconds": 0.002085175,
+        "p95_seconds": 0.0023112849999999993
+      }
+    },
+    {
+      "all_pass": true,
+      "case_id": "calibration_crash_before_decision",
+      "expected_result": "Abort/restart outcome; no calibration transition installed",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "Calibration predecision recovery aborted/restartable; no semantic transition installed",
+      "paper_label": "Calibration: crash before durable decision",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": 0.00147707,
+        "median_seconds": 0.00140025,
+        "p25_seconds": 0.0013476,
+        "p75_seconds": 0.0015411499999999998,
+        "p95_seconds": 0.0019107449999999997
+      }
+    },
+    {
+      "all_pass": true,
+      "case_id": "calibration_crash_after_prepared",
+      "expected_result": "RecoveryNoDecision Abort; no calibration transition installed",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "Calibration Prepared-without-decision recovered to Abort; no semantic transition installed",
+      "paper_label": "Calibration: crash after Prepared",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": 0.003797486666666667,
+        "median_seconds": 0.00269585,
+        "p25_seconds": 0.002392075,
+        "p75_seconds": 0.004924625,
+        "p95_seconds": 0.007184559999999995
+      }
+    },
+    {
+      "all_pass": true,
+      "case_id": "calibration_crash_after_commit",
+      "expected_result": "Commit preserved; exactly one calibration transition installed after reopen",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "Commit preserved; core logs repaired and calibration transition installed exactly once after reopen",
+      "paper_label": "Calibration: crash after Commit",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": 0.006548653333333333,
+        "median_seconds": 0.00562645,
+        "p25_seconds": 0.005042975,
+        "p75_seconds": 0.00783295,
+        "p95_seconds": 0.010581024999999997
+      }
+    },
+    {
+      "all_pass": true,
+      "case_id": "calibration_duplicate_replay",
+      "expected_result": "Stable Commit; calibration transition remains exactly once",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "Calibration replay stable; semantic transition remains exactly once",
+      "paper_label": "Calibration: duplicate replay",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": null,
+        "median_seconds": null,
+        "p25_seconds": null,
+        "p75_seconds": null,
+        "p95_seconds": null
+      }
+    },
+    {
+      "all_pass": true,
+      "case_id": "ordinary_duplicate_replay",
+      "expected_result": "Stable Commit; semantic reputation remains unchanged",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "Ordinary replay stable; semantic reputation epoch unchanged",
+      "paper_label": "Ordinary: duplicate replay",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": null,
+        "median_seconds": null,
+        "p25_seconds": null,
+        "p75_seconds": null,
+        "p95_seconds": null
+      }
+    },
+    {
+      "all_pass": true,
+      "case_id": "conflicting_replay",
+      "expected_result": "RejectedReplay before durable-state mutation",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "Conflicting tx binding rejected as RejectedReplay; committed durable state unchanged",
+      "paper_label": "Conflicting replay",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": null,
+        "median_seconds": null,
+        "p25_seconds": null,
+        "p75_seconds": null,
+        "p95_seconds": null
+      }
+    },
+    {
+      "all_pass": true,
+      "case_id": "stale_ordinary_snapshot_after_calibration",
+      "expected_result": "Reject stale epoch-bound ordinary request before protocol mutation",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "Stale ordinary epoch-bound request rejected before protocol mutation",
+      "paper_label": "Stale ordinary snapshot after calibration",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": null,
+        "median_seconds": null,
+        "p25_seconds": null,
+        "p75_seconds": null,
+        "p95_seconds": null
+      }
+    },
+    {
+      "all_pass": true,
+      "case_id": "threshold_availability_boundary",
+      "expected_result": "T continues arithmetic; T-1 rejects; Qout and storage predicates respect their own thresholds",
+      "failure": 0,
+      "n": 30,
+      "observed_result": "T arithmetic continued and T-1 rejected; output/restart/committed-state predicates respected distinct thresholds",
+      "paper_label": "$T$ / storage-boundary checks",
+      "state_duplicated_any": false,
+      "success": 30,
+      "timing": {
+        "mean_seconds": null,
+        "median_seconds": null,
+        "p25_seconds": null,
+        "p75_seconds": null,
+        "p95_seconds": null
+      }
+    }
+  ],
+  "failure": 0,
+  "final_semantics": {
+    "calibration_semantic_reputation_transition": true,
+    "calibration_truth_delivery": false,
+    "core_refresh_log_distinguished_from_semantic_learning": true,
+    "ordinary_semantic_reputation_transition": false,
+    "stale_epoch_bound_request_rejected": true
+  },
+  "git_head": "3e64cb21c433e6016b988a6034ba33b26c28f768",
+  "limitations": {
+    "application_output_payload_bytes_persisted_by_protocol_v2": false,
+    "byte_identical_retransmission_measured": false,
+    "distributed_network_failures_measured": false,
+    "semantic_mode_epoch_guard_is_experiment_adapter_over_frozen_protocol_v2": true
+  },
+  "measured_per_case": 30,
+  "planned_measured_case_replicates": 360,
+  "raw_sha256": "bdb56d3bda5f8869adaac50b92dc3fcb4114679aa62b9aa66f56c5933b1df134",
+  "recorded_measured_case_replicates": 360,
+  "schema_version": "1.0",
+  "scope": {
+    "distributed_e8b_used": false,
+    "mode_aware_evaluation_adapter": true,
+    "production_fault_tolerance_claim": false,
+    "production_mpc_used": false,
+    "protocol_v2_core_modified": false,
+    "single_machine_sqlite_wal": true
+  },
+  "sqlite_profile": {
+    "foreign_keys": "ON",
+    "journal_mode": "WAL",
+    "synchronous": "FULL"
+  },
+  "state_duplication_cases": 0,
+  "status": "complete",
+  "study_id": "vi_f_final_evidence_gated_recovery_v1",
+  "success": 360,
+  "threshold_profile": {
+    "N": 10,
+    "Q_out": 6,
+    "T": 4,
+    "backend": "simulated_shamir",
+    "f_out": 2,
+    "f_rep": 2
+  },
+  "warmups_per_case": 5
+}

@@ -1,0 +1,42 @@
+{
+  "A1_summary": {
+    "CAL-EMA-TL": {
+      "holm_lir_losses": 1,
+      "holm_lir_wins": 17,
+      "mean_lir_losses": 2,
+      "mean_lir_wins": 18,
+      "mean_ties": 0
+    },
+    "COWA": {
+      "holm_lir_losses": 12,
+      "holm_lir_wins": 5,
+      "mean_lir_losses": 14,
+      "mean_lir_wins": 6,
+      "mean_ties": 0
+    }
+  },
+  "conformance": {
+    "cowa_a3_exact_matches": 120,
+    "cowa_a3_max_abs_loss_diff": 4.440892098500626e-16,
+    "cowa_a3_total": 120,
+    "lir_fast_all_eval_counts_match": true,
+    "lir_fast_cell_checks": 40,
+    "lir_fast_max_abs_loss_diff": 2.220446049250313e-16
+  },
+  "decision": "NO_SAME_INFO_SUPERIORITY",
+  "design_sha256": "925a3bf5ac384075c249c86d15eb2d814fc01729d74625748328283b8ddf1865",
+  "elapsed_seconds": 189.3054003715515,
+  "execution_mode": "parallel-4-fork-contract-preserving",
+  "failure_runs": 0,
+  "new_cal_ema_tl_runs": 738,
+  "new_cowa_runs": 618,
+  "planned_method_runs": 2214,
+  "planned_stream_conditions": 738,
+  "raw_sha256": "82088b5fe09fc3be46b62c31201142625e2802e0b725d2d6e21bb7f5bbf8cd81",
+  "schema_version": "1.0",
+  "source_exact_cowa_a3_runs": 120,
+  "source_exact_lir_runs": 738,
+  "status": "complete",
+  "study_id": "fc2_p0a_same_information_attribution_v1",
+  "successful_method_runs": 2214
+}

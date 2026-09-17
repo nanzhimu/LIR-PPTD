@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "LIR-PPTD-C12-FC4-CLAIM-EVIDENCE-CLOSURE",
+  "step3_status": "COMPLETE",
+  "P0A": {
+    "status": "complete",
+    "decision": "NO_SAME_INFO_SUPERIORITY",
+    "stream_conditions": 738,
+    "method_runs": 2214,
+    "failures": 0,
+    "A1_summary": {
+      "CAL-EMA-TL": {
+        "holm_lir_losses": 1,
+        "holm_lir_wins": 17,
+        "mean_lir_losses": 2,
+        "mean_lir_wins": 18,
+        "mean_ties": 0
+      },
+      "COWA": {
+        "holm_lir_losses": 12,
+        "holm_lir_wins": 5,
+        "mean_lir_losses": 14,
+        "mean_lir_wins": 6,
+        "mean_ties": 0
+      }
+    },
+    "design_sha256": "925a3bf5ac384075c249c86d15eb2d814fc01729d74625748328283b8ddf1865",
+    "raw_sha256": "82088b5fe09fc3be46b62c31201142625e2802e0b725d2d6e21bb7f5bbf8cd81"
+  },
+  "P0B": {
+    "status": "complete",
+    "decision": "ADVANTAGE",
+    "capabilities": [
+      50,
+      52,
+      53,
+      56,
+      69,
+      126
+    ],
+    "chronological_chunks": 5,
+    "future_leakage": false,
+    "equal_capability_macro": [
+      {
+        "equal_capability_macro_Accuracy": 0.9115197146748297,
+        "equal_capability_macro_MacroF1": 0.8930073668094489,
+        "method": "LIR-PPTD"
+      },
+      {
+        "equal_capability_macro_Accuracy": 0.873292417840736,
+        "equal_capability_macro_MacroF1": 0.8543255891574574,
+        "method": "DS"
+      },
+      {
+        "equal_capability_macro_Accuracy": 0.9102778850967327,
+        "equal_capability_macro_MacroF1": 0.8924896155784984,
+        "method": "LA-onepass"
+      },
+      {
+        "equal_capability_macro_Accuracy": 0.8946487689911371,
+        "equal_capability_macro_MacroF1": 0.8717799827817805,
+        "method": "MV"
+      }
+    ],
+    "capability_direction_counts": {
+      "DS": {
+        "LIR_accuracy_wins": 4,
+        "LIR_macrof1_wins": 4,
+        "baseline_accuracy_wins": 2,
+        "baseline_macrof1_wins": 2
+      },
+      "LA-onepass": {
+        "LIR_accuracy_wins": 4,
+        "LIR_macrof1_wins": 4,
+        "baseline_accuracy_wins": 2,
+        "baseline_macrof1_wins": 2
+      }
+    },
+    "design_sha256": "245369b85b409c7eb0dddf8f14a79a545c7e85ab5ce47188c9f3fd16e722e507",
+    "source_provenance": {
+      "DS": {
+        "implementation": "Crowd-Kit DawidSkene source-equivalent accelerated adapter",
+        "n_iter": 10,
+        "note": "NumPy adapter follows the pinned Crowd-Kit 1.4.1 MV initialization, EM E/M steps, epsilon clipping, ELBO stopping rule, and first-max label release; conformance checked against a direct pandas translation of the pinned source on a deterministic fixture.",
+        "source_blob_sha": "65bca6b261bdc551085d79fba73389d1e533e797",
+        "source_file": "crowdkit/aggregation/classification/dawid_skene.py",
+        "tag": "v1.4.1",
+        "tol": 1e-05,
+        "version": "1.4.1"
+      },
+      "LA-onepass": {
+        "alpha": 2,
+        "beta": 2,
+        "commit": "8a4aec398872b50f7da423db6a2352cce8c34c84",
+        "implementation": "paper-faithful Python port of authors online one-pass flow",
+        "note": "Uses the authors weighted vote and immediate agreement-based ability update. Refit causally on each frozen prefix; no truth/reference input.",
+        "random_seed": 1,
+        "repository": "yyang318/LA_onepass",
+        "source_blob_sha": "ea2a587907706b5bcd2dc8946d66abb1bfd2dccb",
+        "source_file": "LA_methods/proposed/proposed_method_online.py"
+      }
+    }
+  },
+  "P0C": {
+    "status": "complete",
+    "budgets": [
+      0.01,
+      0.02,
+      0.05,
+      0.1
+    ],
+    "datasets": [
+      "dog",
+      "weather"
+    ],
+    "lir_runs": 1600,
+    "failures": 0,
+    "decision_characterization": {
+      "dog": [
+        "DEFAULT_JUSTIFIED",
+        "MORE_LABELS_HELP"
+      ],
+      "weather": [
+        "DEFAULT_JUSTIFIED",
+        "MORE_LABELS_HELP"
+      ]
+    },
+    "common_scoring_mask": "complement_of_10pct_mask",
+    "design_sha256": "7753a17fdc1870682f77b5e9f34e0c751c85571ccb3934a296e6d452274b128b",
+    "raw_sha256": "ca8a8412033ece47a7c3ffcf09feb17b7840ad8384de1f66426f8ba8160c1dda"
+  }
+}

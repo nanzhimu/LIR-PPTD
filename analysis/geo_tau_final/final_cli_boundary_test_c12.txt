@@ -1,0 +1,5 @@
+CLI packaging corrective closure
+project script: lir-pptd = lir_pptd.cli:main
+editable-install entry-point smoke: PASS
+command: lir-pptd --help
+result: canonical command list rendered successfully

@@ -1,0 +1,7 @@
+﻿capability,task_type,D,encoding,squared_diameter,legacy_tau,geometry_tau,equivalent,rerun_required,evidence_path
+50,categorical,3,3-class integer labels converted to one-hot vectors by _one_hot(),2,0.6000000000000001,0.4,False,True,data/neteasecrowd/dataset_audit.json; src/lir_pptd/experiments/p1c_netease_longitudinal/runner.py:_one_hot
+52,categorical,3,3-class integer labels converted to one-hot vectors by _one_hot(),2,0.6000000000000001,0.4,False,True,data/neteasecrowd/dataset_audit.json; src/lir_pptd/experiments/p1c_netease_longitudinal/runner.py:_one_hot
+53,categorical,3,3-class integer labels converted to one-hot vectors by _one_hot(),2,0.6000000000000001,0.4,False,True,data/neteasecrowd/dataset_audit.json; src/lir_pptd/experiments/p1c_netease_longitudinal/runner.py:_one_hot
+56,categorical,3,3-class integer labels converted to one-hot vectors by _one_hot(),2,0.6000000000000001,0.4,False,True,data/neteasecrowd/dataset_audit.json; src/lir_pptd/experiments/p1c_netease_longitudinal/runner.py:_one_hot
+69,categorical,3,3-class integer labels converted to one-hot vectors by _one_hot(),2,0.6000000000000001,0.4,False,True,data/neteasecrowd/dataset_audit.json; src/lir_pptd/experiments/p1c_netease_longitudinal/runner.py:_one_hot
+126,categorical,3,3-class integer labels converted to one-hot vectors by _one_hot(),2,0.6000000000000001,0.4,False,True,data/neteasecrowd/dataset_audit.json; src/lir_pptd/experiments/p1c_netease_longitudinal/runner.py:_one_hot

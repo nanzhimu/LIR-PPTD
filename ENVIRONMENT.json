@@ -1,0 +1,23 @@
+{
+  "dependency_lock": "requirements-test-lock.txt",
+  "geometry_aware_build": {
+    "artifact_id": "LIR-PPTD-C10-GEOMETRY-AWARE-FINAL",
+    "baseline_c9_sha256": "4daa2bf84207feb27e66e7fec3e62ca9289037c3531d81d9dde29178c77fb7c6",
+    "focused_regression_tests": "44/44 passed",
+    "geometry_rule": "tau=lambda_tau*diameter_squared(report_domain)",
+    "lambda_tau": "1/5",
+    "source_archive_sha256": "4f8a7b5d5562bd95402bfab930ee48cf6a7be37668e4f1e192dcd8903d0f3325"
+  },
+  "notes": [
+    "Machine-specific repository paths and verbose git-status output were intentionally removed from the submission-clean artifact metadata.",
+    "Historical execution records under results/ are preserved byte-for-byte except where explicitly documented elsewhere."
+  ],
+  "original_pytest": "pytest 9.1.1",
+  "original_python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "original_uv": "uv 0.12.1 (329541a50 2026-07-31 x86_64-pc-windows-msvc)",
+  "original_validation_platform": "Windows-10-10.0.26200-SP0",
+  "project_metadata": "pyproject.toml",
+  "purpose": "Concise environment metadata for the public LIR-PPTD reproducibility artifact.",
+  "schema_version": "1.1",
+  "source_git_commit": "3e64cb21c433e6016b988a6034ba33b26c28f768"
+}

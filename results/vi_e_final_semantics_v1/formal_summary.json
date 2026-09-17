@@ -1,0 +1,65 @@
+{
+  "calibration_tail_measured_runs": 120,
+  "calibration_transition": "enabled",
+  "default_calibration_period": 20,
+  "external_measured_pairs": 120,
+  "external_method_runs": 240,
+  "failure": 0,
+  "formal_raw_sha256": "5ffd6d31944d56633b898cd3241fbc6850ffa058fb0009b5ee548a40faf03d0d",
+  "ordinary_persistent_update": "disabled",
+  "schema_version": "1.0",
+  "study_id": "vi_e_final_evidence_gated_efficiency_v1",
+  "success": 360,
+  "total_measured_timed_units": 360,
+  "validation": {
+    "D": 1,
+    "K": 10,
+    "N": 10,
+    "T": 4,
+    "calibration_plaintext_conformance": [
+      {
+        "calibration_plaintext_conformance": true,
+        "m": 2
+      },
+      {
+        "calibration_plaintext_conformance": true,
+        "m": 20
+      },
+      {
+        "calibration_plaintext_conformance": true,
+        "m": 200
+      }
+    ],
+    "common_kernel_identity": "PASS",
+    "f": 24,
+    "final_semantics": {
+      "calibration_persistent_transition": true,
+      "calibration_truth_iterations": 0,
+      "default_period": 20,
+      "ordinary_output_evidence_computed": true,
+      "ordinary_persistent_reputation_update": false
+    },
+    "ordinary_plaintext_conformance": [
+      {
+        "m": 2,
+        "ordinary_plaintext_conformance": true
+      },
+      {
+        "m": 20,
+        "ordinary_plaintext_conformance": true
+      },
+      {
+        "m": 200,
+        "ordinary_plaintext_conformance": true
+      }
+    ],
+    "status": "PASS",
+    "study_id": "vi_e_final_evidence_gated_efficiency_v1",
+    "worker_grid": [
+      20,
+      50,
+      100,
+      200
+    ]
+  }
+}

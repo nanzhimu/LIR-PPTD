@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "provenance_mode": "source_snapshot_sha256_user_approved_no_git",
+  "source_snapshot_sha256": "109ab1cf23407d726f8f33d5f8dfb2453d36fbedbe8922a9d9902d58551ff936",
+  "files": [
+    {
+      "path": "src/lir_pptd/core/consistency_scale.py",
+      "bytes": 3463,
+      "sha256": "55a91932425317ba0b54168ebd0ee5721cd111f5e6505405c133ae096dfba699"
+    },
+    {
+      "path": "src/lir_pptd/experiments/phase6_exact_adapter.py",
+      "bytes": 3101,
+      "sha256": "c13980dd1bc895273484a896ca10770045db79e3b770a40176c28dfdee413aef"
+    },
+    {
+      "path": "src/lir_pptd/experiments/calibration_anchored.py",
+      "bytes": 4251,
+      "sha256": "a9ef121e67921eeee34cc1023b50ca92f44d64bd09a009db42273b4f90f4fa35"
+    },
+    {
+      "path": "src/lir_pptd/experiments/p1c_netease_longitudinal/runner.py",
+      "bytes": 41588,
+      "sha256": "d67690a9bb961d21ff7602b8449d31a0b27c4da86b2bd1505bd333aae6721333"
+    },
+    {
+      "path": "src/lir_pptd/fixedpoint/algorithm.py",
+      "bytes": 5820,
+      "sha256": "0ca002be1c0359c66f9796ee3d73a60e254f0c9b0904a39366495b0d82fa7ec5"
+    },
+    {
+      "path": "src/lir_pptd/fixedpoint/calibration.py",
+      "bytes": 6947,
+      "sha256": "b2862aa3543f608fc412769c065285c685913c72563d6ef29f9092606e184502"
+    },
+    {
+      "path": "src/lir_pptd/fixedpoint/range_analysis.py",
+      "bytes": 8240,
+      "sha256": "08f82938d383597c18fc89cc6ae3fe8daa594f229ea41118be89ad378a7e3733"
+    },
+    {
+      "path": "src/lir_pptd/mpc/secure_algorithm.py",
+      "bytes": 7160,
+      "sha256": "9b7ee397f7002e387de6639589b3e1b04967e5dcd8ecbed315ea66657c7381e1"
+    },
+    {
+      "path": "src/lir_pptd/mpc/calibration.py",
+      "bytes": 7671,
+      "sha256": "36c91291cd44fa60e9409fd823463044eec098fb2b310534965e2dd1c708e34e"
+    },
+    {
+      "path": "src/lir_pptd/experiments/p1d_e2e/reference.py",
+      "bytes": 2009,
+      "sha256": "13bba6d5c845059dc83ec469d9e7848852183cdfe6ce0da64dbc15c7f619e30d"
+    },
+    {
+      "path": "p1d_mpspdz/ExternalIO/p1d_lir_client.py",
+      "bytes": 3826,
+      "sha256": "c4fa4bf059173f1fcff376eeb581ee6d8e8d8bc6fdca976cec6b2bb9d812f3e8"
+    },
+    {
+      "path": "p1d_mpspdz/Programs/Source/lir_pptd_e2e.mpc",
+      "bytes": 2960,
+      "sha256": "cb6ca306d2d4b8808492a91060b3e261dac819cbd066b87daa0da5f98db400cf"
+    },
+    {
+      "path": "configs/final/LIR_PPTD_GEOMETRY_FROZEN_CONFIG.json",
+      "bytes": 778,
+      "sha256": "57c88bc5e64fc1a60eb1ea0f3e3de78249ccbe67bff2382fe6a539f110c98192"
+    },
+    {
+      "path": "tests/test_consistency_scale.py",
+      "bytes": 5633,
+      "sha256": "2af96cf0d86a7ffb6997911573786ed7d05c400c21f27f18a9d6c21c6b1a6283"
+    }
+  ]
+}

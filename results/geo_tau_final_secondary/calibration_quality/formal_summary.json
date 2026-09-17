@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "runs": 400,
+  "dog_new_geometry": 200,
+  "weather_equivalence_rebound": 200,
+  "analysis": {
+    "reference_noise": {
+      "cells": 12,
+      "mean_degradation_cells": 12,
+      "mean_improvement_cells": 0,
+      "holm_significant_degradation_cells": 12,
+      "holm_significant_improvement_cells": 0
+    },
+    "missing_calibration": {
+      "cells": 8,
+      "mean_degradation_cells": 8,
+      "mean_improvement_cells": 0,
+      "holm_significant_degradation_cells": 8,
+      "holm_significant_improvement_cells": 0
+    }
+  }
+}

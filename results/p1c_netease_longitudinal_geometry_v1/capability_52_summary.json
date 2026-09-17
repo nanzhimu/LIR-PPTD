@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "study_id": "p1c_netease_longitudinal_v1",
+  "capability": 52,
+  "status": "success",
+  "tasks_seen": 18390,
+  "hidden_calibration_tasks": 902,
+  "scored_tasks": 17488,
+  "realized_calibration_rate": 0.0490483958673192,
+  "workers_seen": 28,
+  "reentry30_tasks": 0,
+  "reentry30_worker_events": 0,
+  "reset30_events": 0,
+  "equivalence_gate": {
+    "capability": 52,
+    "ordinary_tasks_checked": 75,
+    "calibration_tasks_checked": 5,
+    "max_abs_output_error": 1.1102230246251565e-16,
+    "max_abs_reputation_error": 1.1102230246251565e-16,
+    "tolerance": 1e-10,
+    "status": "PASS"
+  },
+  "overall": {
+    "lir_pptd": {
+      "n": 17488,
+      "accuracy": 0.8887808783165599,
+      "macro_f1": 0.8820544990567104
+    },
+    "cowa": {
+      "n": 17488,
+      "accuracy": 0.8955855443732845,
+      "macro_f1": 0.8902056844181162
+    },
+    "no_hr": {
+      "n": 17488,
+      "accuracy": 0.8724268069533394,
+      "macro_f1": 0.8615109912705506
+    },
+    "mv": {
+      "n": 17488,
+      "accuracy": 0.8724268069533394,
+      "macro_f1": 0.8615109912705506
+    },
+    "lir_reset30d": {
+      "n": 17488,
+      "accuracy": 0.8887808783165599,
+      "macro_f1": 0.8820544990567104
+    }
+  },
+  "prediction_artifact": "results/p1c_netease_longitudinal_geometry_v1/predictions_cap_52.csv.gz",
+  "limit_tasks": null
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "study_id": "vi_f_final_evidence_gated_recovery_v1",
+  "warmups_per_case": 5,
+  "measured_per_case": 30,
+  "case_count": 12,
+  "planned_measured_case_replicates": 360,
+  "sqlite_profile": {"journal_mode": "WAL", "synchronous": "FULL", "foreign_keys": "ON"},
+  "threshold_profile": {"N": 10, "T": 4, "Q_out": 6, "f_rep": 2, "f_out": 2},
+  "final_semantics": {
+    "ordinary_semantic_reputation_transition": false,
+    "calibration_semantic_reputation_transition": true,
+    "calibration_truth_delivery": false,
+    "stale_epoch_bound_request_rejected": true,
+    "core_refresh_log_is_not_equated_with_semantic_reputation_learning": true
+  },
+  "scope": {
+    "single_machine_sqlite_wal": true,
+    "protocol_state_machine_conformance": true,
+    "mode_aware_evaluation_adapter": true,
+    "distributed_e8b": false,
+    "production_mpc": false,
+    "production_fault_tolerance_claim": false
+  }
+}

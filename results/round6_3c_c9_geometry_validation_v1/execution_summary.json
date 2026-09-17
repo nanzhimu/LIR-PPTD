@@ -1,0 +1,31 @@
+{
+  "study_id": "round6_3c_c9_tau_dimension_v1",
+  "status": "FORMAL_COMPLETE",
+  "planned_runs": 1200,
+  "success": 1200,
+  "failure": 0,
+  "elapsed_seconds": 91.72238898277283,
+  "result_file": "formal_runs.jsonl",
+  "result_sha256": "174763ba73788b4aeb7fca7a71ab8eca8bb265e5367b43dfc33a4c57771d3db3",
+  "dimensions": [
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "rhos": [
+    0.3,
+    0.5,
+    0.7
+  ],
+  "scenarios": [
+    "binary_support",
+    "full_support"
+  ],
+  "tau_modes": [
+    "dimension",
+    "diameter"
+  ],
+  "seed_count": 20
+}

@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "runs": 800,
+  "dog_new_geometry": 200,
+  "equivalent_rebound": 600,
+  "analysis": {
+    "regime_count": 8,
+    "regimes_lir_favored_all_5_orders": 7,
+    "regimes_crh_favored_all_5_orders": 0,
+    "regimes_mixed_or_near_parity": 1
+  }
+}

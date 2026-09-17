@@ -1,0 +1,33 @@
+{
+  "status": "COMPLETE",
+  "legacy_rows": 30240,
+  "dog_geometry_rows_replaced": 2000,
+  "final_rows": 30240,
+  "aggregate_by_comparator": {
+    "crh": {
+      "cell_count": 20,
+      "mean_lir_wins": 19,
+      "mean_ties": 0,
+      "mean_lir_losses": 1,
+      "holm_significant_lir_wins": 18,
+      "holm_significant_lir_losses": 1
+    },
+    "pptd_liang": {
+      "cell_count": 20,
+      "mean_lir_wins": 19,
+      "mean_ties": 0,
+      "mean_lir_losses": 1,
+      "holm_significant_lir_wins": 18,
+      "holm_significant_lir_losses": 1
+    },
+    "tqpp_liu": {
+      "cell_count": 20,
+      "mean_lir_wins": 14,
+      "mean_ties": 0,
+      "mean_lir_losses": 6,
+      "holm_significant_lir_wins": 13,
+      "holm_significant_lir_losses": 5
+    }
+  },
+  "source": "v1.6 Round6-2 frozen selector design + C11 geometry source"
+}

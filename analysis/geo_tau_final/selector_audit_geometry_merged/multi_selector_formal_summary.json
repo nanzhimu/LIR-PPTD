@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "study_id": "round6_2_multi_selector_seed_robustness_v1",
+  "status": "ANALYSIS_COMPLETE",
+  "rows": 30240,
+  "selector_seed_count_per_dataset": {
+    "weather": 20,
+    "duck": 20,
+    "product": 20,
+    "dog": 20
+  },
+  "aggregate_by_comparator": {
+    "crh": {
+      "cell_count": 20,
+      "mean_lir_wins": 19,
+      "mean_ties": 0,
+      "mean_lir_losses": 1,
+      "holm_significant_lir_wins": 18,
+      "holm_significant_lir_losses": 1
+    },
+    "pptd_liang": {
+      "cell_count": 20,
+      "mean_lir_wins": 19,
+      "mean_ties": 0,
+      "mean_lir_losses": 1,
+      "holm_significant_lir_wins": 18,
+      "holm_significant_lir_losses": 1
+    },
+    "tqpp_liu": {
+      "cell_count": 20,
+      "mean_lir_wins": 14,
+      "mean_ties": 0,
+      "mean_lir_losses": 6,
+      "holm_significant_lir_wins": 13,
+      "holm_significant_lir_losses": 5
+    }
+  },
+  "duck_calibration_count_distribution": {
+    "n": 20,
+    "min": 2,
+    "max": 11,
+    "mean": 5.45,
+    "median": 4.5,
+    "counts": [
+      2,
+      4,
+      4,
+      4,
+      4,
+      6,
+      3,
+      7,
+      5,
+      3,
+      4,
+      10,
+      7,
+      8,
+      7,
+      8,
+      3,
+      11,
+      5,
+      4
+    ]
+  },
+  "claim_policy": "No selector seed may be removed or replaced after analysis. Manuscript wording must follow the observed selector-seed distribution, including unfavorable seeds."
+}

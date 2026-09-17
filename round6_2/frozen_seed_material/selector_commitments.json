@@ -1,0 +1,417 @@
+{
+  "commitment_domain": "LIR-PPTD/Round6-2/selector-seed-commitment-v1",
+  "datasets": [
+    "product",
+    "duck",
+    "dog",
+    "weather"
+  ],
+  "schema_version": "1.0",
+  "seed_count_per_dataset": 20,
+  "seed_generation": "Python secrets.token_hex(32)",
+  "seeds_revealed": false,
+  "selectors": [
+    {
+      "commitment_sha256": "38a519b3b4557323e48f24815024b279255179f4aa554930f0c2a1beb4852ba3",
+      "dataset": "product",
+      "seed_index": 1
+    },
+    {
+      "commitment_sha256": "067a3bef6644dc7108e3a75723d1037660367f488da9a00bd3998e5b4b4bcda3",
+      "dataset": "product",
+      "seed_index": 2
+    },
+    {
+      "commitment_sha256": "3348462680080c54a38e4cf5700894ead986daeb4b016c54636f22821f79003f",
+      "dataset": "product",
+      "seed_index": 3
+    },
+    {
+      "commitment_sha256": "4a556b39b559fdc9fb91d41f38e44cb925050e7c5c03123254e6466a5e9d5c03",
+      "dataset": "product",
+      "seed_index": 4
+    },
+    {
+      "commitment_sha256": "a1064a91836310539e1228aa92b0de04c675d32c73d1eb2fb5955d12ffcb1650",
+      "dataset": "product",
+      "seed_index": 5
+    },
+    {
+      "commitment_sha256": "976e7883e8f7198465aa77e538b781259dd6428c51033393b800702a374d3236",
+      "dataset": "product",
+      "seed_index": 6
+    },
+    {
+      "commitment_sha256": "979272d39c17a275334e361a221bcb049d1bfd251cac96a27422397762f10e84",
+      "dataset": "product",
+      "seed_index": 7
+    },
+    {
+      "commitment_sha256": "e373791040b68530646ae974af664d2e3b66f1d893291874feec464640b7e600",
+      "dataset": "product",
+      "seed_index": 8
+    },
+    {
+      "commitment_sha256": "c0c24b3f8c2e82322f3c0751510248913b17aa3c3b06bae5e041c5175812752e",
+      "dataset": "product",
+      "seed_index": 9
+    },
+    {
+      "commitment_sha256": "c18076b892ce6be637cd28b31b08a8c5c7b2048e561fb7cbf62ebfc0a58803c0",
+      "dataset": "product",
+      "seed_index": 10
+    },
+    {
+      "commitment_sha256": "b3ce5edc1e544f179527f511b373ff64e64c97a5828fab19aabbad75e2feb8e0",
+      "dataset": "product",
+      "seed_index": 11
+    },
+    {
+      "commitment_sha256": "f83edb0f5d97f9a6e0904d9bc74075b2792c6deb30b15d83705e03e42653d3bd",
+      "dataset": "product",
+      "seed_index": 12
+    },
+    {
+      "commitment_sha256": "b6de395e3d9d0928ba9bc0232f6991ce6b6b5c8d0d3a0bf67b3d0b6ded941122",
+      "dataset": "product",
+      "seed_index": 13
+    },
+    {
+      "commitment_sha256": "2f92035f7aabea7abab969316597dd66452d0219b1e7dcbd7df87dd119d4dd91",
+      "dataset": "product",
+      "seed_index": 14
+    },
+    {
+      "commitment_sha256": "65d74d0283ac5d0e997a78164e8c5578290ecee9e2bf28e41bbd70ec608ee30b",
+      "dataset": "product",
+      "seed_index": 15
+    },
+    {
+      "commitment_sha256": "400f55f3101bcc295cc2d6e2669f5dac0769be91ad1af9b1b4439f006b97ee2c",
+      "dataset": "product",
+      "seed_index": 16
+    },
+    {
+      "commitment_sha256": "2044dae67b4c4bc38eb243bb79fc474a5e56bb392089d973e94f5d948277a67d",
+      "dataset": "product",
+      "seed_index": 17
+    },
+    {
+      "commitment_sha256": "db3d53d2a40d70529b8060797428c96abcaa45b5740cabb0d835bb726cc6d5f0",
+      "dataset": "product",
+      "seed_index": 18
+    },
+    {
+      "commitment_sha256": "eabe2b94df2d6db29610eddf1c364cd74006ab41a9de4ac2249094733dc444f0",
+      "dataset": "product",
+      "seed_index": 19
+    },
+    {
+      "commitment_sha256": "b60a539f507c129a909b1bdacb5cb67c4260312dfbd39758416180da59480f2b",
+      "dataset": "product",
+      "seed_index": 20
+    },
+    {
+      "commitment_sha256": "7ccd7879bb2194e3856fc102fdc095a98275ad03ed9fe4886dc4108d3295754c",
+      "dataset": "duck",
+      "seed_index": 1
+    },
+    {
+      "commitment_sha256": "297bc8eae7885029c6230dc1223b27e0775c9505b7efd43a854e85369bd59139",
+      "dataset": "duck",
+      "seed_index": 2
+    },
+    {
+      "commitment_sha256": "49b3f0d8708e50c529a9836a4bd661587efe66f1940d4f6aab32a435908a237f",
+      "dataset": "duck",
+      "seed_index": 3
+    },
+    {
+      "commitment_sha256": "7d997d1b3e5b5d3f1b9a5c178fe86f43476046d96861195119770f73df826835",
+      "dataset": "duck",
+      "seed_index": 4
+    },
+    {
+      "commitment_sha256": "156716e71a1b85973ba40fe84d76faba722ae4e5d16d108c43b1b8d05af42546",
+      "dataset": "duck",
+      "seed_index": 5
+    },
+    {
+      "commitment_sha256": "41dee525d0c44b05b60e7718178517b7089eeebb4fc596e283aa4df982097782",
+      "dataset": "duck",
+      "seed_index": 6
+    },
+    {
+      "commitment_sha256": "6fc53f230c0f1270cd7aedce85f89cddc3f8708125d7051fe3a8ee925f2db96f",
+      "dataset": "duck",
+      "seed_index": 7
+    },
+    {
+      "commitment_sha256": "1d7dce751fdab8ee662fa7d015d253bdf60e158da26fa067212b3aa9481ee698",
+      "dataset": "duck",
+      "seed_index": 8
+    },
+    {
+      "commitment_sha256": "7af6da02cb8e7675f2f4c407138c02b19fb885acb544b463baeb445a13ffb53a",
+      "dataset": "duck",
+      "seed_index": 9
+    },
+    {
+      "commitment_sha256": "914aee05945f7917b66f80a79011d7b49fd05f4306cebf077a83e9228e2cd930",
+      "dataset": "duck",
+      "seed_index": 10
+    },
+    {
+      "commitment_sha256": "779e7beb045d8ebf139d49158794870cb9e1f1dcdb5fda9008ca0871ffa1e726",
+      "dataset": "duck",
+      "seed_index": 11
+    },
+    {
+      "commitment_sha256": "2d7f2fa21fc8b07f093d514eb3ccfd73eee6c2c5f3df10833d8ca9e2e01561d2",
+      "dataset": "duck",
+      "seed_index": 12
+    },
+    {
+      "commitment_sha256": "63fe320d4f355fadf74129ef1fa0de1f23dbf53cee49959ce5b6578537532ead",
+      "dataset": "duck",
+      "seed_index": 13
+    },
+    {
+      "commitment_sha256": "217cea3a61137924f81dead7596db26f676dfa0f70703d6e513392b6d6080664",
+      "dataset": "duck",
+      "seed_index": 14
+    },
+    {
+      "commitment_sha256": "2c9413eb868a1ddf7fac37e5fa7be3ae7249b2d5d3eddd258e5ac1752466ad64",
+      "dataset": "duck",
+      "seed_index": 15
+    },
+    {
+      "commitment_sha256": "d348f1576f53a0eb9c9a2ee6723c4c3e6cfafc13d2e9f7234c7ae6382c93b7dd",
+      "dataset": "duck",
+      "seed_index": 16
+    },
+    {
+      "commitment_sha256": "a7ae48b26b797da97eebb15f25594737210b0dc03825cc128c5e2fa6b8a39e79",
+      "dataset": "duck",
+      "seed_index": 17
+    },
+    {
+      "commitment_sha256": "f3e16ed3b864ab4e6063c197abe2a5e90bd76bf0bcb679075510d1946495996a",
+      "dataset": "duck",
+      "seed_index": 18
+    },
+    {
+      "commitment_sha256": "b87116956fea297e6adff78716ea44c3d2177139016ba6b98d359e924993b256",
+      "dataset": "duck",
+      "seed_index": 19
+    },
+    {
+      "commitment_sha256": "30b7fbb5b9a9c476f89729e94ac7660d5575799084f6bf54b21cd86d584a4aab",
+      "dataset": "duck",
+      "seed_index": 20
+    },
+    {
+      "commitment_sha256": "22a905b9f3e8e4cb68fab4a7ba2da68754b339662f1fc0d0a64ee42382a38de2",
+      "dataset": "dog",
+      "seed_index": 1
+    },
+    {
+      "commitment_sha256": "46e080322489ab6f3da4dfa6c5c7eccd35bdbb8e652bc29a965bf96ded9766c3",
+      "dataset": "dog",
+      "seed_index": 2
+    },
+    {
+      "commitment_sha256": "0805387ed0eff8f722c3112161fd5b56252628e742a80c321305bf378473e2db",
+      "dataset": "dog",
+      "seed_index": 3
+    },
+    {
+      "commitment_sha256": "4d44be40245d94874a7e0b3b3e640207de9165aa742ecc28017660afbe6ece04",
+      "dataset": "dog",
+      "seed_index": 4
+    },
+    {
+      "commitment_sha256": "1166194136efd84e937c0b9d50fdca2e3267ad45194b20af1213d7c9bec8802c",
+      "dataset": "dog",
+      "seed_index": 5
+    },
+    {
+      "commitment_sha256": "1a173d74f2280439b6d90ebf04b661e97e4c6378c19cf812f46df7cf95abeb5d",
+      "dataset": "dog",
+      "seed_index": 6
+    },
+    {
+      "commitment_sha256": "ffdd408b6f066701144c58580311e45224be5c98afe13bb5e8c7b96b796a8a9a",
+      "dataset": "dog",
+      "seed_index": 7
+    },
+    {
+      "commitment_sha256": "aa0e9330f5f7df935a4b77cd9cc10f12ba32831cb7918465ad08f829b543d352",
+      "dataset": "dog",
+      "seed_index": 8
+    },
+    {
+      "commitment_sha256": "cd808ac0051ecf4133796f6e33ee4bd6c23c7e59cdc95ec866b417931b88d126",
+      "dataset": "dog",
+      "seed_index": 9
+    },
+    {
+      "commitment_sha256": "860ce6b154d15764f9b8367ffb0cc8c2aab9a69302577ad4c8e6313c0d88703b",
+      "dataset": "dog",
+      "seed_index": 10
+    },
+    {
+      "commitment_sha256": "e644f2ba70e1de400b2af7db0e5a1ef7c19a4ee376ef955beb40fd9c9b04f18b",
+      "dataset": "dog",
+      "seed_index": 11
+    },
+    {
+      "commitment_sha256": "d51822285a387c704fd73bac6cafc50964140838c79cb75e462aad9f14d5f3af",
+      "dataset": "dog",
+      "seed_index": 12
+    },
+    {
+      "commitment_sha256": "48dc22f3fde4a9822d6cde0eaa38d9ad4d769723aa0d2389c606e8193f1cde7d",
+      "dataset": "dog",
+      "seed_index": 13
+    },
+    {
+      "commitment_sha256": "5b57b15d46e007e9c8422942354c814bb74267c582d22b3cc4f28048baa8689c",
+      "dataset": "dog",
+      "seed_index": 14
+    },
+    {
+      "commitment_sha256": "4c20f587813de5f612ebad140a8713e0264c24fe9e59ab45ef0ab59e59c1ed52",
+      "dataset": "dog",
+      "seed_index": 15
+    },
+    {
+      "commitment_sha256": "a9d697375e03847714000d66a67ff9eda4706e84ac08b8116ef2cabacb7bf977",
+      "dataset": "dog",
+      "seed_index": 16
+    },
+    {
+      "commitment_sha256": "1f6defd6f0670aa0a339855d61c73b3042d54e31730ed42731768bd2eacfbdc1",
+      "dataset": "dog",
+      "seed_index": 17
+    },
+    {
+      "commitment_sha256": "f22a18722619e9f5fbbb46738619740e5e1b2b06a03da65e07ac51fb31c524cc",
+      "dataset": "dog",
+      "seed_index": 18
+    },
+    {
+      "commitment_sha256": "40690d35065903aebd32b02d3131da75caf246ac60395075d0a80315fce90202",
+      "dataset": "dog",
+      "seed_index": 19
+    },
+    {
+      "commitment_sha256": "1a7ab289922114cee5cac3ddeab876289d8e7180892b574c679f4611deb67cd6",
+      "dataset": "dog",
+      "seed_index": 20
+    },
+    {
+      "commitment_sha256": "960fc0e757a1a80b5e516c9f764024d589b201301950f8498911bd9bb197392f",
+      "dataset": "weather",
+      "seed_index": 1
+    },
+    {
+      "commitment_sha256": "f2fef4bcfadb4827925c0116b7f0de99d273c75defd38c346483d2d704541f9f",
+      "dataset": "weather",
+      "seed_index": 2
+    },
+    {
+      "commitment_sha256": "90a084cf8ad8fb28ef4c42938f577d0297f9178e40765d2c1038785348d0fc00",
+      "dataset": "weather",
+      "seed_index": 3
+    },
+    {
+      "commitment_sha256": "60657746dcc2eb411b325b886180d9dd501a6942c62a58b6505e30e5a6893e13",
+      "dataset": "weather",
+      "seed_index": 4
+    },
+    {
+      "commitment_sha256": "3e4fe8ba162a73624ed86fa703d71da85ce947d2e07ec786d19ef8cb993d3a5f",
+      "dataset": "weather",
+      "seed_index": 5
+    },
+    {
+      "commitment_sha256": "0e583d24889c46d480c10d2006897602441ec44b05c2facf453cffd0b99df77c",
+      "dataset": "weather",
+      "seed_index": 6
+    },
+    {
+      "commitment_sha256": "cf1a2e9739908726b938ff59b8ceefa4d7d356bb70a739ecf33b7e1c5a145d6e",
+      "dataset": "weather",
+      "seed_index": 7
+    },
+    {
+      "commitment_sha256": "391ac01bfeae8ec9c4865dbb2bec9d7a7394fedd74e6f7784213b3689ce3a1a4",
+      "dataset": "weather",
+      "seed_index": 8
+    },
+    {
+      "commitment_sha256": "565ce32ec3acb80fd8b3e7ecaeacc07ca62cbc8a3c2630f4a6a950b107975b72",
+      "dataset": "weather",
+      "seed_index": 9
+    },
+    {
+      "commitment_sha256": "eb9cb7b0c3e6a898c597e6dcfa48bf1245792fe360834c2d4f2ca8db6103d609",
+      "dataset": "weather",
+      "seed_index": 10
+    },
+    {
+      "commitment_sha256": "37f634afab4a5b3d57a51a96db1d11f8a1cbb84449c9a95f96e36dc2b11c49db",
+      "dataset": "weather",
+      "seed_index": 11
+    },
+    {
+      "commitment_sha256": "b05cd18bf58dd4f9e91f4fd14fffdf4e73720905be280bce68cfc636b31ce52e",
+      "dataset": "weather",
+      "seed_index": 12
+    },
+    {
+      "commitment_sha256": "a41c10a0cac3ecc68caa592eab8d7b150bf91d92fe5d67359e7668d6ba8cd5f2",
+      "dataset": "weather",
+      "seed_index": 13
+    },
+    {
+      "commitment_sha256": "09032126a97a3193fb50c2b0f3b840ed010b9abbe668f9e8c1a681b3b53db6b8",
+      "dataset": "weather",
+      "seed_index": 14
+    },
+    {
+      "commitment_sha256": "0d0ef9969251838d5c5df6247e75d221a5816017b1edaf937d34aca530c53cf5",
+      "dataset": "weather",
+      "seed_index": 15
+    },
+    {
+      "commitment_sha256": "3f79b2cd4646c848a4664e70eb14fc5a6113c177f9c67e3d939a21bb6f51a648",
+      "dataset": "weather",
+      "seed_index": 16
+    },
+    {
+      "commitment_sha256": "194516f9c55e518e56c16c8a0386e181e7add8ca4cfacaf0b58a3b0303a6c67d",
+      "dataset": "weather",
+      "seed_index": 17
+    },
+    {
+      "commitment_sha256": "64ba2b493d1dfa80c5b616a2098b59f968ed8ffdcd3924a7a36aea156b365989",
+      "dataset": "weather",
+      "seed_index": 18
+    },
+    {
+      "commitment_sha256": "5295120399af9f75c1a4a26b3241682bde6c217790510d794d2e351c50e7eb14",
+      "dataset": "weather",
+      "seed_index": 19
+    },
+    {
+      "commitment_sha256": "7a5197019571c993c9e4ed7e2dad28f707601686716b67b9832ec761d73bd838",
+      "dataset": "weather",
+      "seed_index": 20
+    }
+  ],
+  "status": "FROZEN_BEFORE_OUTCOMES",
+  "study_id": "round6_2_multi_selector_seed_robustness_v1"
+}

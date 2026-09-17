@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "study_id": "p1c_netease_longitudinal_v1",
+  "dataset": "NetEaseCrowd",
+  "dataset_audit": "data/neteasecrowd/dataset_audit.json",
+  "official_cardinality_gate": {
+    "annotations": 6016319,
+    "tasks": 999799,
+    "workers": 2413,
+    "capabilities": 6
+  },
+  "chronology": {
+    "task_event_time": "max completeTime of all observed annotations for the task",
+    "tie_break": "taskId ascending",
+    "future_annotation_leakage": false
+  },
+  "skill_handling": {
+    "primary_streams": "one chronological stream per capability",
+    "reason": "avoid conflating capability-specific expertise with a scalar global reliability state"
+  },
+  "hidden_calibration": {
+    "period": 20,
+    "probability": 0.05,
+    "task_id_based": true,
+    "ordinary_persistent_updates": false
+  },
+  "cold_start": "fraction of current participants with zero prior authenticated calibration exposures",
+  "natural_reentry": "same worker ID reappears after >= 30 days of inactivity",
+  "churn_control": "LIR-reset30d resets that returning worker's persistent state to c0 after >= 30 days",
+  "identity_replacement_claimed": false,
+  "algorithm_retuning": false,
+  "result_dependent_selection": false,
+  "inference_role": "longitudinal realism/mechanism study; not a new adversarial superiority gate"
+}

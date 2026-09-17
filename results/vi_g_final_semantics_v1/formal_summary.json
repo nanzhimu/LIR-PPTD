@@ -1,0 +1,47 @@
+{
+  "attacks": [
+    "persistent",
+    "random",
+    "on_off"
+  ],
+  "calibration_tasks_per_stream": 5,
+  "design_sha256": "80bbb724514632b861987498763b69b5625b3a444d696ac6516e6ccc355edc14",
+  "failure_streams": 0,
+  "families": [
+    "synthetic_num_small",
+    "synthetic_num_shifted",
+    "synthetic_num_longitudinal",
+    "synthetic_cat_binary",
+    "synthetic_cat_tie"
+  ],
+  "implementation_bindings": {
+    "build_scored_task": "D:/LIR_PPTD/src/lir_pptd/experiments/phase6_generator.py@1950c3dee2d2a322c69bf0345cd336c3b2cde3d0f09e1ce88963b2773d0962d3",
+    "candidate_config_loader": "D:/LIR_PPTD/src/lir_pptd/experiments/phase6_candidate_runner.py@8b2a9b0377df232b564fe5d25ab8be305fe1c121456f1ecc3eb608fe241ac9ed",
+    "mean_vote_predict": "D:/LIR_PPTD/src/lir_pptd/baselines/mean_vote.py@76d8921882fbf7ae838a37ec6d3a0d9f59c9df823358153c3b77e171e396c87e",
+    "run_ablation_once": "D:/LIR_PPTD/src/lir_pptd/experiments/phase6_ablation_runner.py@40561ac46a4d8d42171caa13aa2dff035b1df2a0aaa2e2305c8a51f4ed2dc87c"
+  },
+  "ordinary_persistence_violations": 0,
+  "paired_seed_count": 20,
+  "planned_streams": 1800,
+  "raw_path": "results/vi_g_final_semantics_v1/formal_runs.jsonl",
+  "raw_sha256": "9040f5d8b238ae46967ac26e4b3cf83546cfbdf28c91158b8e304a7a2753ef59",
+  "rho_grid": [
+    "0",
+    "1/10",
+    "3/10",
+    "1/2",
+    "7/10",
+    "9/10"
+  ],
+  "schema_version": "1.0",
+  "scored_ordinary_tasks_per_stream": 95,
+  "seeds": [
+    4001,
+    4020
+  ],
+  "status": "complete",
+  "study_id": "vi_g_final_semantics_v1",
+  "successful_streams": 1800,
+  "tasks_per_stream": 100,
+  "total_recorded_elapsed_seconds": 3011.3473106003366
+}

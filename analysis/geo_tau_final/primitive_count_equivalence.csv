@@ -1,0 +1,11 @@
+﻿task_id,mode,primitive,count
+dog:344,legacy_D_scaling,DivPositive,100
+dog:344,legacy_D_scaling,SecMulPositive,100
+dog:344,legacy_D_scaling,SecSqr,400
+dog:344,legacy_D_scaling,local_add,100
+dog:344,legacy_D_scaling,local_sub,400
+dog:344,geometry_diameter_scaling,DivPositive,100
+dog:344,geometry_diameter_scaling,SecMulPositive,100
+dog:344,geometry_diameter_scaling,SecSqr,400
+dog:344,geometry_diameter_scaling,local_add,100
+dog:344,geometry_diameter_scaling,local_sub,400

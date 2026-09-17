@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.1-ga",
+  "study_id": "b2_hidden_selector_migration_v1",
+  "algorithm_variant": "geometry_aware_domain_diameter_v1",
+  "source": "old unaffected rows + rerun Dog LIR",
+  "success": 960,
+  "failure": 0,
+  "analysis": {
+    "cell_count": 12,
+    "holm_family_size": 36,
+    "per_comparator": {
+      "crh": {
+        "cells": 12,
+        "mean_wins": 10,
+        "mean_ties": 1,
+        "mean_losses": 1,
+        "holm_significant_wins": 10,
+        "holm_significant_losses": 0
+      },
+      "pptd_liang": {
+        "cells": 12,
+        "mean_wins": 10,
+        "mean_ties": 1,
+        "mean_losses": 1,
+        "holm_significant_wins": 10,
+        "holm_significant_losses": 0
+      },
+      "tqpp_liu": {
+        "cells": 12,
+        "mean_wins": 7,
+        "mean_ties": 1,
+        "mean_losses": 4,
+        "holm_significant_wins": 7,
+        "holm_significant_losses": 2
+      }
+    },
+    "per_attack": {
+      "random": {
+        "pairwise_contrasts": 12,
+        "lir_mean_wins": 11,
+        "lir_mean_ties": 0,
+        "lir_mean_losses": 1,
+        "lir_holm_wins": 11,
+        "lir_holm_losses": 0
+      },
+      "collusive": {
+        "pairwise_contrasts": 12,
+        "lir_mean_wins": 8,
+        "lir_mean_ties": 3,
+        "lir_mean_losses": 1,
+        "lir_holm_wins": 8,
+        "lir_holm_losses": 1
+      },
+      "on_off": {
+        "pairwise_contrasts": 12,
+        "lir_mean_wins": 8,
+        "lir_mean_ties": 0,
+        "lir_mean_losses": 4,
+        "lir_holm_wins": 8,
+        "lir_holm_losses": 1
+      }
+    },
+    "cells_improve_or_tie_both_crh_and_pptd": 11,
+    "scientific_decision": "REVIEW_AFTER_RESULT",
+    "retuning_allowed": false
+  }
+}

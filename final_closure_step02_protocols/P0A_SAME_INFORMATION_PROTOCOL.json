@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "study_id": "fc2_p0a_same_information_attribution_v1",
+  "reviewer_concern": "C1 same-information attribution",
+  "scientific_question": "When calibration tasks, authenticated references, attack streams, task order, scoring masks, and malicious identities are identical, does evidence-authorized persistent learning retain an advantage over natural same-information history controls?",
+  "datasets": [
+    "product",
+    "duck",
+    "dog",
+    "weather"
+  ],
+  "methods": [
+    {
+      "id": "LIR-PPTD",
+      "role": "candidate",
+      "definition": "canonical FC1 Full; no changes"
+    },
+    {
+      "id": "COWA",
+      "role": "same-information cumulative control",
+      "definition": "same authenticated calibration events/references; worker weight is cumulative mean q_cal; ordinary categorical weighted vote / numerical weighted mean; no task-local consistency; no LIR bounded transition"
+    },
+    {
+      "id": "CAL-EMA-TL",
+      "role": "same-information dynamic reputation control",
+      "definition": "identical ordinary inference to Full, including geometry-aware task-local q and influence formula; persistent state changes only on authenticated calibration via c_i <- (1-alpha)c_i + alpha*q_cal; clipped to [0,1] only for numerical safety",
+      "alpha": 0.1,
+      "initial_c": 0.5,
+      "tuning": "none; alpha is frozen equal to LIR eta"
+    }
+  ],
+  "information_contract": {
+    "same_calibration_selector": true,
+    "same_calibration_tasks": true,
+    "same_authenticated_reference": true,
+    "same_attacked_reports": true,
+    "same_malicious_workers": true,
+    "same_task_order": true,
+    "same_scoring_mask": true,
+    "calibration_tasks_excluded_from_scoring": true,
+    "attack_generated_before_mode_revelation": true
+  },
+  "families": [
+    {
+      "id": "A1-persistent-ratio",
+      "datasets": [
+        "product",
+        "duck",
+        "dog",
+        "weather"
+      ],
+      "rhos": [
+        0.1,
+        0.3,
+        0.5,
+        0.7,
+        0.9
+      ],
+      "replication": "reuse canonical malicious-subset identities: 20 unique subsets per nonzero cell, except canonical exhaustive smaller cells; total 378 stream conditions over 20 nonzero cells",
+      "primary": true
+    },
+    {
+      "id": "A2-attack-rho07",
+      "datasets": [
+        "product",
+        "duck",
+        "dog",
+        "weather"
+      ],
+      "rho": 0.7,
+      "attacks": [
+        "random",
+        "collusive",
+        "on_off"
+      ],
+      "replication": "20 frozen malicious subsets per dataset/attack; 240 stream conditions",
+      "primary": true
+    },
+    {
+      "id": "A3-behavior-switch",
+      "datasets": [
+        "product",
+        "duck",
+        "dog",
+        "weather"
+      ],
+      "rho": 0.7,
+      "switches": [
+        "benign_to_malicious",
+        "malicious_to_benign"
+      ],
+      "replication": "reuse held-out replicates 6-20 only; 15 paired replicates per cell; 120 stream conditions",
+      "primary": true
+    }
+  ],
+  "endpoints": {
+    "product": "1-MacroF1",
+    "duck": "1-Accuracy",
+    "dog": "1-MacroF1",
+    "weather": "MAE"
+  },
+  "statistics": {
+    "bootstrap_resamples": 10000,
+    "test": "exact two-sided paired sign-flip",
+    "effect": "paired rank-biserial",
+    "holm_families": [
+      "per comparator across 20 A1 cells",
+      "per comparator across 12 A2 cells",
+      "per comparator across 8 A3 cells"
+    ],
+    "report": "per-cell mean loss, delta Full-comparator, 95% paired CI, raw p, Holm p, effect; no selective omission"
+  },
+  "run_cardinality": {
+    "stream_conditions": 738,
+    "methods_per_stream": 3,
+    "method_runs": 2214
+  },
+  "decision_policy": {
+    "STRONG_SAME_INFO": "may state broad same-information advantage only if Full has lower mean loss in >= 11/20 A1 cells against each same-information comparator and neither comparator has more than 2 Holm-significant reverse A1 cells; A2/A3 must be reported independently.",
+    "SCOPED_SAME_INFO": "if results are mixed, no global superiority claim; report regime-specific advantage exactly where supported, especially behavior-switch conditions.",
+    "NO_SAME_INFO_SUPERIORITY": "if a same-information comparator is materially better overall or has repeated significant reverse cells, remove broad mechanism-superiority language; retain authorization/theory/privacy/system contribution. No retuning or new baseline is permitted."
+  },
+  "forbidden_after_freeze": [
+    "change alpha",
+    "change LIR defaults",
+    "change seeds/subsets",
+    "drop cells",
+    "change attack definitions",
+    "add baseline after seeing results",
+    "replace primary endpoint",
+    "move calibration tasks into scoring"
+  ],
+  "design_sha256": "925a3bf5ac384075c249c86d15eb2d814fc01729d74625748328283b8ddf1865"
+}

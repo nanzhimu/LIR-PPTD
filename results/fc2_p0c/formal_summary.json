@@ -1,0 +1,32 @@
+{
+  "budgets": [
+    0.01,
+    0.02,
+    0.05,
+    0.1
+  ],
+  "common_scoring_mask": "complement_of_10pct_mask",
+  "datasets": [
+    "dog",
+    "weather"
+  ],
+  "decision_characterization": {
+    "dog": [
+      "DEFAULT_JUSTIFIED",
+      "MORE_LABELS_HELP"
+    ],
+    "weather": [
+      "DEFAULT_JUSTIFIED",
+      "MORE_LABELS_HELP"
+    ]
+  },
+  "design_sha256": "7753a17fdc1870682f77b5e9f34e0c751c85571ccb3934a296e6d452274b128b",
+  "failures": 0,
+  "lir_runs": 1600,
+  "raw_sha256": "ca8a8412033ece47a7c3ffcf09feb17b7840ad8384de1f66426f8ba8160c1dda",
+  "schema_version": "1.0",
+  "selector_seeds": 10,
+  "status": "complete",
+  "study_id": "fc2_p0c_calibration_budget_deployment_v1",
+  "subsets_per_seed": 20
+}

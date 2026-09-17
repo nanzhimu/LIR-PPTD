@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.1-ga",
+  "study_id": "p0_1c_hidden_b1_formal_migration_v1",
+  "selectors": [
+    {
+      "dataset": "product",
+      "task_count": 8315,
+      "calibration_task_count": 429,
+      "realized_calibration_rate": 0.05159350571256765,
+      "nominal_calibration_rate": 0.05,
+      "calibration_mask_sha256": "9fec2530d5b65cb4241d41d0ab49f1a29633dc6259013fbadde471776cac6090",
+      "seed_commitment_sha256": "c16acb7609b44ee31cf15e1c6559c42c1eb4f1fdfc702cd3c1e65265850cd4a2",
+      "task_order_invariant": true,
+      "attack_generation_before_mode_designation": true,
+      "same_mask_all_methods_rhos_replicates": true,
+      "seed_revealed": false
+    },
+    {
+      "dataset": "duck",
+      "task_count": 108,
+      "calibration_task_count": 4,
+      "realized_calibration_rate": 0.037037037037037035,
+      "nominal_calibration_rate": 0.05,
+      "calibration_mask_sha256": "0c70188e46701dddf6840d3577e23800f2fe80dca61873948d0cbaa2d7d9527c",
+      "seed_commitment_sha256": "3cacc4edf5a73a42237a91fa2a45f867097d2d1d767c099128766da2879e67e2",
+      "task_order_invariant": true,
+      "attack_generation_before_mode_designation": true,
+      "same_mask_all_methods_rhos_replicates": true,
+      "seed_revealed": false
+    },
+    {
+      "dataset": "dog",
+      "task_count": 807,
+      "calibration_task_count": 48,
+      "realized_calibration_rate": 0.05947955390334572,
+      "nominal_calibration_rate": 0.05,
+      "calibration_mask_sha256": "3edddc1cadba7ef39ebe5e2721aba0be44fe6a4307a858fff7277de2385d20ac",
+      "seed_commitment_sha256": "35ddb90391761f8645fdc598990e8a183d0b0a04b94f8689defe4f87f0f02ab7",
+      "task_order_invariant": true,
+      "attack_generation_before_mode_designation": true,
+      "same_mask_all_methods_rhos_replicates": true,
+      "seed_revealed": false
+    },
+    {
+      "dataset": "weather",
+      "task_count": 1700,
+      "calibration_task_count": 86,
+      "realized_calibration_rate": 0.05058823529411765,
+      "nominal_calibration_rate": 0.05,
+      "calibration_mask_sha256": "bcc5dd399bfecb050c01bc07533114728a816532c5e798fc47865803fdcbf911",
+      "seed_commitment_sha256": "bed345a2d574d238e69c4bc407222ad8a6a00f0103bb3549ebcc70507885876c",
+      "task_order_invariant": true,
+      "attack_generation_before_mode_designation": true,
+      "same_mask_all_methods_rhos_replicates": true,
+      "seed_revealed": false
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0-frozen",
+  "phase": "Phase-R1",
+  "purpose": "real-data external-baseline extension",
+  "task_order_policy": "truth_csv_source_order",
+  "worker_id_mapping": "deterministic_lexicographic_mapping",
+  "missing_response_policy": "retain_observed_missingness_no_imputation",
+  "raw_redistribution_policy": "do_not_bundle_raw_csv_in_public_artifacts",
+  "research_use_basis": {
+    "status": "PUBLIC_RESEARCH_DATASET_PROJECT_IDENTIFIED",
+    "note": "The author-maintained Truth Inference in Crowdsourcing project explicitly states that codes and datasets are made public for future research. Exact byte-for-byte identity of the local CSV copies to a current upstream download was not independently established; the local copies are therefore frozen by SHA-256.",
+    "explicit_license_identifier_found": false
+  },
+  "datasets": {
+    "product": {
+      "modality": "categorical",
+      "class_count": 2,
+      "tasks": 8315,
+      "workers": 176,
+      "answers": 24945,
+      "answer_sha256": "ca69e3f2cba3d6f9c3b3ecc2f8d2a81afcd747d0b91aa5ab18608a5715e26adc",
+      "truth_sha256": "9a5757c726ef1a32b05f6a675924c483b24d602c61b1a2d087ab3d84f90b3766",
+      "primary_endpoint": "one_minus_macro_f1",
+      "secondary_endpoint": "one_minus_accuracy"
+    },
+    "duck": {
+      "modality": "categorical",
+      "class_count": 2,
+      "tasks": 108,
+      "workers": 39,
+      "answers": 4212,
+      "answer_sha256": "0d5e423652c079361a4cbc0adbee0945d40f02a9dedcfb6b068e8f2af63b24f0",
+      "truth_sha256": "04c6d8b6cdc298b63c05dc87d28ceebd018d4207e0ced7c1229ca3593a74983a",
+      "primary_endpoint": "one_minus_accuracy",
+      "secondary_endpoint": "one_minus_macro_f1"
+    },
+    "dog": {
+      "modality": "categorical",
+      "class_count": 4,
+      "tasks": 807,
+      "workers": 109,
+      "answers": 8070,
+      "answer_sha256": "db11159198f59fa2af87450b008f860ca2e9e04e3f15c697ef254af40fb6763a",
+      "truth_sha256": "2a641fa31e80526164d956da4228f80d31b303c2691ab1855c76fef72d04b746",
+      "primary_endpoint": "one_minus_macro_f1",
+      "secondary_endpoint": "one_minus_accuracy"
+    },
+    "weather": {
+      "modality": "numerical",
+      "class_count": null,
+      "tasks": 1700,
+      "workers": 9,
+      "answers": 13012,
+      "answer_sha256": "172f55259ad4c436402aca7b18ef8df6527bbb458ca0673833b1cc6374c088c2",
+      "truth_sha256": "8e882b70b9478329dc9b12fda3cef58e91b1a5417193384cdf34df54ce474b86",
+      "primary_endpoint": "mae",
+      "secondary_endpoint": "rmse"
+    }
+  },
+  "hard_type_constraints": {
+    "product": "categorical_binary_only",
+    "duck": "categorical_binary_only",
+    "dog": "categorical_4class_only",
+    "weather": "numerical_scalar_only"
+  },
+  "encoding": {
+    "categorical": "integer_class_then_one_hot_before_method",
+    "numerical": "exact_decimal_scalar_no_one_hot"
+  },
+  "technical_freeze_status": "FROZEN_NOT_START_APPROVED",
+  "g6_candidate_binding_sha256": "4f9d237418c851958f7e55604ada605812b670d946c5c73172e878f0452a951e"
+}

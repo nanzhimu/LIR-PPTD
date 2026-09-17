@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "study_id": "p1c_netease_longitudinal_v1",
+  "observational_reports_preexist_selector": true,
+  "report_generation_depends_on_selector": false,
+  "nominal_probability": 0.05,
+  "capabilities": {
+    "50": {
+      "seed_commitment_sha256": "f588f02ef6eaf5b8ccd6d154f15fee520f8a393ce08aa206cb63fa9c7056d492",
+      "config_hash": "3e88d9f39345fac1de60f4046d3855be5066c1b60705ff0edef1c9f97a704baf",
+      "nominal_probability": 0.05
+    },
+    "52": {
+      "seed_commitment_sha256": "489718a555e8a68c1abb31c2edef80128dca9190d7ea46d078991b59d45ad792",
+      "config_hash": "daadc0237499c627e0f62fc29c16c6cc8a7062031b95073050b7d0d01e24fc42",
+      "nominal_probability": 0.05
+    },
+    "53": {
+      "seed_commitment_sha256": "b9e7437f4cc17e8e13aa8a7f91806ff5bef8eded8061a5ea8a261c002470255f",
+      "config_hash": "ea658b47f592103a4c7a26dcff8b20079e620fe3d91110923f8cbcaf2cfa08dc",
+      "nominal_probability": 0.05
+    },
+    "56": {
+      "seed_commitment_sha256": "74a16ae51f418d76678386074dd726172679d560352abb0d5ae0f05422f26339",
+      "config_hash": "b5936e9179bccd1177f0b40b3a5c77d7885b6c74d80f69e0b77473a1b21b1294",
+      "nominal_probability": 0.05
+    },
+    "69": {
+      "seed_commitment_sha256": "f528b6e156e1b4f880f973233229f0b1ec7e972f7fd2650665e11cf78ff9bfed",
+      "config_hash": "e45d89c2ba4d56d70961a69ca377d9d4df86076c39dff67033501c4834a5c657",
+      "nominal_probability": 0.05
+    },
+    "126": {
+      "seed_commitment_sha256": "9dd9614e2c9651f42c32fb9342f8a5d3ecadd1547986c21c4cfad9b71c1d3c7a",
+      "config_hash": "e446540ea479f09191cb69b0c66f3554a73b339b19b30b3e2bf56458106b51b9",
+      "nominal_probability": 0.05
+    }
+  },
+  "retired_seed_reveal": "retired_selector_reveal.json"
+}

@@ -1,0 +1,192 @@
+{
+  "status": "complete",
+  "runs": 1120,
+  "dog_new_geometry": 560,
+  "weather_equivalence_rebound": 560,
+  "analysis": {
+    "sensitivity_summary": {
+      "K": {
+        "dog": {
+          "3/10": {
+            "descriptive_best_value": "1",
+            "descriptive_best_mean": 0.7554027243289299,
+            "descriptive_worst_value": "1",
+            "descriptive_worst_mean": 0.7554027243289299,
+            "default_value": "10",
+            "note": "descriptive only; the preregistered default remains frozen"
+          },
+          "7/10": {
+            "descriptive_best_value": "1",
+            "descriptive_best_mean": 0.3279972893718448,
+            "descriptive_worst_value": "1",
+            "descriptive_worst_mean": 0.3279972893718448,
+            "default_value": "10",
+            "note": "descriptive only; the preregistered default remains frozen"
+          }
+        },
+        "weather": {
+          "3/10": {
+            "descriptive_best_value": "20",
+            "descriptive_best_mean": 0.05398549318266168,
+            "descriptive_worst_value": "1",
+            "descriptive_worst_mean": 0.05636866226224567,
+            "default_value": "10",
+            "note": "descriptive only; the preregistered default remains frozen"
+          },
+          "7/10": {
+            "descriptive_best_value": "5",
+            "descriptive_best_mean": 0.15072178107354958,
+            "descriptive_worst_value": "1",
+            "descriptive_worst_mean": 0.15081711993338603,
+            "default_value": "10",
+            "note": "descriptive only; the preregistered default remains frozen"
+          }
+        }
+      },
+      "lambda_tau": {
+        "dog": {
+          "3/10": {
+            "descriptive_best_value": "1/20",
+            "descriptive_best_mean": 0.7603697127834586,
+            "descriptive_worst_value": "4/5",
+            "descriptive_worst_mean": 0.7397135658707232,
+            "default_value": "1/5",
+            "note": "descriptive only; the preregistered default remains frozen"
+          },
+          "7/10": {
+            "descriptive_best_value": "1/20",
+            "descriptive_best_mean": 0.360327834620913,
+            "descriptive_worst_value": "4/5",
+            "descriptive_worst_mean": 0.2740158518885051,
+            "default_value": "1/5",
+            "note": "descriptive only; the preregistered default remains frozen"
+          }
+        },
+        "weather": {
+          "3/10": {
+            "descriptive_best_value": "1/20",
+            "descriptive_best_mean": 0.028384968786097056,
+            "descriptive_worst_value": "4/5",
+            "descriptive_worst_mean": 0.08310083955906249,
+            "default_value": "1/5",
+            "note": "descriptive only; the preregistered default remains frozen"
+          },
+          "7/10": {
+            "descriptive_best_value": "1/20",
+            "descriptive_best_mean": 0.07982975486234262,
+            "descriptive_worst_value": "4/5",
+            "descriptive_worst_mean": 0.1810757896615426,
+            "default_value": "1/5",
+            "note": "descriptive only; the preregistered default remains frozen"
+          }
+        }
+      },
+      "kappa": {
+        "dog": {
+          "3/10": {
+            "descriptive_best_value": "1",
+            "descriptive_best_mean": 0.7560581845836559,
+            "descriptive_worst_value": "4",
+            "descriptive_worst_mean": 0.751007261392006,
+            "default_value": "2",
+            "note": "descriptive only; the preregistered default remains frozen"
+          },
+          "7/10": {
+            "descriptive_best_value": "1",
+            "descriptive_best_mean": 0.3286803355298837,
+            "descriptive_worst_value": "4",
+            "descriptive_worst_mean": 0.32223161596260336,
+            "default_value": "2",
+            "note": "descriptive only; the preregistered default remains frozen"
+          }
+        },
+        "weather": {
+          "3/10": {
+            "descriptive_best_value": "4",
+            "descriptive_best_mean": 0.045346522992744984,
+            "descriptive_worst_value": "1",
+            "descriptive_worst_mean": 0.06331323831161337,
+            "default_value": "2",
+            "note": "descriptive only; the preregistered default remains frozen"
+          },
+          "7/10": {
+            "descriptive_best_value": "4",
+            "descriptive_best_mean": 0.1291612153981912,
+            "descriptive_worst_value": "1",
+            "descriptive_worst_mean": 0.16919385933874795,
+            "default_value": "2",
+            "note": "descriptive only; the preregistered default remains frozen"
+          }
+        }
+      },
+      "calibration_period": {
+        "dog": {
+          "3/10": {
+            "descriptive_best_value": "10",
+            "descriptive_best_mean": 0.7704687541615075,
+            "descriptive_worst_value": "40",
+            "descriptive_worst_mean": 0.7441443549737441,
+            "default_value": "20",
+            "note": "descriptive only; the preregistered default remains frozen"
+          },
+          "7/10": {
+            "descriptive_best_value": "10",
+            "descriptive_best_mean": 0.38722344485986665,
+            "descriptive_worst_value": "40",
+            "descriptive_worst_mean": 0.30104618141549644,
+            "default_value": "20",
+            "note": "descriptive only; the preregistered default remains frozen"
+          }
+        },
+        "weather": {
+          "3/10": {
+            "descriptive_best_value": "10",
+            "descriptive_best_mean": 0.05095134348227531,
+            "descriptive_worst_value": "40",
+            "descriptive_worst_mean": 0.05676285667368307,
+            "default_value": "20",
+            "note": "descriptive only; the preregistered default remains frozen"
+          },
+          "7/10": {
+            "descriptive_best_value": "10",
+            "descriptive_best_mean": 0.14150761142939403,
+            "descriptive_worst_value": "40",
+            "descriptive_worst_mean": 0.15797510682129487,
+            "default_value": "20",
+            "note": "descriptive only; the preregistered default remains frozen"
+          }
+        }
+      }
+    },
+    "sweep_spreads": {
+      "K": {
+        "nondefault_cell_count": 20,
+        "max_absolute_mean_loss_delta_vs_default": 0.0023831564980614445,
+        "cells_better_than_default_by_mean": 3,
+        "cells_worse_than_default_by_mean": 7
+      },
+      "lambda_tau": {
+        "nondefault_cell_count": 16,
+        "max_absolute_mean_loss_delta_vs_default": 0.07089311612044356,
+        "cells_better_than_default_by_mean": 8,
+        "cells_worse_than_default_by_mean": 8
+      },
+      "kappa": {
+        "nondefault_cell_count": 8,
+        "max_absolute_mean_loss_delta_vs_default": 0.021561655584594983,
+        "cells_better_than_default_by_mean": 4,
+        "cells_worse_than_default_by_mean": 4
+      },
+      "calibration_period": {
+        "nondefault_cell_count": 8,
+        "max_absolute_mean_loss_delta_vs_default": 0.05743774249114053,
+        "cells_better_than_default_by_mean": 4,
+        "cells_worse_than_default_by_mean": 4
+      }
+    },
+    "default_configuration_remains_frozen": true,
+    "parameter_selection": "NONE",
+    "inference_policy": "Paired bootstrap intervals and loss deltas are descriptive. No multiplicity-based winner selection is used for parameter tuning.",
+    "scientific_decision": "REVIEW_AFTER_RESULT"
+  }
+}

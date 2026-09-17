@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0-public-artifact-regression",
+  "cases": [
+    {
+      "id": "numerical_equal_reports",
+      "kind": "numerical",
+      "parameters": {
+        "K": 2,
+        "tau": "1",
+        "epsilon_c": "1/1024",
+        "kappa": "2",
+        "eta": "1/10"
+      },
+      "reports": [
+        [
+          "1/2"
+        ],
+        [
+          "1/2"
+        ]
+      ],
+      "reputations": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "id": "categorical_unanimous",
+      "kind": "categorical",
+      "parameters": {
+        "K": 2,
+        "tau": "1",
+        "epsilon_c": "1/1024",
+        "kappa": "2",
+        "eta": "1/10"
+      },
+      "reports": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "reputations": [
+        "1/2",
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "id": "categorical_tie",
+      "kind": "categorical",
+      "parameters": {
+        "K": 2,
+        "tau": "1",
+        "epsilon_c": "1/1024",
+        "kappa": "2",
+        "eta": "1/10"
+      },
+      "reports": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "reputations": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "id": "reputation_boundaries",
+      "kind": "numerical",
+      "parameters": {
+        "K": 2,
+        "tau": "1",
+        "epsilon_c": "1/1024",
+        "kappa": "2",
+        "eta": "1/10"
+      },
+      "reports": [
+        [
+          "0"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "reputations": [
+        "0",
+        "1"
+      ]
+    }
+  ]
+}

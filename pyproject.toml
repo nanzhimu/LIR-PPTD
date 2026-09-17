@@ -1,0 +1,26 @@
+[project]
+name = "lir-pptd-public-repro-artifact"
+version = "0.2.0"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "pydantic>=2.13,<3",
+  "PyYAML>=6,<7",
+  "mpmath>=1.4,<2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=9,<10"]
+analysis = ["numpy>=1.26,<3", "matplotlib>=3.8,<4"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[project.scripts]
+lir-pptd = "lir_pptd.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,13 @@
+case_id,paper_label,n,success,failure,state_duplicated_any,median_recovery_ms,p95_recovery_ms
+ordinary_crash_before_decision,Ordinary: crash before durable decision,30,30,0,False,1.43225,1.9856499999999995
+ordinary_crash_after_prepared,Ordinary: crash after Prepared,30,30,0,False,3.03595,5.362594999999997
+ordinary_crash_after_commit,Ordinary: crash after Commit,30,30,0,False,2.53605,3.2860899999999993
+ordinary_postcommit_delivery_failure,Ordinary: postcommit delivery failure,30,30,0,False,1.88945,2.3112849999999994
+calibration_crash_before_decision,Calibration: crash before durable decision,30,30,0,False,1.40025,1.9107449999999997
+calibration_crash_after_prepared,Calibration: crash after Prepared,30,30,0,False,2.69585,7.184559999999995
+calibration_crash_after_commit,Calibration: crash after Commit,30,30,0,False,5.62645,10.581024999999997
+calibration_duplicate_replay,Calibration: duplicate replay,30,30,0,False,,
+ordinary_duplicate_replay,Ordinary: duplicate replay,30,30,0,False,,
+conflicting_replay,Conflicting replay,30,30,0,False,,
+stale_ordinary_snapshot_after_calibration,Stale ordinary snapshot after calibration,30,30,0,False,,
+threshold_availability_boundary,$T$ / storage-boundary checks,30,30,0,False,,

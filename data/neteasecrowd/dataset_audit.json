@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "study_id": "p1c_netease_longitudinal_v1",
+  "dataset": "NetEaseCrowd",
+  "official_repository": "https://github.com/fuxiAIlab/NetEaseCrowd-Dataset",
+  "raw_parts": 15,
+  "raw_sha256": {
+    "NetEaseCrowd_part_1.csv": "6522bf2194e014ba5c33df7101457efdb47d516cffde8f0b6fc98e200c5cd5a6",
+    "NetEaseCrowd_part_2.csv": "351acbf5fe1bdb7e50df754f7034cfdfb836f4856888f7dfe16ef98d5fd8cf7f",
+    "NetEaseCrowd_part_3.csv": "f744a25da0b8a3c785e95a4109a1a4d59ff70e307349f049240e0671bc79ff67",
+    "NetEaseCrowd_part_4.csv": "ebc19dee7bee906fa9d64487cef77c49c852ca07041fd7110d75bb5e85f2507c",
+    "NetEaseCrowd_part_5.csv": "61f272bb1b21462138b9113a499e324216abbaec3550e2a971798193d1458f4d",
+    "NetEaseCrowd_part_6.csv": "cc5b71e258b0d4367e44b6b712e2c0b1b0457cc81a6c4882fc54cfa0d1417a2c",
+    "NetEaseCrowd_part_7.csv": "e84ed9ab1c31c8cf63ab0dc91f8aadd3004f7ba6229600dfd4cac97c28072596",
+    "NetEaseCrowd_part_8.csv": "0fe72b6019167020ce3bf7e974e01e969ed94ae705a47e9a784b7db8c07c20e2",
+    "NetEaseCrowd_part_9.csv": "b9cf561aa3879c0f9a2af75fa89a494ab801514d599c9fe5e3b292e6bb2c38e4",
+    "NetEaseCrowd_part_10.csv": "a84afdb61cd8cb8fd92eb0677bcd2f96587e35bc6f4c94cd9a68ac8ff0bd3078",
+    "NetEaseCrowd_part_11.csv": "f931a44de1ed71514a36c9bc616505c34917d660831a3b81e061f48607254916",
+    "NetEaseCrowd_part_12.csv": "b8f04129771c80531a7d954d24835a4dff90db7219a28702c25aaef7b3a762b8",
+    "NetEaseCrowd_part_13.csv": "4bf5abd5bab606a238e26999813260349394f21426724ba8278cbf8ddad1bdef",
+    "NetEaseCrowd_part_14.csv": "8513146fb2f0dbf285555960f24b1b5dc9f7ff72d1539e69f6a356fd89a01b2d",
+    "NetEaseCrowd_part_15.csv": "4b8095bb5214e83b16fcb775d5d7a36727d6b9d351e4001efb58a46736649d4d"
+  },
+  "annotations": 6016319,
+  "tasks": 999799,
+  "workers": 2413,
+  "capabilities": [
+    50,
+    52,
+    53,
+    56,
+    69,
+    126
+  ],
+  "capability_count": 6,
+  "labels": [
+    0,
+    1,
+    2
+  ],
+  "task_event_time": "max completeTime over the task's observed annotation batch",
+  "capability_stats": [
+    {
+      "capability": 50,
+      "tasks": 135336,
+      "annotations": 912616,
+      "workers": 1085,
+      "tasksets": 98,
+      "start_ms": 1665750581088,
+      "end_ms": 1673419489469,
+      "span_days": 88.76051366898149,
+      "min_reports_per_task": 3,
+      "max_reports_per_task": 10,
+      "truth_labels": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "capability": 52,
+      "tasks": 18390,
+      "annotations": 131842,
+      "workers": 28,
+      "tasksets": 100,
+      "start_ms": 1654671656994,
+      "end_ms": 1654786351555,
+      "span_days": 1.3274833449074075,
+      "min_reports_per_task": 3,
+      "max_reports_per_task": 10,
+      "truth_labels": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "capability": 53,
+      "tasks": 90697,
+      "annotations": 653105,
+      "workers": 847,
+      "tasksets": 100,
+      "start_ms": 1655896270862,
+      "end_ms": 1672977142849,
+      "span_days": 197.69527762731482,
+      "min_reports_per_task": 2,
+      "max_reports_per_task": 10,
+      "truth_labels": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "capability": 56,
+      "tasks": 726583,
+      "annotations": 4142226,
+      "workers": 1050,
+      "tasksets": 98,
+      "start_ms": 1671873058157,
+      "end_ms": 1673846372621,
+      "span_days": 22.839287777777777,
+      "min_reports_per_task": 3,
+      "max_reports_per_task": 10,
+      "truth_labels": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "capability": 69,
+      "tasks": 4942,
+      "annotations": 30353,
+      "workers": 327,
+      "tasksets": 25,
+      "start_ms": 1661741607620,
+      "end_ms": 1662109203424,
+      "span_days": 4.254581064814815,
+      "min_reports_per_task": 3,
+      "max_reports_per_task": 9,
+      "truth_labels": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "capability": 126,
+      "tasks": 23851,
+      "annotations": 146177,
+      "workers": 237,
+      "tasksets": 15,
+      "start_ms": 1671428978223,
+      "end_ms": 1671635438031,
+      "span_days": 2.389581111111111,
+      "min_reports_per_task": 3,
+      "max_reports_per_task": 9,
+      "truth_labels": [
+        0,
+        1,
+        2
+      ]
+    }
+  ]
+}

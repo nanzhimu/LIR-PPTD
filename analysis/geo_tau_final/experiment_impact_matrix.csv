@@ -1,0 +1,25 @@
+﻿experiment,affected_by_tau,affected_dataset/domain,rerun_required,reason,existing_geometry_result_available,action
+malicious-ratio main experiment,yes,Dog D=4 categorical,already canonical geometry rerun,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,C10/GEO-TAU v1.1,use geometry result
+attack robustness,yes,Dog D=4 categorical,already canonical geometry rerun,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,C10/GEO-TAU v1.1,use geometry result
+ablation,yes,Dog D=4 categorical,already canonical geometry rerun,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,C10/GEO-TAU v1.1,use geometry result
+reputation evolution,yes,Dog D=4 categorical,already canonical geometry rerun,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,C10/GEO-TAU v1.1,use geometry result
+K sensitivity,yes,Dog D=4 categorical,rerun required,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,no active geometry result,R4.1
+lambda_tau sensitivity,yes,Dog D=4 categorical,rerun required,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,no active geometry result,R4.1
+kappa sensitivity,yes,Dog D=4 categorical,rerun required,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,no active geometry result,R4.1
+P sensitivity,yes,Dog D=4 categorical,rerun required,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,no active geometry result,R4.1
+calibration corruption,yes,Dog D=4 categorical,rerun required,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,no active geometry result,R4.2
+calibration missingness,yes,Dog D=4 categorical,rerun required,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,no active geometry result,R4.3
+task-order sensitivity,yes,Dog D=4 categorical,rerun required,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,no active geometry result,R4.4
+selector-seed audit,yes,Dog D=4 categorical,Dog-only synchronization required if retained,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,historical study not active in v1.7.2 main,R4.6 / archive if not active
+behavior-switch / equal-information COWA diagnostic,yes,Dog D=4 categorical,geometry rerun available,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,C10 cowa_dynamic_formal_geometry_v1,validate/rebind
+synthetic operating boundary,mixed,three numerical + binary categorical + categorical-tie,numerical/binary equivalent; categorical-tie geometry path required,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,VI-G active resolver,validate representative
+high-D categorical diagnostic,yes,one-hot D=2..32,completed,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,GEO-TAU v1.1,use geometry evidence
+NetEaseCrowd capability-level evaluation,yes,all capability D=3 one-hot,completed geometry rerun,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,C10 NetEase geometry,R5 validate/rebind
+history-complete evaluation,yes,NetEase D=3,completed geometry rerun,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,C10 NetEase geometry,R5 validate/rebind
+30-day windows,yes,NetEase D=3,completed geometry rerun,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,C10 NetEase geometry,R5 validate/rebind
+re-entry / Reset30d,yes,NetEase D=3,completed geometry rerun,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,C10 NetEase geometry,R5 validate/rebind
+MP-SPDZ correctness / numerical fidelity,"no value change, integration affected",D=1 numerical,no numerical rerun required; resolver integration required,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,P1-D2 real MPC,R6/R7
+fixed-point approximation,yes certificate,numerical and categorical,certificate update required,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,fixedpoint preflight,R7
+worker-side sharing cost,no,secure sharing primitive independent of tau value,no rerun,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,VI-E,hash/version validation
+arithmetic/primitive counts,no count change,public tau value only,proof required,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,fixedpoint/MPC,R7
+recovery / exactly-once,no,state machine independent of tau value,no rerun,tau enters q for D>2 categorical; numerical and D=2 are exactly equivalent unless noted,VI-F,version mark only
