@@ -1,0 +1,44 @@
+{
+  "A1-persistent-ratio": {
+    "Tuned-LIR-vs-Tuned-EMA": {
+      "mean_W_T_L_tuned_lir": "19/0/1",
+      "holm_W_L_tuned_lir": "15/0"
+    },
+    "Tuned-LIR-vs-Window-COWA": {
+      "mean_W_T_L_tuned_lir": "11/0/9",
+      "holm_W_L_tuned_lir": "6/4"
+    },
+    "Tuned-LIR-vs-COWA": {
+      "mean_W_T_L_tuned_lir": "9/0/11",
+      "holm_W_L_tuned_lir": "7/4"
+    }
+  },
+  "A2-attack-rho07": {
+    "Tuned-LIR-vs-Tuned-EMA": {
+      "mean_W_T_L_tuned_lir": "9/1/2",
+      "holm_W_L_tuned_lir": "8/0"
+    },
+    "Tuned-LIR-vs-Window-COWA": {
+      "mean_W_T_L_tuned_lir": "9/1/2",
+      "holm_W_L_tuned_lir": "6/0"
+    },
+    "Tuned-LIR-vs-COWA": {
+      "mean_W_T_L_tuned_lir": "6/1/5",
+      "holm_W_L_tuned_lir": "4/2"
+    }
+  },
+  "A3-behavior-switch": {
+    "Tuned-LIR-vs-Tuned-EMA": {
+      "mean_W_T_L_tuned_lir": "7/0/1",
+      "holm_W_L_tuned_lir": "5/1"
+    },
+    "Tuned-LIR-vs-Window-COWA": {
+      "mean_W_T_L_tuned_lir": "7/0/1",
+      "holm_W_L_tuned_lir": "5/1"
+    },
+    "Tuned-LIR-vs-COWA": {
+      "mean_W_T_L_tuned_lir": "7/0/1",
+      "holm_W_L_tuned_lir": "4/0"
+    }
+  }
+}

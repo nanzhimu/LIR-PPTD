@@ -77,6 +77,18 @@ required = [
     "results/fc2_p0c/formal_summary.json",
     "results/fc2_p0c/budget_summary.csv",
     "results/fc2_p0c/contrasts_vs_5pct.csv",
+    "FINAL_P0_P1_EVIDENCE_MAP.md",
+    "validate_final_p0_p1_evidence.py",
+    "analysis/final_scientific_closure_p0/reanalyze_equal_budget.py",
+    "analysis/final_scientific_closure_p0/fastpath_kernel_benchmark.py",
+    "analysis/final_scientific_closure_p1/deployment_boundary_postprocess.py",
+    "results/final_scientific_closure_p0/mechanism/equal_tuning_summary.json",
+    "results/final_scientific_closure_p0/mechanism/selected_hyperparameters.json",
+    "results/final_scientific_closure_p0/fastpath/fastpath_summary.json",
+    "results/final_scientific_closure_p0/fastpath/kernel_timing_summary.csv",
+    "results/final_scientific_closure_p1/deployment_boundary/deployment_boundary_summary.json",
+    "results/final_scientific_closure_p1/deployment_boundary/worker_calibration_coverage_by_capability.csv",
+    "results/final_scientific_closure_p1/deployment_boundary/task_cold_start_by_capability.csv",
 ]
 for r in required:
     if not (ROOT / r).is_file():
@@ -100,7 +112,7 @@ for p in ROOT.rglob("*"):
 # 5) Metadata/document promises.
 try:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    for token in ("0 failed tests", "data/phase_r1_dataset_manifest.json", "data/neteasecrowd/dataset_audit.json", "paper_result_consistency.csv"):
+    for token in ("0 failed tests", "data/phase_r1_dataset_manifest.json", "data/neteasecrowd/dataset_audit.json", "paper_result_consistency.csv", "FINAL_P0_P1_EVIDENCE_MAP.md"):
         if token not in readme:
             errors.append(f"README_PROMISE {token}")
     dp = (ROOT / "DATA_POLICY.md").read_text(encoding="utf-8")
@@ -140,7 +152,21 @@ except Exception as exc:
     errors.append(f"DATASET_AUDIT_CHECK {exc}")
 
 
-# 8) Submission hygiene: reviewer-facing Python scripts must not contain hard-coded /mnt/data paths.
+# 8) Final P0/P1 evidence integration checks.
+try:
+    p0 = json.loads((ROOT / "results/final_scientific_closure_p0/mechanism/equal_tuning_summary.json").read_text())
+    if p0["A1-persistent-ratio"]["Tuned-LIR-vs-Tuned-EMA"]["mean_W_T_L_tuned_lir"] != "19/0/1":
+        errors.append("FINAL_P0_EQUAL_BUDGET")
+    fp = json.loads((ROOT / "results/final_scientific_closure_p0/fastpath/fastpath_summary.json").read_text())
+    if not fp.get("gate_pass") or fp.get("overall", {}).get("ordinary_tasks") != 1662310 or fp.get("overall", {}).get("mismatches") != 0:
+        errors.append("FINAL_P0_FASTPATH")
+    p1 = json.loads((ROOT / "results/final_scientific_closure_p1/deployment_boundary/deployment_boundary_summary.json").read_text())
+    if p1.get("worker_capability_coverage", {}).get("worker_capability_trajectories") != 3574 or p1.get("task_history_coverage", {}).get("scored_tasks") != 949647:
+        errors.append("FINAL_P1_DEPLOYMENT")
+except Exception as exc:
+    errors.append(f"FINAL_P0_P1_CHECK {exc}")
+
+# 9) Submission hygiene: reviewer-facing Python scripts must not contain hard-coded /mnt/data paths.
 for p in ROOT.rglob("*.py"):
     if p.resolve() == Path(__file__).resolve():
         continue

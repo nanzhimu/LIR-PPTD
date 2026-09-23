@@ -1,0 +1,9 @@
+domain,D,m,full_secure_squares,full_secure_multiplications,full_positive_divisions,fast_secure_squares,fast_secure_multiplications,fast_positive_divisions,nonlinear_call_reduction_fraction
+binary,2,20,440,640,242,0,40,2,0.9682299546142209
+binary,2,50,1100,1600,572,0,100,2,0.9688264058679706
+binary,2,100,2200,3200,1122,0,200,2,0.9690279055504446
+binary,2,200,4400,6400,2222,0,400,2,0.969129166026724
+four-class,4,20,880,1080,264,0,80,4,0.9622302158273381
+four-class,4,50,2200,2700,594,0,200,4,0.9628685839097197
+four-class,4,100,4400,5400,1144,0,400,4,0.9630847953216374
+four-class,4,200,8800,10800,2244,0,800,4,0.9631935542940854

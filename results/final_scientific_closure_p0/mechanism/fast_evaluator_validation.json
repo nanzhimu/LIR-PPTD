@@ -1,0 +1,7 @@
+{
+  "streams": 738,
+  "max_abs_primary_loss_difference": 5.551115123125783e-17,
+  "mean_abs_primary_loss_difference": 3.008734484079015e-19,
+  "differences_gt_1e-12": 0,
+  "status": "PASS"
+}

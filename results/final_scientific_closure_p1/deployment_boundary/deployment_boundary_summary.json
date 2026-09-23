@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "study": "Final Scientific Closure \u2014 P1 Deployment Boundary",
+  "source_study": "p1c_netease_longitudinal_geometry_v1",
+  "status": "PASS",
+  "worker_capability_coverage": {
+    "worker_capability_trajectories": 3574,
+    "zero_exposure_count": 615,
+    "zero_exposure_fraction": 0.17207610520425293,
+    "ge1_fraction": 0.827923894795747,
+    "ge2_fraction": 0.7364297705651931,
+    "ge5_fraction": 0.580581980973699,
+    "ge10_fraction": 0.434247341913822,
+    "exposure_median": 7.0,
+    "exposure_q1": 1.0,
+    "exposure_q3": 42.0,
+    "exposure_p90": 207.0,
+    "participant_annotations": 6016319,
+    "calibration_exposures": 302421,
+    "participant_exposure_rate": 0.050266782728774856
+  },
+  "unique_worker_descriptive": {
+    "unique_worker_ids": 2413,
+    "zero_exposure_count_any_capability": 396,
+    "zero_exposure_fraction_any_capability": 0.1641110650642354,
+    "ge1_fraction_any_capability": 0.8358889349357647,
+    "exposure_median_across_capabilities": 7.0,
+    "exposure_q1_across_capabilities": 1.0,
+    "exposure_q3_across_capabilities": 53.0
+  },
+  "task_history_coverage": {
+    "scored_tasks": 949647,
+    "mean_cold_fraction": 0.010861701810970329,
+    "history_complete_count": 903373,
+    "history_complete_fraction": 0.9512724201729695,
+    "minority_cold_count": 44233,
+    "majority_cold_count": 1642,
+    "all_cold_count": 399
+  },
+  "capability_69_boundary": {
+    "worker_zero_exposure_fraction": 0.308868501529052,
+    "history_complete_fraction": 0.4160475482912333,
+    "median_exposures": 2.0
+  },
+  "scope_notes": [
+    "Persistent reputation is capability-specific; worker-capability trajectories are the primary coverage unit.",
+    "The lean artifact does not retain participant-level first-calibration timestamps, so exact worker-level waiting time is not claimed.",
+    "Reference-provider acquisition latency is external to the MPC path and was not measured.",
+    "Selector hiddenness does not imply that task content hides application-level verifiability cues.",
+    "SQLite-WAL experiments validate persistence/replay semantics at component level, not distributed failover.",
+    "The 4+3+3 VM layout is a performance topology, not ten independent administrative trust domains."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "study": "Final Scientific Closure P0 Mechanism Necessity",
+  "eta_grid": [
+    "1/50",
+    "1/20",
+    "1/10",
+    "1/5",
+    "2/5"
+  ],
+  "window_grid": [
+    3,
+    5,
+    10
+  ],
+  "tuning_split": "behavior-switch replicates 1-5 only",
+  "heldout": "behavior-switch replicates 6-20",
+  "selection": "one global hyperparameter per method minimizing unweighted mean dev post-switch primary loss",
+  "tie_rule": "first in declared ascending grid",
+  "frozen_calibration_masks": {
+    "product": "9fec2530d5b65cb4241d41d0ab49f1a29633dc6259013fbadde471776cac6090",
+    "duck": "0c70188e46701dddf6840d3577e23800f2fe80dca61873948d0cbaa2d7d9527c",
+    "dog": "3edddc1cadba7ef39ebe5e2721aba0be44fe6a4307a858fff7277de2385d20ac",
+    "weather": "bcc5dd399bfecb050c01bc07533114728a816532c5e798fc47865803fdcbf911"
+  }
+}

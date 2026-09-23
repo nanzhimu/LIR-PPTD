@@ -1,0 +1,44 @@
+{
+  "A1-persistent-ratio": {
+    "COWA": {
+      "mean_W_T_L_full": "6/0/14",
+      "holm_W_L_full": "5/12"
+    },
+    "Tuned-EMA-TL": {
+      "mean_W_T_L_full": "8/0/12",
+      "holm_W_L_full": "7/10"
+    },
+    "Window-COWA": {
+      "mean_W_T_L_full": "5/0/15",
+      "holm_W_L_full": "5/15"
+    }
+  },
+  "A2-attack-rho07": {
+    "COWA": {
+      "mean_W_T_L_full": "4/1/7",
+      "holm_W_L_full": "3/6"
+    },
+    "Tuned-EMA-TL": {
+      "mean_W_T_L_full": "6/1/5",
+      "holm_W_L_full": "6/3"
+    },
+    "Window-COWA": {
+      "mean_W_T_L_full": "5/1/6",
+      "holm_W_L_full": "2/5"
+    }
+  },
+  "A3-behavior-switch": {
+    "COWA": {
+      "mean_W_T_L_full": "5/0/3",
+      "holm_W_L_full": "5/0"
+    },
+    "Tuned-EMA-TL": {
+      "mean_W_T_L_full": "3/0/5",
+      "holm_W_L_full": "1/2"
+    },
+    "Window-COWA": {
+      "mean_W_T_L_full": "5/0/3",
+      "holm_W_L_full": "2/2"
+    }
+  }
+}

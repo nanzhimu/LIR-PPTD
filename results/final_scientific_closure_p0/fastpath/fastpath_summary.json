@@ -1,0 +1,274 @@
+{
+  "gate_pass": true,
+  "overall": {
+    "streams": 570,
+    "ordinary_tasks": 1662310,
+    "mismatches": 0,
+    "mismatch_rate": 0.0,
+    "init_exact_ties": 384,
+    "full_exact_ties": 384,
+    "min_init_margin_integer": 0,
+    "min_full_margin_integer": 0
+  },
+  "groups": {
+    "overall": {
+      "streams": 570,
+      "ordinary_tasks": 1662310,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 384,
+      "full_exact_ties": 384,
+      "min_init_margin_integer": 0,
+      "min_full_margin_integer": 0
+    },
+    "family|A1-persistent-ratio": {
+      "streams": 300,
+      "ordinary_tasks": 874900,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 200,
+      "full_exact_ties": 200,
+      "min_init_margin_integer": 0,
+      "min_full_margin_integer": 0
+    },
+    "dataset|product": {
+      "streams": 190,
+      "ordinary_tasks": 1498340,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 0,
+      "full_exact_ties": 0,
+      "min_init_margin_integer": 35,
+      "min_full_margin_integer": 699
+    },
+    "family_dataset|A1-persistent-ratio|product": {
+      "streams": 100,
+      "ordinary_tasks": 788600,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 0,
+      "full_exact_ties": 0,
+      "min_init_margin_integer": 753,
+      "min_full_margin_integer": 14833
+    },
+    "dataset|duck": {
+      "streams": 190,
+      "ordinary_tasks": 19760,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 0,
+      "full_exact_ties": 0,
+      "min_init_margin_integer": 177,
+      "min_full_margin_integer": 3463
+    },
+    "family_dataset|A1-persistent-ratio|duck": {
+      "streams": 100,
+      "ordinary_tasks": 10400,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 0,
+      "full_exact_ties": 0,
+      "min_init_margin_integer": 177,
+      "min_full_margin_integer": 3463
+    },
+    "dataset|dog": {
+      "streams": 190,
+      "ordinary_tasks": 144210,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 384,
+      "full_exact_ties": 384,
+      "min_init_margin_integer": 0,
+      "min_full_margin_integer": 0
+    },
+    "family_dataset|A1-persistent-ratio|dog": {
+      "streams": 100,
+      "ordinary_tasks": 75900,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 200,
+      "full_exact_ties": 200,
+      "min_init_margin_integer": 0,
+      "min_full_margin_integer": 0
+    },
+    "family|A2-attack-rho07": {
+      "streams": 180,
+      "ordinary_tasks": 524940,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 137,
+      "full_exact_ties": 137,
+      "min_init_margin_integer": 0,
+      "min_full_margin_integer": 0
+    },
+    "family_dataset|A2-attack-rho07|product": {
+      "streams": 60,
+      "ordinary_tasks": 473160,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 0,
+      "full_exact_ties": 0,
+      "min_init_margin_integer": 157,
+      "min_full_margin_integer": 3105
+    },
+    "family_dataset|A2-attack-rho07|duck": {
+      "streams": 60,
+      "ordinary_tasks": 6240,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 0,
+      "full_exact_ties": 0,
+      "min_init_margin_integer": 471,
+      "min_full_margin_integer": 9283
+    },
+    "family_dataset|A2-attack-rho07|dog": {
+      "streams": 60,
+      "ordinary_tasks": 45540,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 137,
+      "full_exact_ties": 137,
+      "min_init_margin_integer": 0,
+      "min_full_margin_integer": 0
+    },
+    "family|A3-behavior-switch": {
+      "streams": 90,
+      "ordinary_tasks": 262470,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 47,
+      "full_exact_ties": 47,
+      "min_init_margin_integer": 0,
+      "min_full_margin_integer": 0
+    },
+    "family_dataset|A3-behavior-switch|product": {
+      "streams": 30,
+      "ordinary_tasks": 236580,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 0,
+      "full_exact_ties": 0,
+      "min_init_margin_integer": 35,
+      "min_full_margin_integer": 699
+    },
+    "family_dataset|A3-behavior-switch|duck": {
+      "streams": 30,
+      "ordinary_tasks": 3120,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 0,
+      "full_exact_ties": 0,
+      "min_init_margin_integer": 6185,
+      "min_full_margin_integer": 121721
+    },
+    "family_dataset|A3-behavior-switch|dog": {
+      "streams": 30,
+      "ordinary_tasks": 22770,
+      "mismatches": 0,
+      "mismatch_rate": 0.0,
+      "init_exact_ties": 47,
+      "full_exact_ties": 47,
+      "min_init_margin_integer": 0,
+      "min_full_margin_integer": 0
+    }
+  },
+  "arithmetic_cost": [
+    {
+      "domain": "binary",
+      "D": 2,
+      "m": 20,
+      "full_secure_squares": 440,
+      "full_secure_multiplications": 640,
+      "full_positive_divisions": 242,
+      "fast_secure_squares": 0,
+      "fast_secure_multiplications": 40,
+      "fast_positive_divisions": 2,
+      "nonlinear_call_reduction_fraction": 0.9682299546142209
+    },
+    {
+      "domain": "binary",
+      "D": 2,
+      "m": 50,
+      "full_secure_squares": 1100,
+      "full_secure_multiplications": 1600,
+      "full_positive_divisions": 572,
+      "fast_secure_squares": 0,
+      "fast_secure_multiplications": 100,
+      "fast_positive_divisions": 2,
+      "nonlinear_call_reduction_fraction": 0.9688264058679706
+    },
+    {
+      "domain": "binary",
+      "D": 2,
+      "m": 100,
+      "full_secure_squares": 2200,
+      "full_secure_multiplications": 3200,
+      "full_positive_divisions": 1122,
+      "fast_secure_squares": 0,
+      "fast_secure_multiplications": 200,
+      "fast_positive_divisions": 2,
+      "nonlinear_call_reduction_fraction": 0.9690279055504446
+    },
+    {
+      "domain": "binary",
+      "D": 2,
+      "m": 200,
+      "full_secure_squares": 4400,
+      "full_secure_multiplications": 6400,
+      "full_positive_divisions": 2222,
+      "fast_secure_squares": 0,
+      "fast_secure_multiplications": 400,
+      "fast_positive_divisions": 2,
+      "nonlinear_call_reduction_fraction": 0.969129166026724
+    },
+    {
+      "domain": "four-class",
+      "D": 4,
+      "m": 20,
+      "full_secure_squares": 880,
+      "full_secure_multiplications": 1080,
+      "full_positive_divisions": 264,
+      "fast_secure_squares": 0,
+      "fast_secure_multiplications": 80,
+      "fast_positive_divisions": 4,
+      "nonlinear_call_reduction_fraction": 0.9622302158273381
+    },
+    {
+      "domain": "four-class",
+      "D": 4,
+      "m": 50,
+      "full_secure_squares": 2200,
+      "full_secure_multiplications": 2700,
+      "full_positive_divisions": 594,
+      "fast_secure_squares": 0,
+      "fast_secure_multiplications": 200,
+      "fast_positive_divisions": 4,
+      "nonlinear_call_reduction_fraction": 0.9628685839097197
+    },
+    {
+      "domain": "four-class",
+      "D": 4,
+      "m": 100,
+      "full_secure_squares": 4400,
+      "full_secure_multiplications": 5400,
+      "full_positive_divisions": 1144,
+      "fast_secure_squares": 0,
+      "fast_secure_multiplications": 400,
+      "fast_positive_divisions": 4,
+      "nonlinear_call_reduction_fraction": 0.9630847953216374
+    },
+    {
+      "domain": "four-class",
+      "D": 4,
+      "m": 200,
+      "full_secure_squares": 8800,
+      "full_secure_multiplications": 10800,
+      "full_positive_divisions": 2244,
+      "fast_secure_squares": 0,
+      "fast_secure_multiplications": 800,
+      "fast_positive_divisions": 4,
+      "nonlinear_call_reduction_fraction": 0.9631935542940854
+    }
+  ],
+  "interpretation": "PASS permits an iteration-free classification-only specialization under the tested f=24 deterministic backend; it does not assert equality of the soft output vectors."
+}

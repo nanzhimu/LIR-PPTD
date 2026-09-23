@@ -1,0 +1,10 @@
+{
+  "ema_alpha": "2/5",
+  "window_w": 3,
+  "selection_endpoint": "unweighted mean post-switch primary loss over behavior-switch dev replicates 1-5 across 8 cells",
+  "tie_rule": "first in declared ascending grid",
+  "dev_runs_per_parameter": 40,
+  "lir_eta": "2/5",
+  "lir_kappa": "2",
+  "equal_tuning_note": "LIR kappa=2 and EMA kappa=1 use the same eta grid; Window-COWA uses w in {3,5,10}. All choices use behavior-switch development replicates 1-5 only."
+}

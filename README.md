@@ -42,6 +42,11 @@ Start with:
 - `analysis/geo_tau_final/final_pass_matrix.csv` — final geometry/selector/fixed-point evidence gates.
 - `PUBLIC_ARTIFACT_MANIFEST.json` — exact released-file hashes.
 
+
+## Final P0/P1 evidence integration
+
+The submission-candidate artifact additionally includes the final equal-budget mechanism comparison, categorical hard-label fast-path validation, and calibration-history/deployment-boundary postprocessing used by the final manuscript and supplement. Start with `FINAL_P0_P1_EVIDENCE_MAP.md`; `validate_final_p0_p1_evidence.py` checks the manuscript-facing headline values and reruns the released P0/P1 postprocessing that does not require excluded third-party raw data or active private selector seeds.
+
 ## External data
 
 Raw Product/Duck CSVs are not redistributed. Their frozen sizes and SHA-256 values are recorded in `data/phase_r1_dataset_manifest.json`.

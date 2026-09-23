@@ -1,12 +1,12 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "artifact_id": "LIR-PPTD-REPRODUCIBILITY-ARTIFACT",
-  "packaging_profile": "reviewer-facing-lean",
+  "packaging_profile": "reviewer-facing-lean+p0-p1-final-sync",
   "private_active_selector_material_included": false,
   "raw_netease_dataset_included": false,
   "raw_product_duck_dataset_included": false,
   "cleanup_notes": "Development-only status/audit documents, obsolete provenance snapshots, superseded preregistration copies, historical cloud-runner version tests/notes, hard-coded or private-seed-dependent one-off execution wrappers, probe/freezer helpers, generated caches, and exact duplicate outputs were removed. Core implementation, public tests, frozen protocols/configs, paper-facing analyses, final result records, and system-evaluation material were retained.",
-  "file_count": 384,
+  "file_count": 413,
   "files": [
     {
       "path": "DATA_POLICY.md",
@@ -27,6 +27,11 @@
       "path": "FINAL_CLOSURE_STEP03_RESULT_LEDGER.md",
       "bytes": 1605,
       "sha256": "2c81afd5c1eeac4da7989a4a76206d6bd6a51e5e71ef0ab13ecba77a4f56a629"
+    },
+    {
+      "path": "FINAL_P0_P1_EVIDENCE_MAP.md",
+      "bytes": 2896,
+      "sha256": "36ec519a8ca7fd7236ed45ae90a598bd31971d7cb03fa597a89db074e238f0dc"
     },
     {
       "path": "LICENSE.md",
@@ -115,8 +120,23 @@
     },
     {
       "path": "README.md",
-      "bytes": 4560,
-      "sha256": "cd3f1ca0caa519a32c0a8a72bb35c094b6539efcc22a7ef8adae4d8672f7e388"
+      "bytes": 5102,
+      "sha256": "98ca0bcf8b63975ad10523f6fcac0b75b70919c65295001156407083ca682274"
+    },
+    {
+      "path": "analysis/final_scientific_closure_p0/fastpath_kernel_benchmark.py",
+      "bytes": 4421,
+      "sha256": "492929006fe6069cae8f5f8f28cd2019909327ab3174b1514c32d339c76fdd9e"
+    },
+    {
+      "path": "analysis/final_scientific_closure_p0/reanalyze_equal_budget.py",
+      "bytes": 1905,
+      "sha256": "3f181eb93f53bf6df9b4632596158decd52feeee147cb19e3da60d30c7ad2f18"
+    },
+    {
+      "path": "analysis/final_scientific_closure_p1/deployment_boundary_postprocess.py",
+      "bytes": 6218,
+      "sha256": "1c202f5fad8579350ff36e1bc97a77fb73e5d30d8a1c9ee652a48853aa626937"
     },
     {
       "path": "analysis/geo_tau_final/calibration_quality_contrasts_final.csv",
@@ -280,8 +300,8 @@
     },
     {
       "path": "analysis/geo_tau_final/paper_result_consistency.csv",
-      "bytes": 6764,
-      "sha256": "e42bd791e33661d38b5273f3696b924affc8c092c9ca5ccbc935cfcbcbdf6570"
+      "bytes": 8137,
+      "sha256": "624a0198ffd10235e49db8c09e384476b0597470b12095686bb0b5d556f402b5"
     },
     {
       "path": "analysis/geo_tau_final/parameter_sensitivity_delta_final.csv",
@@ -717,6 +737,126 @@
       "path": "results/fc2_p0c/selector_mask_audit.csv",
       "bytes": 3272,
       "sha256": "00b6f4b87886e6e499dca10873ccda56ae4f475a9c73542dfebeb3c87f32f3ce"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/fastpath/arithmetic_cost.csv",
+      "bytes": 641,
+      "sha256": "cd2516a927c63f21f477937ec9bdb84a2fbc633fc98f268eb7a3d5f67b0df4b3"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/fastpath/fastpath_summary.json",
+      "bytes": 7865,
+      "sha256": "5c9cf61472947923c25c7c734e694071e0509f30785f9db7355b616ff2394ed8"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/fastpath/kernel_benchmark_summary.json",
+      "bytes": 2829,
+      "sha256": "cd25de9b643a95d7d0b48ff315b2fd76ad75009f704c4c7495a275d002e73aa9"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/fastpath/kernel_timing_runs.csv",
+      "bytes": 25114,
+      "sha256": "dad2a01525f06bea44e0eee98c451828c90a4b999a59470b81c471e848576592"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/fastpath/kernel_timing_summary.csv",
+      "bytes": 995,
+      "sha256": "906e9dd3814d80d5e8a943bd7e4a38536c82bfe31cfee9e96a19a2e7c4d3d94e"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/fastpath/preregistered_design.json",
+      "bytes": 348,
+      "sha256": "2f42e85e4c007480d39ac41cb915c8d39bd482d61aaf8e0e298fe3faca469eb4"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/fastpath/stream_results.jsonl",
+      "bytes": 265044,
+      "sha256": "a3998b85621750c82ea3bd4e4279c5bff819788e3d73fde21a5c2015576d781b"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/cell_comparisons.csv",
+      "bytes": 18512,
+      "sha256": "60649a9bdb0c0a1e5830547f3a4277611a4da127521c443b001f9667d8ca47ae"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/equal_tuning_cell_comparisons.csv",
+      "bytes": 27485,
+      "sha256": "8f7661040312eb20c9a6280cdabcceb1ff4a416a0cc0fb7ea85f2c2a4a076a42"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/equal_tuning_summary.json",
+      "bytes": 1094,
+      "sha256": "05794903ca25badad83122a2f5fc8915e29b2b0a3e042dce3f09dc1fc6d239e9"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/evaluation_runs.jsonl",
+      "bytes": 2206009,
+      "sha256": "9f4abaed92de2f5bf007ed59d7d1b194acfeab2d288fc20498eb7e49a44fb86c"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/fast_evaluator_validation.json",
+      "bytes": 191,
+      "sha256": "36d8ed2853190ac93d207b7b61a1cc072d2cdce4cd26be8c73b909619d7473a4"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/mechanism_summary.json",
+      "bytes": 898,
+      "sha256": "d697dc8a641116e1d8ec2b87f1993b33bd1e5d1a6517e20de72c17b822ca568d"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/preregistered_design.json",
+      "bytes": 815,
+      "sha256": "0f686402aa911bce764ea93c4a65431e60323792d0bc8d431603cc298df06d30"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/regime_table.csv",
+      "bytes": 257,
+      "sha256": "56a3b569ccabaf4643997deeface0bfceb4a73041d72b3683ebc9ae290beb50e"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/selected_hyperparameters.json",
+      "bytes": 461,
+      "sha256": "68fb9fa2b332d08f272380f8b79c7955a4843a2745436d9e9fc319938ac47743"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/tuned_lir_evaluation_runs.jsonl",
+      "bytes": 1115820,
+      "sha256": "5f67d2d16c8f94d86bfed149bd9ac1a97deaaab754c2790b991d9db30927ee58"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/tuned_lir_tuning_runs.jsonl",
+      "bytes": 221708,
+      "sha256": "416bde947f2d5ab8d90edb48ef96d67c0068b1ef159e377afadd3feb80d49662"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/tuned_lir_tuning_summary.csv",
+      "bytes": 239,
+      "sha256": "8cc4f188d2f4b5039a56caf672b680f8b8d9634484e3c1bb53fb71c8936fe71a"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/tuning_runs.jsonl",
+      "bytes": 396015,
+      "sha256": "c282b2da4242a7c56897ef3339935bbbef3dd3ccbfdce0b25d8c07050715b3e1"
+    },
+    {
+      "path": "results/final_scientific_closure_p0/mechanism/tuning_summary.csv",
+      "bytes": 298,
+      "sha256": "1e2cd4f476cdf79cea742ac5ff953bcffc11dc7444c70e33bd6f3b7e49947e41"
+    },
+    {
+      "path": "results/final_scientific_closure_p1/deployment_boundary/deployment_boundary_summary.json",
+      "bytes": 2269,
+      "sha256": "1e16ab40bf18842dae762e067c7a7a257c839f959d54bad42d004ba1c0715fc8"
+    },
+    {
+      "path": "results/final_scientific_closure_p1/deployment_boundary/task_cold_start_by_capability.csv",
+      "bytes": 780,
+      "sha256": "005ff59ffaa4d989e8e49d4962089acf3b095881b14fb91d23b3c78e7012d64c"
+    },
+    {
+      "path": "results/final_scientific_closure_p1/deployment_boundary/worker_calibration_coverage_by_capability.csv",
+      "bytes": 1292,
+      "sha256": "1e0f154136cfde726da6c2ca4747d58e5eff00de774b99bad78d8b5d65bc49a2"
     },
     {
       "path": "results/geo_tau_final_secondary/calibration_quality/formal_runs.jsonl",
@@ -1924,9 +2064,15 @@
       "sha256": "443bbecf687b7c70cfefc93c78d71743eaeeea40d3a6e2d6e330e9e796cc5c6d"
     },
     {
+      "path": "validate_final_p0_p1_evidence.py",
+      "bytes": 3191,
+      "sha256": "51fde609e1d2282f1d5cc6b3962c756df234ad300a4a89e5143c5597e90239a1"
+    },
+    {
       "path": "verify_public_artifact.py",
-      "bytes": 6969,
-      "sha256": "dc865162bb5e56507764c2ed9c4df57b6aec520999580ef3d73fb1045fe814d4"
+      "bytes": 8929,
+      "sha256": "28173f10be84abdec85e2e346e135a64907f4d4847ce2baf27864ac0ec57d20e"
     }
-  ]
+  ],
+  "p0_p1_final_evidence_integrated": true
 }

@@ -1,0 +1,10 @@
+{
+  "study": "Final Scientific Closure P0 Categorical Fast Path",
+  "fixed_profile": "l2-plaintext-f24-v1",
+  "fractional_bits": 24,
+  "K_full": 10,
+  "fast_path": "initialization-only fixed-point release",
+  "corpus": "all categorical LIR-PPTD streams in FC2-P0A A1/A2/A3",
+  "stream_count": 570,
+  "gate": "zero hard-label mismatches required"
+}

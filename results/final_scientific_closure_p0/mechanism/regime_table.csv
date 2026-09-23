@@ -1,0 +1,4 @@
+comparator,stationary_ratio_WTL,stationary_ratio_Holm_WL,attack_WTL,attack_Holm_WL,behavior_switch_WTL,behavior_switch_Holm_WL
+COWA,6/0/14,5/12,4/1/7,3/6,5/0/3,5/0
+Tuned-EMA-TL,8/0/12,7/10,6/1/5,6/3,3/0/5,1/2
+Window-COWA,5/0/15,5/15,5/1/6,2/5,5/0/3,2/2
